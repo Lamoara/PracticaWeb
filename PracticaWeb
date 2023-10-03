@@ -1,7 +1,10 @@
 <!doctype HTML>
+
 <head>
     <title>GamingRank</title>
+    <link type="text/css" rel="stylesheet" href="styleprincipal.css" />
 </head>
+
 <body>
     <p> hola mundo</p>
 </body>
