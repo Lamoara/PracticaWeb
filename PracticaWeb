@@ -19,33 +19,77 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-            
+             <image src="Imagenes_practica/Factorio.jpeg"></image>
             </div>
             <div class="col-md-3">
-            
+                <image src="Imagenes_practica/COD.jpeg"></image>
             </div>
             <div class="col-md-3">
-            
+                <image src="Imagenes_practica/god of war.jpeg"></image>
             </div>
             <div class="col-md-3">
-            
+            <image src="Imagenes_practica/gtav.jpeg"></image>
             </div>
         </div>
 
         <div class="row">
-
+            <div class="col-md-3">
+                <image src="Imagenes_practica/Factorio.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/COD.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/god of war.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+               <image src="Imagenes_practica/gtav.jpeg"></image>
+               </div>
         </div>
 
         <div class="row">
-
+            <div class="col-md-3">
+                <image src="Imagenes_practica/Factorio.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/COD.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/god of war.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+               <image src="Imagenes_practica/gtav.jpeg"></image>
+               </div>
         </div>
 
         <div class="row">
-
+            <div class="col-md-3">
+                <image src="Imagenes_practica/Factorio.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/COD.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/god of war.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+               <image src="Imagenes_practica/gtav.jpeg"></image>
+               </div>
         </div>
 
         <div class="row">
-
+            <div class="col-md-3">
+                <image src="Imagenes_practica/Factorio.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/COD.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+                   <image src="Imagenes_practica/god of war.jpeg"></image>
+               </div>
+               <div class="col-md-3">
+               <image src="Imagenes_practica/gtav.jpeg"></image>
+               </div>
         </div>
 
     </section>
