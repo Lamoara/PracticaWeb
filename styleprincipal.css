@@ -6,3 +6,8 @@ body{
     text-align: center;
     font-family:'Lobster Two',serif ;
 }
+
+.container-fluid>row>col-md-3>img-responsive{
+    width="500";
+     height="200";
+}
