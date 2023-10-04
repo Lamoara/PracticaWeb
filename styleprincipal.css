@@ -16,6 +16,10 @@ body {
 .botton {
     color: rgb(212, 16, 16);
     margin: 0 auto;
-    margin:;
+    ;
+}
 
+.img-responsive{
+    width: 230px;
+    height: 310px;
 }
