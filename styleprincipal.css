@@ -1,8 +1,21 @@
-body{
+body {
     background-color: rgb(246, 250, 197);
 }
-#cabecera{
+
+#cabecera {
     background-color: aqua;
     text-align: center;
-    font-family:'Lobster Two',serif ;
+    font-family: 'Lobster Two', serif;
+}
+
+.bottons {
+    display: inline;
+    
+}
+
+.botton {
+    color: rgb(212, 16, 16);
+    margin: 0 auto;
+    margin:;
+
 }
