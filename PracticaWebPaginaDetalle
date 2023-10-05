@@ -13,10 +13,29 @@
         <h1 id="cabecera">GamingRank</h1>
     </header>
     <section>
-        <div class="grid">
+        <div class="gridReveiw">
             <a class="botton" href="http://127.0.0.1:3000/PracticaWeb"><i class="bi bi-arrow-90deg-left"></i></a> 
             <a class="botton"><i class="bi bi-pencil"></i></a>
             <a class="botton"><i class="bi bi-trash"></i></a>
         </div>
     </section>
+
+    <div class="gridInfo">
+        <div class="image">
+            <img src="https://ih1.redbubble.net/image.4863460958.7822/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
+        </div>
+        <div class="description">
+            <p>Hola soy una descripcion muy larga y necesaria para saber que pasa si escribo mucho
+                aqui quiza podamos poner links al sitio de compra y eso
+            </p>
+        </div>
+        <div class="trailer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/J8SBp4SyvLc?si=qNvirMq2Z8LHg_yV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="data">
+            <p>Esto son datos datados en la datada epoca de los datos, si quieres saber mas datos puedes bucarte la vida porque los datos no salen de debajo de las
+                piedras, es como la vida misma, muchas veces es dificil. Una vez dicho esto, a mamar
+            </p>
+        </div>
+    </div>
 </body>
