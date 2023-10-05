@@ -13,11 +13,10 @@
         <h1 id="cabecera">GamingRank</h1>
     </header>
     <section>
-        <div class="container">
-            <!<i class="bi bi-arrow-90deg-left" class="botton"></i>
-            <a class="botton">a</a>  
-            <a class="botton">b</a> 
-            <a class="botton">c</a> 
+        <div class="grid">
+            <a class="botton" href="http://127.0.0.1:3000/PracticaWeb"><i class="bi bi-arrow-90deg-left"></i></a> 
+            <a class="botton"><i class="bi bi-pencil"></i></a>
+            <a class="botton"><i class="bi bi-trash"></i></a>
         </div>
     </section>
 </body>
