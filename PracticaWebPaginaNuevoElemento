@@ -9,6 +9,8 @@
 
 <body>
     <header>
-        <h1 id="cabecera">GamingRank</h1>
+        <h1 id="cabecera"><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+        </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+            id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
     </header>
 </body>

@@ -3,10 +3,36 @@ body {
 }
 
 #cabecera {
-    background-color: aqua;
+    background-color: black;
     text-align: center;
     font-family: 'Lobster Two', serif;
 }
+
+#colorGaming{
+    color: yellow;
+}
+
+#colorR{
+    color: pink;
+}
+
+#colorA{
+    color: rgb(0, 225, 255);
+}
+
+#colorN{
+    color: orange;
+}
+
+#colorK{
+    color: red;
+}
+
+#fantasmas {
+    width: 30px;
+    height: 20px;
+}
+
 
 .gridBotton {
     display: grid;
@@ -64,7 +90,7 @@ body {
 }
 
 .image>img {
-    width: 270px;
+    width: 260px;
     height: 370px;
     display: block;
     margin-left: auto;
@@ -105,10 +131,48 @@ body {
 }
 
 .data>ul>li {
-    font-size: 3vh;
+    font-size: 20;
     text-align: left;
     word-wrap: break-word;
     word-break: keep-all;
     width: 80%;
 }
 
+#tablaconsola{
+    display: grid;
+    margin-top: 30px;
+}
+
+table>thead{
+    background-color: white;
+    text-align: center;
+}
+
+#videojuego{
+    background-color: white;
+}
+
+#ps{
+    background-color: blue;
+}
+
+#xbox{
+    background-color: green;
+}
+
+#nintendo{
+    background-color: red;
+}
+
+#pc{
+    background-color: goldenrod;
+}
+
+.tick{
+    color: green;
+}
+
+table>tbody{
+    background-color: white;
+    text-align: center;
+}

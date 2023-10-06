@@ -12,85 +12,87 @@
 
 <body>
     <header>
-        <h1 id="cabecera">GamingRank</h1>
+        <h1 id="cabecera"><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+            </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
     </header>
 
     <section>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Bloodborne.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/COD.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/god of war.jpeg"></image>
+                </div>
             </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
+            <div class="row">
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/MarioGalaxy.jpg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/gtav.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/minecraft.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/RocketLeague.jpeg"></image>
+                </div>
             </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
+            <div class="row">
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/RDR2.jpg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
             </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
+            <div class="row">
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
             </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
+            <div class="row">
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
+                <div class="col-md-3">
+                    <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg"></image>
+                </div>
             </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-            <div class="col-md-3">
-                <image class="img-responsive" src="Imagenes_practica/Factorio.jpeg" ></image>
-            </div>
-        </div>
 
     </section>
 </body>

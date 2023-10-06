@@ -10,7 +10,9 @@
 
 <body>
     <header>
-        <h1 id="cabecera">GamingRank</h1>
+        <h1 id="cabecera"><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+            </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
     </header>
     <section>
         <div class="gridBotton">
@@ -33,19 +35,41 @@
                 </p>
             </div>
             <div class="trailer">
-                <iframe src="https://www.youtube.com/embed/J8SBp4SyvLc?si=qNvirMq2Z8LHg_yV"
-                    title="YouTube video player" frameborder="0"
+                <iframe src="https://www.youtube.com/embed/J8SBp4SyvLc?si=qNvirMq2Z8LHg_yV" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
             <div class="data">
                 <h3>Información Básica</h3>
                 <ul>
-                    <li>Título Completo: </li>
-                    <li>Año de lanzamiento: </li>
-                    <li>Empresesa desarrolladora: </li>
-                   </ul>
+                    <li>Título Completo: Red dead redemption 2 </li>
+                    <li>Fecha de lanzamiento: 26 de octubre de 2018 </li>
+                    <li>Empresesa desarrolladora: Rockstar</li>
+                </ul>
             </div>
+        </div>
+    </section>
+    <section>
+        <div id="tablaconsola">
+            <table>
+                <thead>
+                    <th id="videojuego"><i class="bi bi-controller"></i></th>
+                    <th id="ps"><i class="bi bi-playstation"></i></th>
+                    <th id="xbox"><i class="bi bi-xbox"></i></th>
+                    <th id="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                    <th id="pc"><i class="bi bi-pc-display"></i></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Red Dead Redemption 2</td>
+                        <td class="tick"><i class="bi bi-check2"></i></td>
+                        <td class="tick"><i class="bi bi-check2"></i></td>
+                        <td class="tick"><i class="bi bi-check2"></i></td>
+                        <td class="tick"><i class="bi bi-check2"></i></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </body>
