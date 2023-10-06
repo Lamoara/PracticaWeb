@@ -14,9 +14,19 @@
     </header>
     <section>
         <div class="grid">
-            <a class="botton" href="http://127.0.0.1:3000/PracticaWeb"><i class="bi bi-arrow-90deg-left"></i></a> 
+            <a class="botton" href="http://127.0.0.1:3000/PracticaWeb"><i class="bi bi-arrow-90deg-left"></i></a>
             <a class="botton"><i class="bi bi-pencil"></i></a>
             <a class="botton"><i class="bi bi-trash"></i></a>
+        </div>
+    </section>
+    <section>
+        <div class="grid2">
+            <form>
+
+                <p>Reseña: <textarea name="comentario"></textarea></p>
+                <button>Cancelar</button>
+                <button type="submit">Añadir Reseña</button>
+            </form>
         </div>
     </section>
 </body>
