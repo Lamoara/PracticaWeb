@@ -13,20 +13,39 @@
         <h1 id="cabecera">GamingRank</h1>
     </header>
     <section>
-        <div class="grid">
+        <div class="gridBotton">
             <a class="botton" href="http://127.0.0.1:3000/PracticaWeb"><i class="bi bi-arrow-90deg-left"></i></a>
             <a class="botton"><i class="bi bi-pencil"></i></a>
             <a class="botton"><i class="bi bi-trash"></i></a>
         </div>
     </section>
-    <section>
-        <div class="grid2">
-            <form>
 
-                <p>Reseña: <textarea name="comentario"></textarea></p>
-                <button>Cancelar</button>
-                <button type="submit">Añadir Reseña</button>
-            </form>
+    <section>
+        <div class="gridInfo">
+            <div class="image">
+                <img src="Imagenes_practica/RDR2.jpg">
+            </div>
+            <div class="description">
+                <p>Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se
+                    ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la
+                    pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder
+                    sobrevivir.
+                </p>
+            </div>
+            <div class="trailer">
+                <iframe src="https://www.youtube.com/embed/J8SBp4SyvLc?si=qNvirMq2Z8LHg_yV"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="data">
+                <h3>Información Básica</h3>
+                <ul>
+                    <li>Título Completo: </li>
+                    <li>Año de lanzamiento: </li>
+                    <li>Empresesa desarrolladora: </li>
+                   </ul>
+            </div>
         </div>
     </section>
 </body>
