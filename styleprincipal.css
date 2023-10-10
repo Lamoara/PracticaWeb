@@ -66,8 +66,12 @@ body {
 }
 
 .img-responsive {
-    width: 240px;
-    height: 370px;
+    width: 20vw;
+    height: 27vw;
+    margin-bottom:3vw ;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    
 }
 
 .gridInfo {
