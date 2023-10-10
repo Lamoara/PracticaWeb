@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(246, 250, 197);
+    background-color:aqua;
 }
 
 #cabecera {
@@ -31,6 +31,7 @@ body {
 #fantasmas {
     width: 30px;
     height: 20px;
+    
 }
 
 
@@ -96,6 +97,17 @@ body {
     margin-bottom:4vh ;
     margin-left: 1vw;
     margin-right: 1vw;
+}
+
+.img-responsive:hover {
+    width: 18vw;
+    height: 50vh;
+    margin-bottom:4vh ;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-style:solid;
+    border-width: 0.7vw;
+    border-color: green;
 }
 
 .gridInfo {
@@ -201,6 +213,6 @@ table>thead{
 }
 
 table>tbody{
-    background-color: white;
+    background-color: transparent;
     text-align: center;
 }
