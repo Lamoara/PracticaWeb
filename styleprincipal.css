@@ -51,6 +51,31 @@ body {
     height: 50px;
 }
 
+.botton2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}
+
+.botton2:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(26, 40, 20);
+    border-style:dashed;
+    border-width: 10px;
+    border-color: green;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}
+
 .botton:hover{
     display: flex;
     align-items: center;

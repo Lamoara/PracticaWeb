@@ -46,30 +46,30 @@
                     <li>Título Completo: Red dead redemption 2 </li>
                     <li>Fecha de lanzamiento: 26 de octubre de 2018 </li>
                     <li>Empresesa desarrolladora: Rockstar</li>
+                    <section>
+                        <div id="tablaconsola">
+                            <table>
+                                <thead>
+                                    <th id="videojuego"><i class="bi bi-controller"></i></th>
+                                    <th id="ps"><i class="bi bi-playstation"></i></th>
+                                    <th id="xbox"><i class="bi bi-xbox"></i></th>
+                                    <th id="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                                    <th id="pc"><i class="bi bi-pc-display"></i></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Red Dead Redemption 2</td>
+                                        <td class="tick"><i class="bi bi-check2"></i></td>
+                                        <td class="tick"><i class="bi bi-check2"></i></td>
+                                        <td class="tick"><i class="bi bi-check2"></i></td>
+                                        <td class="tick"><i class="bi bi-check2"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section>
-        <div id="tablaconsola">
-            <table>
-                <thead>
-                    <th id="videojuego"><i class="bi bi-controller"></i></th>
-                    <th id="ps"><i class="bi bi-playstation"></i></th>
-                    <th id="xbox"><i class="bi bi-xbox"></i></th>
-                    <th id="nintendo"><i class="bi bi-nintendo-switch"></i></th>
-                    <th id="pc"><i class="bi bi-pc-display"></i></th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Red Dead Redemption 2</td>
-                        <td class="tick"><i class="bi bi-check2"></i></td>
-                        <td class="tick"><i class="bi bi-check2"></i></td>
-                        <td class="tick"><i class="bi bi-check2"></i></td>
-                        <td class="tick"><i class="bi bi-check2"></i></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </section>
 </body>
