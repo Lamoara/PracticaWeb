@@ -1,8 +1,5 @@
-body {
-    background-color: rgb(246, 250, 197);
-}
 
-#cabecera {
+#Header {
     background-color: black;
     text-align: center;
     font-family: 'Lobster Two', serif;
@@ -96,6 +93,10 @@ body {
     margin-bottom:4vh ;
     margin-left: 1vw;
     margin-right: 1vw;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-radius:12px ;
+    border-color: black;
 }
 
 .gridInfo {

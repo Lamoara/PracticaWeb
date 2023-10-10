@@ -13,13 +13,15 @@
 </head>
 
 <body>
+    
     <header>
-        <h1 id="cabecera"><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+        <h1 id="Header"><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
             </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
                 id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
     </header>
-
+    <div id="background">
     <section>
+        <div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
@@ -99,11 +101,11 @@
                     <image class="img-responsive" src="Imagenes_practica/thelastofus.jpeg"></image>
                 </div>
             </div>
-
     </section>
     <section>
         <div class="gridBotton">
             <a class="botton2" href="http://127.0.0.1:3000/PracticaWebPaginaNuevoElemento"><i class="bi bi-plus-circle"></i></a>
         </div>
     </section>
+</div>
 </body>
