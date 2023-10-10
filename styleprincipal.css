@@ -73,7 +73,7 @@ body {
 .gridInfo {
     display: grid;
 
-    margin-left: 0;
+    margin-left: 5vh;
     margin-right: 5vh;
     height: auto;
     width: 100%;
@@ -116,7 +116,7 @@ body {
 }
 
 .trailer>iframe {
-    width: fit-content;
+    width: 100%;
     height: 100%;
 }
 
