@@ -91,8 +91,11 @@ body {
 }
 
 .img-responsive {
-    width: 240px;
-    height: 370px;
+    width: 18vw;
+    height: 50vh;
+    margin-bottom:4vh ;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .gridInfo {
