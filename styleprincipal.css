@@ -76,7 +76,7 @@ body {
     margin-left: 5vh;
     margin-right: 5vh;
     height: auto;
-    width: 100%;
+    width: 90%;
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5vh;
