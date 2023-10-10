@@ -28,6 +28,7 @@
 #fantasmas {
     width: 30px;
     height: 20px;
+    
 }
 
 
@@ -97,6 +98,17 @@
     border-style: solid;
     border-radius:12px ;
     border-color: black;
+}
+
+.img-responsive:hover {
+    width: 18vw;
+    height: 50vh;
+    margin-bottom:4vh ;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-style:solid;
+    border-width: 0.7vw;
+    border-color: green;
 }
 
 .gridInfo {
@@ -202,6 +214,6 @@ table>thead{
 }
 
 table>tbody{
-    background-color: white;
+    background-color: transparent;
     text-align: center;
 }

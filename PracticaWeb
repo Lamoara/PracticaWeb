@@ -14,6 +14,7 @@
 
 <body>
     
+<body background="Imagenes_practica/Fondo.jpg">
     <header>
         <h1 id="Header"><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
             </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
@@ -104,7 +105,8 @@
     </section>
     <section>
         <div class="gridBotton">
-            <a class="botton2" href="http://127.0.0.1:3000/PracticaWebPaginaNuevoElemento"><i class="bi bi-plus-circle"></i></a>
+            <a class="botton2" href="http://127.0.0.1:3000/PracticaWebPaginaNuevoElemento"><i
+                    class="bi bi-plus-circle"></i></a>
         </div>
     </section>
 </div>
