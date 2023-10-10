@@ -90,8 +90,8 @@ body {
 }
 
 .image>img {
-    width: 260px;
-    height: 370px;
+    width: 100%;
+    height: fit-content;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -116,7 +116,7 @@ body {
 }
 
 .trailer>iframe {
-    width: 100%;
+    width: fit-content;
     height: 100%;
 }
 
