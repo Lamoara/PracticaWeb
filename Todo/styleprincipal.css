@@ -250,3 +250,69 @@ table>tbody{
 #form-control{
     height: 30px;
 }
+
+#gridTittle{
+    text-align: center;
+    background-color: rgb(70, 95, 238);
+    border-color: black;
+    border-style: solid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#gridData{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 30px;
+
+    background-color: rgb(140, 217, 253);
+    border-color: black;
+    border-style: solid;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+#NameData{
+    background-color: rgb(255, 6, 6);
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+
+#ImageData{ 
+    background-color: rgb(42, 56, 165);
+    grid-row: 2;
+}
+
+#TrailerData{
+    background-color: rgb(159, 165, 42);
+    grid-row: 2;
+}
+
+#DescriptionData{
+    background-color: rgb(42, 165, 89);
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.DataText{
+    font: bold 120% monospace;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.TextFile{
+    margin-left: 10px;
+    margin-right: 10px;
+}
