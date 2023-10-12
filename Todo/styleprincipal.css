@@ -96,8 +96,8 @@
 }
 
 .img-responsive {
-    width: 18vw;
-    height: 50vh;
+    width: 100%;
+    height: auto;
     margin-bottom:4vh ;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -108,8 +108,8 @@
 }
 
 .img-responsive:hover {
-    width: 18vw;
-    height: 50vh;
+    width: 100%;
+    height: auto;
     margin-bottom:4vh ;
     margin-left: 1vw;
     margin-right: 1vw;
