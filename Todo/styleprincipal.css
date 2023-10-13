@@ -1,5 +1,10 @@
+body{
+    background-image: url("Imagenes_practica/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-#Header {
+header {
     background-color: black;
     text-align: center;
     font-family: 'Lobster Two', serif;
@@ -27,15 +32,20 @@
 
 #fantasmas {
     width: 30px;
-    height: 20px;
-    
+    height: 20px;  
 }
-
 
 .gridBotton {
     display: grid;
-    grid-template-columns: 60px 60px 60px;
+    grid-template-columns: 60px 60px 60px 300px;
     margin: 10px
+}
+
+#Tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
 }
 
 .botton {
@@ -49,51 +59,20 @@
     height: 50px;
 }
 
-.botton2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: black;
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-}
-
-.botton2:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgb(26, 40, 20);
-    border-style:dashed;
-    border-width: 10px;
-    border-color: green;
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-}
-
 .botton:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgb(26, 40, 20);
     border-style:dashed;
     border-width: 10px;
     border-color: green;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
+}
+
+#bottonwidth{
+    width: 200px;
 }
 
 .img-responsive {
-    width: 18vw;
-    height: 50vh;
-    margin-bottom:4vh ;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    width: 100%;
+    height: 75%;
+    margin-top: 4vh ;
     flex-wrap: wrap;
     border-style: solid;
     border-radius:5% ;
@@ -101,19 +80,18 @@
 }
 
 .img-responsive:hover {
-    width: 18vw;
-    height: 50vh;
-    margin-bottom:4vh ;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    border-style:solid;
-    border-width: 0.7vw;
     border-color: rgba(218, 148, 18, 0.808);
+}
+
+.GameName{
+    margin-top: 1vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
 }
 
 .gridInfo {
     display: grid;
-
     margin-left: 5vw;
     margin-right: 5vw;
     height: auto;
@@ -216,4 +194,96 @@ table>thead{
 table>tbody{
     background-color: transparent;
     text-align: center;
+}
+
+#formgrid{
+    background-color: rgb(201, 218, 220);
+    display: grid;
+    margin-top: 2vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+}
+
+#buttonsubmit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px; 
+}
+
+#form-control{
+    height: 30px;
+}
+
+#gridTittle{
+    text-align: center;
+    background-color: rgb(70, 95, 238);
+    border-color: black;
+    border-style: solid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#gridData{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 30px;
+
+    background-color: rgb(140, 217, 253);
+    border-color: black;
+    border-style: solid;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+#NameData{
+    background-color: rgb(255, 6, 6);
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+
+#ImageData{ 
+    background-color: rgb(42, 56, 165);
+    grid-row: 2;
+}
+
+#TrailerData{
+    background-color: rgb(159, 165, 42);
+    grid-row: 2;
+}
+
+#DescriptionData{
+    background-color: rgb(42, 165, 89);
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.DataText{
+    font: bold 120% monospace;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.TextFile{
+    margin-left: 10px;
+    margin-right: 10px;
 }
