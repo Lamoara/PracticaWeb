@@ -1,5 +1,10 @@
+body{
+    background-image: url("Imagenes_practica/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-#Header {
+header {
     background-color: black;
     text-align: center;
     font-family: 'Lobster Two', serif;
@@ -27,10 +32,8 @@
 
 #fantasmas {
     width: 30px;
-    height: 20px;
-    
+    height: 20px;  
 }
-
 
 .gridBotton {
     display: grid;
@@ -56,71 +59,39 @@
     height: 50px;
 }
 
-.botton2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: black;
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-}
-
-.botton2:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgb(26, 40, 20);
-    border-style:dashed;
-    border-width: 10px;
-    border-color: green;
-    border-radius: 5px;
-    width: 200px;
-    height: 50px;
-}
-
 .botton:hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: rgb(26, 40, 20);
     border-style:dashed;
     border-width: 10px;
     border-color: green;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
+}
+
+#bottonwidth{
+    width: 200px;
 }
 
 .img-responsive {
     width: 100%;
-    height: auto;
-    margin-bottom:4vh ;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    height: 75%;
+    margin-top: 4vh ;
     flex-wrap: wrap;
     border-style: solid;
-    border-radius:12px ;
+    border-radius: 12px ;
     border-color: black;
 }
 
 .img-responsive:hover {
-    width: 100%;
-    height: auto;
-    margin-bottom:4vh ;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    border-style:solid;
-    border-width: 0.7vw;
     border-color: rgba(218, 148, 18, 0.808);
+}
+
+.GameName{
+    margin-top: 1vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
 }
 
 .gridInfo {
     display: grid;
-
     margin-left: 5vw;
     margin-right: 5vw;
     height: auto;
