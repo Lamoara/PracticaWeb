@@ -3,7 +3,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.headproyect{
+background-color: black;
+border-color: black;
+border-style: solid;
+}
 header {
     background-color: black;
     text-align: center;
@@ -224,7 +228,7 @@ table>tbody{
 
 #gridTittle{
     text-align: center;
-    background-color: rgb(70, 95, 238);
+    background-color: yellow;
     border-color: black;
     border-style: solid;
     border-top-right-radius: 30px;
@@ -235,21 +239,22 @@ table>tbody{
 
 #gridData{
     display: grid;
-    row-gap: 10px;
-    column-gap: 30px;
+    row-gap: 5px;
+    column-gap: 5px;
 
-    background-color: rgb(140, 217, 253);
+    background-color: black;
     border-color: black;
     border-style: solid;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     margin-left: 10px;
     margin-right: 10px;
+    overflow: hidden;
     
 }
 
 #NameData{
-    background-color: rgb(255, 6, 6);
+    background-color:pink;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -258,24 +263,28 @@ table>tbody{
 
 
 #ImageData{ 
-    background-color: rgb(42, 56, 165);
+    background-color:orange;
     grid-row: 2;
 }
 
 #TrailerData{
-    background-color: rgb(159, 165, 42);
+    background-color: red;
     grid-row: 2;
 }
 
 #DescriptionData{
-    background-color: rgb(42, 165, 89);
+    background-color: rgb(0, 225, 255);
     grid-row: 3;
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: left;
-    margin-left: 10px;
 }
-
+#BasicInfo{
+    background-color: rgb(11, 206, 11);
+    grid-row: 4;
+    grid-column-start:1;
+    grid-column-end:3;
+}
 .DataText{
     font: bold 120% monospace;
     margin-left: 10px;
