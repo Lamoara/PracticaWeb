@@ -1,51 +1,52 @@
-body{
+body {
     background-image: url("Imagenes_practica/Fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.headproyect{
-background-color: black;
-border-color: black;
-border-style: solid;
+
+.headproyect {
+    background-color: black;
+    border-color: black;
+    border-style: solid;
 }
+
 header {
     background-color: black;
     text-align: center;
     font-family: 'Lobster Two', serif;
 }
 
-#colorGaming{
+#colorGaming {
     color: yellow;
 }
 
-#colorR{
+#colorR {
     color: pink;
 }
 
-#colorA{
+#colorA {
     color: rgb(0, 225, 255);
 }
 
-#colorN{
+#colorN {
     color: orange;
 }
 
-#colorK{
+#colorK {
     color: red;
 }
 
 #fantasmas {
     width: 30px;
-    height: 20px;  
+    height: 20px;
 }
 
 .gridBotton {
     display: grid;
-    grid-template-columns: 60px 60px 60px 300px;
-    margin: 10px
+    grid-template-columns: 60px 60px 60px 1fr;
 }
 
-#Tittle{
+#Tittle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,32 +55,34 @@ header {
 
 .botton {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     color: white;
     background-color: black;
+    margin: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
 }
 
-.botton:hover{
-    border-style:dashed;
+.botton:hover {
+    border-style: dashed;
     border-width: 10px;
     border-color: green;
 }
 
-#bottonwidth{
+#bottonwidth {
     width: 200px;
 }
 
 .img-responsive {
     width: 100%;
     height: 75%;
-    margin-top: 4vh ;
+    margin-top: 4vh;
     flex-wrap: wrap;
     border-style: solid;
-    border-radius:5% ;
+    border-radius: 5%;
     border-color: black;
 }
 
@@ -87,9 +90,9 @@ header {
     border-color: rgba(218, 148, 18, 0.808);
 }
 
-.GameName{
+.GameName {
     margin-top: 1vh;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: larger;
     text-align: center;
 }
@@ -148,7 +151,7 @@ header {
     width: 1fr;
 }
 
-.data>h3{
+.data>h3 {
     font-size: larger;
     font-weight: 1000;
 }
@@ -161,46 +164,46 @@ header {
     width: 80%;
 }
 
-#tablaconsola{
+#tablaconsola {
     display: grid;
     margin-top: 30px;
 }
 
-table>thead{
+table>thead {
     background-color: white;
     text-align: center;
 }
 
-#videojuego{
+#videojuego {
     background-color: white;
 }
 
-#ps{
+#ps {
     background-color: blue;
 }
 
-#xbox{
+#xbox {
     background-color: green;
 }
 
-#nintendo{
+#nintendo {
     background-color: red;
 }
 
-#pc{
+#pc {
     background-color: goldenrod;
 }
 
-.tick{
+.tick {
     color: green;
 }
 
-table>tbody{
+table>tbody {
     background-color: transparent;
     text-align: center;
 }
 
-#formgrid{
+.formgrid {
     background-color: rgb(201, 218, 220);
     display: grid;
     margin-top: 2vw;
@@ -209,9 +212,10 @@ table>tbody{
     border-radius: 10px;
     border-color: black;
     border-style: solid;
+
 }
 
-#buttonsubmit{
+#buttonsubmit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,14 +223,139 @@ table>tbody{
     background-color: black;
     border-radius: 5px;
     width: 100px;
-    height: 50px; 
+    height: 50px;
 }
 
-#form-control{
+#form-control {
     height: 30px;
 }
 
-#gridTittle{
+#contentform {
+    margin: 10px;
+}
+
+.form-group {
+    margin: 10px;
+}
+
+#score {
+    margin: 10px;
+}
+
+#buttonsubmit {
+    margin-top: 20px;
+}
+
+.valoracion {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.valoracion input {
+    position: absolute;
+    top: -100px;
+}
+
+
+.valoracion label {
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px;
+}
+
+.valoracion label:hover,
+.valoracion label:hover~label,
+.valoracion input:checked~label {
+    color: yellow;
+}
+
+.ScoreReview{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.YellowStar{
+    float: right;
+    color: yellow;
+    font-size: 30px;
+}
+
+.GreyStar{
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px;
+}
+
+.gridReview {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 4fr 1fr;
+    background-color: rgb(201, 218, 220);
+    border-color: black;
+    border-style: solid;
+    margin-top: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+}
+
+.imageUser {
+    justify-content: center;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.UserName {
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(247, 252, 220);
+    border-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 5px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.userimage {
+    width: 65px;
+    height: 70px;
+    border-color: rgb(0, 179, 255);
+    border-style: solid;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 1vh;
+}
+
+
+.review {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-color: black;
+    border-left: 2px;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+    border-style: solid;
+}
+
+.reviewtext {
+    margin: 10px;
+}
+
+
+#gridTittle {
     text-align: center;
     background-color: yellow;
     border-color: black;
@@ -237,7 +366,7 @@ table>tbody{
     margin-right: 10px;
 }
 
-#gridData{
+#gridData {
     display: grid;
     row-gap: 5px;
     column-gap: 5px;
@@ -250,11 +379,10 @@ table>tbody{
     margin-left: 10px;
     margin-right: 10px;
     overflow: hidden;
-    
 }
 
-#NameData{
-    background-color:pink;
+#NameData {
+    background-color: pink;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -262,37 +390,39 @@ table>tbody{
 }
 
 
-#ImageData{ 
-    background-color:orange;
+#ImageData {
+    background-color: orange;
     grid-row: 2;
 }
 
-#TrailerData{
+#TrailerData {
     background-color: red;
     grid-row: 2;
 }
 
-#DescriptionData{
+#DescriptionData {
     background-color: rgb(0, 225, 255);
     grid-row: 3;
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: left;
 }
-#BasicInfo{
+
+#BasicInfo {
     background-color: rgb(11, 206, 11);
     grid-row: 4;
-    grid-column-start:1;
-    grid-column-end:3;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-.DataText{
+
+.DataText {
     font: bold 120% monospace;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
 }
 
-.TextFile{
+.TextFile {
     margin-left: 10px;
     margin-right: 10px;
     width: 95%;

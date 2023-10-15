@@ -1,39 +1,33 @@
 <!doctype HTML>
 
 <head>
-    <title>GamingRankDetalle</title>
+    <title>GamingRank</title>
     <link type="text/css" rel="stylesheet" href="styleprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
-
 </head>
 
 <body>
     <header>
         <button class="headproyect">
             <a href="http://127.0.0.1:3000/Todo/PracticaWeb.html" style="text-decoration: none">
-            <h1><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
-                </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
-                    id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
+                <h1><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+                    </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                        id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
             </a>
-         </button>
+        </button>
     </header>
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1"><a class="botton" href="http://127.0.0.1:3000/Todo/PracticaWeb.html"><i
-                            class="bi bi-arrow-90deg-left"></i></a></div>
-                <div class="col-md-1"><a class="botton"><i class="bi bi-pencil"></i></a></div>
-                <div class="col-md-1"><a class="botton"><i class="bi bi-trash"></i></a></div>
-                <div class="col-md-6">
-                    <h1 id="Tittle"> Red Dead Redemption 2</h1>
-                </div>
-            </div>
+        <div class="gridBotton">
+            <a class="botton" href="http://127.0.0.1:3000/Todo/PracticaWeb.html"><i
+                    class="bi bi-arrow-90deg-left"></i></a>
+            <a class="botton"><i class="bi bi-pencil"></i></a>
+            <a class="botton"><i class="bi bi-trash"></i></a>
+            <h3 id="Tittle"> Red Dead Redemption 2</h3>
+        </div>
     </section>
     <section>
         <div class="gridInfo">
@@ -87,35 +81,86 @@
         </div>
     </section>
     <section>
-        <div id="formgrid">
-            <form role="form">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="email" placeholder="Nombre">
+        <div class="formgrid">
+            <div id="contentform">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="email" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Reseña </label>
+                        <input type="text" class="form-control" id="pwd" placeholder="Escriba su reseña">
+                    </div>
+                    <div id="score">
+                        <form>
+                            <div class="valoracion">
+                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                --><label for="radio1">★</label><!--
+                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                --><label for="radio2">★</label><!--
+                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                --><label for="radio3">★</label><!--
+                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                --><label for="radio4">★</label><!--
+                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                --><label for="radio5">★</label>
+                              </div>
+                          </form>
+                    </div>
+                    <button id="buttonsubmit" type="submit" class="bi bi-plus-circle"></button>
+                </form>
+            </div>
+        </div>
+        <div class="gridReview">
+            <div class="imageUser">
+                <img class="userimage" src="Imagenes_practica/user.png">
+                <p class="UserName">Alberto Mayoral Gómez</p>
+            </div>
+            <div class="review">
+                <p class="reviewtext">Red Dead Redemption es probablemente uno de los mejores videojuegos que he jugado en mi vida. Durante toda la aventura no dejas de sorprenderte por el nivel de inmersión que Rockstar ha logrado crear. Respecto a la historia y el desarrollo de todos sus personajes es sencillamente una de las mejores de todo el medio audiovisual. Si te gustan los juegos de mundo abierto, con una historia que te atrapa desde el primer momento y la ambientación western, este es tú juego.</p>
+                <div class="ScoreReview">
+                   <p class="YellowStar">★</p>
+                   <p class="YellowStar">★</p> 
+                   <p class="YellowStar">★</p> 
+                   <p class="YellowStar">★</p> 
+                   <p class="YellowStar">★</p> 
                 </div>
-                <div class="form-group">
-                    <label for="pwd">Reseña </label>
-                    <input type="text" class="form-control" id="pwd" placeholder="Escriba su reseña">
-                </div>
-                <div>
-                    <label for="select">Calificación</label>
-                    <select id="select">
-                        <option value="*" selected>*</option>
-                        <option value="1">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="1">6</option>
-                        <option value="2">7</option>
-                        <option value="3">8</option>
-                        <option value="4">9</option>
-                        <option value="5">10</option>
-                    </select>
-                </div>
-                <button id="buttonsubmit" type="submit" class="bi bi-plus-circle"></button>
-            </form>
+            </div>
+        </div>
+
+        <div class="gridReview">
+            <div class="imageUser">
+                <img class="userimage" src="Imagenes_practica/user.png">
+                <p class="UserName">Jorge Cimadevilla Aniz</p>
+            </div>
+            <div class="review">
+                <p class="reviewtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id reiciendis magnam facere doloribus magni ducimus eligendi saepe repellat dicta, voluptatibus numquam, voluptatum fugit, repellendus placeat labore nihil. Velit, architecto assumenda.</p>
+                <div class="ScoreReview">
+                    <p class="GreyStar">★</p> 
+                    <p class="GreyStar">★</p> 
+                    <p class="YellowStar">★</p>
+                    <p class="YellowStar">★</p> 
+                    <p class="YellowStar">★</p> 
+                 </div>
+            </div>
+        </div>
+
+        <div class="gridReview">
+            <div class="imageUser">
+                <img class="userimage" src="Imagenes_practica/user.png">
+                <p class="UserName">Ronald Sebastian Silvera Llimpe</p>
+            </div>
+            <div class="review">
+                <p class="reviewtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id reiciendis magnam facere doloribus magni ducimus eligendi saepe repellat dicta, voluptatibus numquam, voluptatum fugit, repellendus placeat labore nihil. Velit, architecto assumenda.</p>
+                <div class="ScoreReview">
+                    <p class="GreyStar">★</p>
+                    <p class="YellowStar">★</p>
+                    <p class="YellowStar">★</p> 
+                    <p class="YellowStar">★</p> 
+                    <p class="YellowStar">★</p>  
+                 </div>
+            </div>
         </div>
     </section>
 </body>
