@@ -136,8 +136,21 @@ header {
     width: 80%;
 }
 
-#tablaconsola {
+.tablaconsola {
     margin-top: 20px;
+}
+
+.tablaconsola>table{
+    width: 100%;
+}
+
+
+.tabla>th{
+    width: 25%;
+}
+
+.tablaconsola>th{
+    width: 25%;
 }
 
 table>thead {
@@ -145,28 +158,32 @@ table>thead {
     text-align: center;
 }
 
-#videojuego {
+.videojuego {
     background-color: white;
 }
 
-#ps {
+.ps {
     background-color: blue;
 }
 
-#xbox {
+.xbox {
     background-color: green;
 }
 
-#nintendo {
+.nintendo {
     background-color: red;
 }
 
-#pc {
+.pc {
     background-color: goldenrod;
 }
 
 .tick {
     color: green;
+}
+
+.tick-red {
+    color: red;
 }
 
 table>tbody {
@@ -397,4 +414,17 @@ table>tbody {
     margin-left: 10px;
     margin-right: 10px;
     width: 95%;
+}
+
+#selectGen{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 95%;
+}
+
+#plataforma{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }

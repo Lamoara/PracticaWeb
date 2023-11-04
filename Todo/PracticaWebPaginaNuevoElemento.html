@@ -15,9 +15,9 @@
         <button class="headproyect">
             <a href="http://127.0.0.1:3000/Todo/PracticaWeb.html" style="text-decoration: none">
                 <h1><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
-                </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
-                    id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
-            </a>    
+                    </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                        id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
+            </a>
         </button>
     </header>
     <section>
@@ -58,18 +58,55 @@
             <div id="BasicInfo">
                 <p class="DataText">Información Básica:</p>
                 <p>
-                    <input class="TextFile" type="text" placeholder="Fecha"> 
+                    <input class="TextFile" type="text" placeholder="Fecha">
                     <input class="TextFile" type="text" placeholder="Desarrolladora">
-                    <input class="TextFile" type="text" placeholder=""> 
+                    <select id="selectGen">
+                        <option value="value1" selected>Elegir género</option>
+                        <option value="value2">Aventura</option>
+                        <option value="value3">Acción</option>
+                        <option value="value4">Estrategia</option>
+                        <option value="value5">RPG</option>
+                        <option value="value6">Deporte</option>
+                        <option value="value7">Simulación</option>
+                        <option value="value8">Shooter</option>
+                        <option value="value9">Carreras</option>
+                        <option value="value10">Terror</option>
+                        <option value="value11">Puzle</option>
+                        <option value="value12">Plataformas</option>
+                        <option value="value13">MMO</option>
+                    </select>
+                <div id="plataforma">
+                    <h6>Plataformas compatibles:</h6>
+                    <section>
+                        <div class="tablaconsola">
+                            <table>
+                                <thead>
+                                    <th class="ps"><i class="bi bi-playstation"></i></th>
+                                    <th class="xbox"><i class="bi bi-xbox"></i></th>
+                                    <th class="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                                    <th class="pc"><i class="bi bi-pc-display"></i></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" value="Ps"><br></td>
+                                        <td><input type="checkbox" value="Xbox"><br></td>
+                                        <td><input type="checkbox" value="Switch"><br></td>
+                                        <td><input type="checkbox" value="Pc"><br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
                 </p>
             </div>
         </div>
     </section>
-    
+
 
     <section>
         <div class="gridBotton">
-            <a class="botton"  id="bottonwidth" href="http://127.0.0.1:3000/Todo/PracticaWebPaginaNuevoElemento.html"><i
+            <a class="botton" id="bottonwidth"><i
                     class="bi bi-plus-circle"></i></a>
         </div>
     </section>
