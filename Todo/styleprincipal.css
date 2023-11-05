@@ -41,40 +41,7 @@ header {
     height: 20px;
 }
 
-.gridBotton {
-    display: grid;
-    grid-template-columns: 60px 60px 60px 1fr;
-}
 
-#Tittle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-}
-
-.botton {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: black;
-    margin: 10px;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
-}
-
-.botton:hover {
-    border-style: dashed;
-    border-width: 10px;
-    border-color: green;
-}
-
-#bottonwidth {
-    width: 200px;
-}
 
 .img-responsive {
     width: 100%;
@@ -99,6 +66,44 @@ header {
     text-decoration:none;
 }
 
+.gridBotton {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 1fr;
+}
+
+.botton {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    margin: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.botton:hover {
+    border-style: dashed;
+    border-width: 10px;
+    border-color: green;
+}
+
+.bottonwidth {
+    width: 200px;
+}
+
+
+
+
+#Tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
 #description{
     margin: 10px;
     width: 100%;
@@ -107,33 +112,6 @@ header {
     overflow: hidden;
     word-wrap: break-word;
     word-break: keep-all;
-}
-
-#videotrailer{
-    width: 80%;
-}
-
-.elementCenter{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;  
-}
-
-#trailer{
-    width: 80%;
-}
-
-.data>h3 {
-    font-size: larger;
-    font-weight: 1000;
-}
-
-.data>ul>li {
-    font-size: 20;
-    text-align: left;
-    word-wrap: break-word;
-    word-break: keep-all;
-    width: 80%;
 }
 
 .tablaconsola {
@@ -155,6 +133,11 @@ header {
 
 table>thead {
     background-color: white;
+    text-align: center;
+}
+
+table>tbody {
+    background-color: transparent;
     text-align: center;
 }
 
@@ -186,9 +169,14 @@ table>thead {
     color: red;
 }
 
-table>tbody {
-    background-color: transparent;
-    text-align: center;
+.elementCenter{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+}
+
+#trailer{
+    width: 100%;
 }
 
 .formgrid {
@@ -200,26 +188,14 @@ table>tbody {
     border-radius: 10px;
     border-color: black;
     border-style: solid;
-
-}
-
-#buttonsubmit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: black;
-    border-radius: 5px;
-    width: 100px;
-    height: 50px;
-}
-
-#form-control {
-    height: 30px;
 }
 
 #contentform {
     margin: 10px;
+}
+
+#form-control {
+    height: 30px;
 }
 
 .form-group {
@@ -228,10 +204,6 @@ table>tbody {
 
 #score {
     margin: 10px;
-}
-
-#buttonsubmit {
-    margin-top: 20px;
 }
 
 .valoracion {
@@ -244,7 +216,6 @@ table>tbody {
     position: absolute;
     top: -100px;
 }
-
 
 .valoracion label {
     float: right;
@@ -275,6 +246,18 @@ table>tbody {
     float: right;
     color: #c1b8b8;
     font-size: 30px;
+}
+
+#buttonsubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
 }
 
 .gridReview {
@@ -343,6 +326,8 @@ table>tbody {
 }
 
 
+
+
 #gridTittle {
     text-align: center;
     background-color: yellow;
@@ -358,7 +343,6 @@ table>tbody {
     display: grid;
     row-gap: 5px;
     column-gap: 5px;
-
     background-color: black;
     border-color: black;
     border-style: solid;
