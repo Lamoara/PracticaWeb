@@ -41,7 +41,7 @@ header {
     height: 20px;
 }
 
-.pieDePagina{
+.pieDePagina {
     background-color: black;
     width: 100%;
     height: 120px;
@@ -50,7 +50,7 @@ header {
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 120px;
     height: 70px;
     margin: 10px;
@@ -82,12 +82,16 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: larger;
     text-align: center;
-    color: rgba(6, 62, 165, 0.986);
+    color: black;
+}
+
+.GameName:hover {
+    color: red;
 }
 
 .gridBotton {
     display: grid;
-    grid-template-columns: 60px 60px 60px 1fr;
+    grid-template-columns: 60px 60px 60px;
 }
 
 .botton {
@@ -121,9 +125,13 @@ header {
     align-items: center;
     justify-content: center;
     color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#description{
+#description {
     margin: 10px;
     width: 100%;
     font-size: 3vb;
@@ -137,16 +145,15 @@ header {
     margin-top: 20px;
 }
 
-.tablaconsola>table{
+.tablaconsola>table {
     width: 100%;
 }
 
-
-.tabla>th{
+.tabla>th {
     width: 25%;
 }
 
-.tablaconsola>th{
+.tablaconsola>th {
     width: 25%;
 }
 
@@ -188,14 +195,19 @@ table>tbody {
     color: red;
 }
 
-.elementCenter{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;  
+.elementCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#trailer{
+#espacioTrailer{
+    height: 300px;
+}
+
+#trailer {
     width: 100%;
+    height: 100%;
 }
 
 .formgrid {
@@ -248,20 +260,20 @@ table>tbody {
     color: yellow;
 }
 
-.ScoreReview{
+.ScoreReview {
     position: relative;
     overflow: hidden;
     display: inline-block;
     margin-left: 20px;
 }
 
-.YellowStar{
+.YellowStar {
     float: right;
     color: yellow;
     font-size: 30px;
 }
 
-.GreyStar{
+.GreyStar {
     float: right;
     color: #c1b8b8;
     font-size: 30px;
@@ -425,14 +437,14 @@ table>tbody {
     margin-bottom: 5px;
 }
 
-#selectGen{
+#selectGen {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     width: 95%;
 }
 
-#plataforma{
+#plataforma {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
