@@ -124,12 +124,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 600px) {
+    #Tittle {
+        font-size: 30px;
+    }
+}
+
 
 #description {
     margin: 10px;
@@ -139,6 +147,20 @@ header {
     overflow: hidden;
     word-wrap: break-word;
     word-break: keep-all;
+}
+
+@media (max-width: 600px) {
+    #description {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    #info {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
 }
 
 .tablaconsola {
@@ -201,7 +223,7 @@ table>tbody {
     align-items: center;
 }
 
-#espacioTrailer{
+#espacioTrailer {
     height: 300px;
 }
 
@@ -292,9 +314,6 @@ table>tbody {
 }
 
 .gridReview {
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 4fr 1fr;
     background-color: rgb(201, 218, 220);
     border-color: black;
     border-style: solid;
@@ -305,16 +324,24 @@ table>tbody {
     border-radius: 10px;
 }
 
+@media (min-width: 600px) {
+    .gridReview {
+        display: flex;
+    }
+}
+
 .imageUser {
     justify-content: center;
     text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
 }
 
-.UserName {
+@media (min-width: 600px) {
+    .imageUser {
+        width: 20%;
+    }
+}
+
+.userName {
     justify-content: center;
     text-align: center;
     background-color: rgb(247, 252, 220);
@@ -322,13 +349,11 @@ table>tbody {
     border-radius: 5px;
     border-style: solid;
     margin: 5px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    text-wrap: wrap;
+    margin-bottom: 12px;
 }
 
-.userimage {
+.userImage {
     width: 65px;
     height: 70px;
     border-color: rgb(0, 179, 255);
@@ -336,20 +361,35 @@ table>tbody {
     background-color: white;
     border-radius: 3px;
     margin-top: 1vh;
+
 }
 
+@media (min-width: 600px) {
+    .userImage {
+        width: 65px;
+        height: 70px;
+    }
+}
 
 .review {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
     border-color: black;
-    border-left: 2px;
     border-right: 0;
     border-bottom: 0;
-    border-top: 0;
+    border-top: 2px;
+    border-left: 0px;
     border-style: solid;
+}
+
+@media (min-width: 600px) {
+    .review {
+        width: 80%;
+        border-color: black;
+        border-left: 2px;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+        border-style: solid;
+    }
 }
 
 .reviewtext {
@@ -361,7 +401,7 @@ table>tbody {
 
 #gridTittle {
     text-align: center;
-    background-color: yellow;
+    background-color: rgb(255, 255, 62);
     border-color: black;
     border-style: solid;
     border-top-right-radius: 30px;
@@ -373,7 +413,6 @@ table>tbody {
 #gridData {
     display: grid;
     row-gap: 5px;
-    column-gap: 5px;
     background-color: black;
     border-color: black;
     border-style: solid;
@@ -385,34 +424,73 @@ table>tbody {
 }
 
 #NameData {
-    background-color: pink;
+    background-color: rgb(252, 218, 224);
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;
 }
 
-
-#ImageData {
-    background-color: orange;
+#imgandtrailer {
     grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 0;
+    margin-right: 0;
 }
 
+
+#ImageData {
+    background-color: rgb(255, 206, 116);
+    border-right: 5px;
+}
+
+
 #TrailerData {
-    background-color: red;
-    grid-row: 2;
+    background-color: rgb(255, 125, 125);
+    border-left: 5px;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: black;
+}
+
+@media (max-width: 600px) {
+    #TrailerData {
+        border-left: 0px;
+        border-bottom: 0px;
+        border-top: 5px;
+        border-right: 0px;
+        border-style: solid;
+        border-color: black;
+    }
+}
+
+@media (max-width: 600px) {
+    .textsize {
+        height: 60px;
+        text-align: left;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
 }
 
 #DescriptionData {
-    background-color: rgb(0, 225, 255);
+    background-color: rgb(154, 243, 255);
     grid-row: 3;
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: left;
 }
 
+#textDescription {
+    height: 80px;
+}
+
 #BasicInfo {
-    background-color: rgb(11, 206, 11);
+    background-color: rgb(133, 255, 133);
     grid-row: 4;
     grid-column-start: 1;
     grid-column-end: 3;

@@ -31,32 +31,41 @@
         <div id="gridTittle">
             <h1>Crear nuevo elemento</h1>
         </div>
+
         <div id="gridData">
             <div id="NameData">
-                <p class="DataText">Nombre del Videojuego:</p>
+                <p class="DataText">Título:</p>
                 <p>
-                    <input class="TextFile" type="text">
+                    <input class="TextFile" type="text" placeholder="Nombre del videojuego">
                 </p>
             </div>
 
-            <div id="ImageData">
-                <p class="DataText">Imagen URL:</p>
-                <p>
-                    <input class="TextFile" type="text">
-                </p>
-            </div>
 
-            <div id="TrailerData">
-                <p class="DataText">Trailer URL:</p>
-                <p>
-                    <input class="TextFile" type="text">
-                </p>
+            <div class="container" id="imgandtrailer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="ImageData">
+                        <p class="DataText">Imagen URL:</p>
+                        <p>
+                            <textarea class="TextFile textsize" type="url"
+                                placeholder="Copie el enlace de la portada del videojuego"></textarea>
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="TrailerData">
+                        <p class="DataText">Trailer URL:</p>
+                        <p>
+                            <textarea class="TextFile textsize" type="url" 
+                            placeholder="Copie el enlace al trailer del videojuego"></textarea>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div id="DescriptionData">
                 <p class="DataText">Descripción:</p>
                 <p>
-                    <input class="TextFile" type="text">
+                    <textarea class="TextFile" id="textDescription" type="text" 
+                    placeholder="Escribe una breve sinopsis"></textarea>
                 </p>
             </div>
 
