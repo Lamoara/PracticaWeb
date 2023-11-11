@@ -107,9 +107,16 @@ header {
     height: 50px;
 }
 
+@media (max-width: 600px) {
+    .botton {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .botton:hover {
     border-style: dashed;
-    border-width: 10px;
+    border-width: 5px;
     border-color: green;
 }
 
@@ -301,7 +308,7 @@ table>tbody {
     font-size: 30px;
 }
 
-#buttonsubmit {
+#bottonsubmit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,6 +318,13 @@ table>tbody {
     width: 100px;
     height: 50px;
     margin-top: 20px;
+}
+
+
+#bottonsubmit:hover {
+    border-style: dashed;
+    border-width: 5px;
+    border-color: green;
 }
 
 .gridReview {
@@ -435,8 +449,6 @@ table>tbody {
     grid-row: 2;
     grid-column-start: 1;
     grid-column-end: 3;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 
@@ -464,16 +476,6 @@ table>tbody {
         border-right: 0px;
         border-style: solid;
         border-color: black;
-    }
-}
-
-@media (max-width: 600px) {
-    .textsize {
-        height: 60px;
-        text-align: left;
-        overflow: hidden;
-        word-wrap: break-word;
-        word-break: keep-all;
     }
 }
 
