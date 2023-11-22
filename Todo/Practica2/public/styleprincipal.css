@@ -542,3 +542,34 @@ table>tbody {
     align-items: center;
     justify-content: center;
 }
+
+html, body{
+    height: 80%;
+}
+
+.contenedor{
+    height: 49%;
+    background-color:#81c2ed;
+    margin: 1% 1%;
+    border-radius: 5px;
+    border-color: rgb(124, 230, 230);
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+#buttonBack{
+    height: 30px;
+    width: 200px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    border-style: double;
+    border-color: green;
+}
+
+#buttonBack:hover{
+    background-color: rgb(116, 206, 26);
+    border-color: rgb(9, 72, 9);
+}
