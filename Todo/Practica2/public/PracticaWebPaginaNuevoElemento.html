@@ -2,7 +2,7 @@
 
 <head>
     <title>GamingRankNuevoElemento</title>
-    <link type="text/css" rel="stylesheet" href="/Practica2/public/styleprincipal.css" />
+    <link type="text/css" rel="stylesheet" href="/css/styleprincipal.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -13,17 +13,17 @@
 <body>
     <header>
         <button class="headproyect">
-            <a href="PracticaWeb.html" class="decoration">
-                <h1><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+            <a href="/" class="decoration">
+                <h1><img id="fantasmas" src="/Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
                     </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
-                        id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
+                        id="colorK">k</span><img id="fantasmas" src="/Imagenes_practica/Fantasmas.jpg"></h1>
             </a>
         </button>
     </header>
 
     <section>
         <div class="gridButton">
-            <a class="button" href="/Practica2/public/PracticaWeb.html"><i class="bi bi-arrow-90deg-left"></i></a>
+            <a class="button" href="/"><i class="bi bi-arrow-90deg-left"></i></a>
         </div>
     </section>
 
@@ -33,25 +33,26 @@
         </div>
 
         <div id="gridData">
+            <form action="post/new" method="post">
             <div id="NameData">
                 <p class="DataText">Título:</p>
                 <p>
-                    <input class="TextFile" type="text" placeholder="Nombre del videojuego">
+                    <input class="TextFile" type="text" name="name" placeholder="Nombre del videojuego">
                 </p>
             </div>
             <div class="row" id="imgandtrailer">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
                     <p class="DataText">Imagen URL:</p>
                     <p>
-                        <textarea class="TextFile" type="url"
-                            placeholder="Copie el enlace de la portada del videojuego"></textarea>
+                        <input class="TextFile" type="url" name="image"
+                            placeholder="Copie el enlace de la portada del videojuego"></input>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
                     <p class="DataText">Trailer URL:</p>
                     <p>
-                        <textarea class="TextFile" type="url"
-                            placeholder="Copie el enlace al trailer del videojuego"></textarea>
+                        <input class="TextFile" type="url"
+                            placeholder="Copie el enlace al trailer del videojuego"></input>
                     </p>
 
                 </div>
@@ -60,8 +61,8 @@
             <div id="DescriptionData">
                 <p class="DataText">Descripción:</p>
                 <p>
-                    <textarea class="TextFile" id="textDescription" type="text"
-                        placeholder="Escribe una breve sinopsis"></textarea>
+                    <input class="TextFile" id="textDescription" type="text" name="description"
+                        placeholder="Escribe una breve sinopsis"></input>
                 </p>
             </div>
 
@@ -115,18 +116,19 @@
                 </div>
                 </p>
             </div>
+            <div class="gridButtonLarge">
+                <input class="buttonsubmitlarge" type="submit" value="Save" href="/"><i class="bi bi-upload"></i></input>
+            </div>
+        </form>
         </div>
     </section>
 
     <section>
-        <div class="gridButtonLarge">
-            <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
-        </div>
     </section>
     <footer>
         <div class="pieDePagina">
-            <a href="/Practica2/public/PracticaWeb.html" class="decoration">
-                <image class="logo" src="Imagenes_practica/LogoGR.jpg"></image>
+            <a href="/" class="decoration">
+                <image class="logo" src="/Imagenes_practica/LogoGR.jpg"></image>
             </a>
         </div>
     </footer>

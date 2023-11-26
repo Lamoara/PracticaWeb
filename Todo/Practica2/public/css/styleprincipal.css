@@ -1,0 +1,580 @@
+body {
+    background-image: url("Imagenes_practica/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headproyect {
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+}
+
+header {
+    background-color: black;
+    text-align: center;
+    font-family: 'Lobster Two', serif;
+}
+
+#colorGaming {
+    color: yellow;
+}
+
+#colorR {
+    color: pink;
+}
+
+#colorA {
+    color: rgb(0, 225, 255);
+}
+
+#colorN {
+    color: orange;
+}
+
+#colorK {
+    color: red;
+}
+
+#fantasmas {
+    width: 30px;
+    height: 20px;
+}
+
+.pieDePagina {
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: 70px;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+
+.decoration {
+    text-decoration: none;
+}
+
+.img-responsive {
+    width: 100%;
+    height: 75%;
+    margin-top: 4vh;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-radius: 5%;
+    border-color: black;
+}
+
+.img-responsive:hover {
+    border-color: rgb(255, 0, 0);
+    border-width: 3px;
+}
+
+.GameName {
+    margin-top: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
+    color: black;
+}
+
+.GameName:hover {
+    color: red;
+}
+
+#gridButton {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.34%;
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: rgb(195, 210, 211);
+    width: 100%;
+    height: 50px;
+    border-style: solid;
+    margin-bottom: 25px;
+    border-width: 1px;
+}
+
+.button:hover {
+    background-color: rgb(203, 241, 241);
+}
+
+
+#buttonnew{
+    background-color: black;
+    color: white;
+    height: 50px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+#buttonnew:hover{
+    border-color: green;
+    border-style: dashed;
+    border-width: 7px;
+}
+
+.img-fluid {
+    width: 80%;
+    height: 60%;
+}
+
+
+#Tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    #Tittle {
+        font-size: 30px;
+    }
+}
+
+
+#description {
+    margin: 10px;
+    width: 100%;
+    font-size: 3vb;
+    text-align: left;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+@media (max-width: 600px) {
+    #description {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    #info {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+.tablaconsola {
+    margin-top: 20px;
+}
+
+.tablaconsola>table {
+    width: 100%;
+}
+
+.tabla>th {
+    width: 25%;
+}
+
+.tablaconsola>th {
+    width: 25%;
+}
+
+table>thead {
+    background-color: white;
+    text-align: center;
+}
+
+table>tbody {
+    background-color: transparent;
+    text-align: center;
+}
+
+.videojuego {
+    background-color: white;
+}
+
+.ps {
+    background-color: blue;
+}
+
+.xbox {
+    background-color: green;
+}
+
+.nintendo {
+    background-color: red;
+}
+
+.pc {
+    background-color: goldenrod;
+}
+
+.tick {
+    color: green;
+}
+
+.tick-red {
+    color: red;
+}
+
+.elementCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#espacioTrailer {
+    height: 300px;
+}
+
+#trailer {
+    width: 100%;
+    height: 100%;
+}
+
+.formgrid {
+    background-color: rgb(201, 218, 220);
+    display: grid;
+    margin-top: 2vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+}
+
+#contentform {
+    margin: 10px;
+}
+
+#form-control {
+    height: 30px;
+}
+
+.form-group {
+    margin: 10px;
+}
+
+#score {
+    margin: 10px;
+}
+
+.valoracion {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.valoracion input {
+    position: absolute;
+    top: -100px;
+}
+
+.valoracion label {
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px;
+}
+
+.valoracion label:hover,
+.valoracion label:hover~label,
+.valoracion input:checked~label {
+    color: yellow;
+}
+
+.ScoreReview {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.YellowStar {
+    float: right;
+    color: yellow;
+    font-size: 30px;
+}
+
+.GreyStar {
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px;
+}
+
+.buttonsubmitlarge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(15, 197, 207);
+    border-style: double;
+    border-width: 5px;
+    border-color: rgb(103, 243, 250);
+    border-radius: 5px;
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+.buttonsubmitlarge:hover {
+    background-color: rgb(34, 118, 122);
+    border-style: double;
+    border-width: 5px;
+    border-color: rgb(39, 175, 183);
+}
+
+.gridReview {
+    background-color: rgb(201, 218, 220);
+    border-color: black;
+    border-style: solid;
+    margin-top: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+    .gridReview {
+        display: flex;
+    }
+}
+
+.imageUser {
+    justify-content: center;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .imageUser {
+        width: 20%;
+    }
+}
+
+.userName {
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(247, 252, 220);
+    border-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 5px;
+    text-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.userImage {
+    width: 65px;
+    height: 70px;
+    border-color: rgb(0, 179, 255);
+    border-style: solid;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 1vh;
+
+}
+
+@media (min-width: 600px) {
+    .userImage {
+        width: 65px;
+        height: 70px;
+    }
+}
+
+.review {
+    border-color: black;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 2px;
+    border-left: 0px;
+    border-style: solid;
+}
+
+@media (min-width: 600px) {
+    .review {
+        width: 80%;
+        border-color: black;
+        border-left: 2px;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+        border-style: solid;
+    }
+}
+
+.reviewtext {
+    margin: 10px;
+}
+
+
+
+
+#gridTittle {
+    text-align: center;
+    background-color: rgb(255, 255, 62);
+    border-color: black;
+    border-style: solid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#gridData {
+    display: grid;
+    row-gap: 5px;
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    overflow: hidden;
+}
+
+#NameData {
+    background-color: rgb(252, 218, 224);
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+#imgandtrailer {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+#ImageData {
+    background-color: rgb(255, 206, 116);
+    border-right: 5px;
+}
+
+
+#TrailerData {
+    background-color: rgb(255, 125, 125);
+    border-left: 5px;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: black;
+}
+
+@media (max-width: 600px) {
+    #TrailerData {
+        border-left: 0px;
+        border-bottom: 0px;
+        border-top: 5px;
+        border-right: 0px;
+        border-style: solid;
+        border-color: black;
+    }
+}
+
+#DescriptionData {
+    background-color: rgb(154, 243, 255);
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left;
+}
+
+#textDescription {
+    height: 80px;
+}
+
+#BasicInfo {
+    background-color: rgb(133, 255, 133);
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.DataText {
+    font: bold 120% monospace;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.TextFile {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+}
+
+#InfoFecha {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#selectGen {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 95%;
+}
+
+#plataforma {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.gridButtonLarge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html, body{
+    height: 80%;
+}
+
+.contenedor{
+    height: 49%;
+    background-color:#81c2ed;
+    margin: 1% 1%;
+    border-radius: 5px;
+    border-color: rgb(124, 230, 230);
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+#buttonBack{
+    height: 30px;
+    width: 200px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    border-style: double;
+    border-color: green;
+}
+
+#buttonBack:hover{
+    background-color: rgb(116, 206, 26);
+    border-color: rgb(9, 72, 9);
+}
