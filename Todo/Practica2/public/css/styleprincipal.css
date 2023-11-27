@@ -1,6 +1,5 @@
 body {
-    background-image: url("Imagenes_practica/Fondo.jpg");
-    background-repeat: no-repeat;
+    background-image: url("/Imagenes_practica/Fondo.jpg");
     background-size: cover;
 }
 

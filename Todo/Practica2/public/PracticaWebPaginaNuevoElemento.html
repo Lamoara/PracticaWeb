@@ -34,95 +34,94 @@
 
         <div id="gridData">
             <form action="post/new" method="post">
-            <div id="NameData">
-                <p class="DataText">Título:</p>
-                <p>
-                    <input class="TextFile" type="text" name="name" placeholder="Nombre del videojuego">
-                </p>
-            </div>
-            <div class="row" id="imgandtrailer">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
-                    <p class="DataText">Imagen URL:</p>
+                <div id="NameData">
+                    <p class="DataText">Título:</p>
                     <p>
-                        <input class="TextFile" type="url" name="image"
-                            placeholder="Copie el enlace de la portada del videojuego"></input>
+                        <input class="TextFile" type="text" name="name" placeholder="Nombre del videojuego">
                     </p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
-                    <p class="DataText">Trailer URL:</p>
+                <div class="row" id="imgandtrailer">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
+                        <p class="DataText">Imagen URL:</p>
+                        <p>
+                            <input class="TextFile" type="url" name="image"
+                                placeholder="Copie el enlace de la portada del videojuego"></input>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
+                        <p class="DataText">Trailer URL:</p>
+                        <p>
+                            <input class="TextFile" type="url"
+                                placeholder="Copie el enlace al trailer del videojuego"></input>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div id="DescriptionData">
+                    <p class="DataText">Descripción:</p>
                     <p>
-                        <input class="TextFile" type="url"
-                            placeholder="Copie el enlace al trailer del videojuego"></input>
+                        <input class="TextFile" id="textDescription" type="text" name="description"
+                            placeholder="Escribe una breve sinopsis"></input>
                     </p>
-
                 </div>
-            </div>
 
-            <div id="DescriptionData">
-                <p class="DataText">Descripción:</p>
-                <p>
-                    <input class="TextFile" id="textDescription" type="text" name="description"
-                        placeholder="Escribe una breve sinopsis"></input>
-                </p>
-            </div>
+                <div id="BasicInfo">
+                    <p class="DataText">Información Básica:</p>
+                    <p>
+                    <div id="InfoFecha">
+                        <h6>Fecha de lanzamiento:</h6>
+                        <input type="date" value="0000-00-00" />
+                    </div>
+                    <input class="TextFile" type="text" placeholder="Empresa Desarrolladora">
 
-            <div id="BasicInfo">
-                <p class="DataText">Información Básica:</p>
-                <p>
-                <div id="InfoFecha">
-                    <h6>Fecha de lanzamiento:</h6>
-                    <input type="date" value="0000-00-00" />
+                    <select id="selectGen">
+                        <option value="value1" selected>Elegir género</option>
+                        <option value="value2">Aventura</option>
+                        <option value="value3">Acción</option>
+                        <option value="value4">Estrategia</option>
+                        <option value="value5">RPG</option>
+                        <option value="value6">Deporte</option>
+                        <option value="value7">Simulación</option>
+                        <option value="value8">Shooter</option>
+                        <option value="value9">Carreras</option>
+                        <option value="value10">Terror</option>
+                        <option value="value11">Puzle</option>
+                        <option value="value12">Plataformas</option>
+                        <option value="value13">MMO</option>
+                    </select>
+
+                    <div id="plataforma">
+                        <h6>Plataformas compatibles:</h6>
+                        <section>
+                            <div class="tablaconsola">
+                                <table>
+                                    <thead>
+                                        <th class="ps"><i class="bi bi-playstation"></i></th>
+                                        <th class="xbox"><i class="bi bi-xbox"></i></th>
+                                        <th class="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                                        <th class="pc"><i class="bi bi-pc-display"></i></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" value="Ps"><br></td>
+                                            <td><input type="checkbox" value="Xbox"><br></td>
+                                            <td><input type="checkbox" value="Switch"><br></td>
+                                            <td><input type="checkbox" value="Pc"><br></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                    </p>
                 </div>
-                <input class="TextFile" type="text" placeholder="Empresa Desarrolladora">
-
-                <select id="selectGen">
-                    <option value="value1" selected>Elegir género</option>
-                    <option value="value2">Aventura</option>
-                    <option value="value3">Acción</option>
-                    <option value="value4">Estrategia</option>
-                    <option value="value5">RPG</option>
-                    <option value="value6">Deporte</option>
-                    <option value="value7">Simulación</option>
-                    <option value="value8">Shooter</option>
-                    <option value="value9">Carreras</option>
-                    <option value="value10">Terror</option>
-                    <option value="value11">Puzle</option>
-                    <option value="value12">Plataformas</option>
-                    <option value="value13">MMO</option>
-                </select>
-
-                <div id="plataforma">
-                    <h6>Plataformas compatibles:</h6>
-                    <section>
-                        <div class="tablaconsola">
-                            <table>
-                                <thead>
-                                    <th class="ps"><i class="bi bi-playstation"></i></th>
-                                    <th class="xbox"><i class="bi bi-xbox"></i></th>
-                                    <th class="nintendo"><i class="bi bi-nintendo-switch"></i></th>
-                                    <th class="pc"><i class="bi bi-pc-display"></i></th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox" value="Ps"><br></td>
-                                        <td><input type="checkbox" value="Xbox"><br></td>
-                                        <td><input type="checkbox" value="Switch"><br></td>
-                                        <td><input type="checkbox" value="Pc"><br></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-                </p>
-            </div>
-            <div class="gridButtonLarge">
-                <input class="buttonsubmitlarge" type="submit" value="Save" href="/"><i class="bi bi-upload"></i></input>
-            </div>
-        </form>
         </div>
     </section>
-
+    <div class="gridButtonLarge">
+        <input class="buttonsubmitlarge" type="submit" value="Save" href="/"></input>
+    </div>
+    </form>
     <section>
     </section>
     <footer>
