@@ -51,7 +51,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
                         <p class="DataText">Trailer URL:</p>
                         <p>
-                            <input class="TextFile" type="url"
+                            <input class="TextFile" type="url" name="trailer"
                                 placeholder="Copie el enlace al trailer del videojuego"></input>
                         </p>
 
@@ -71,11 +71,11 @@
                     <p>
                     <div id="InfoFecha">
                         <h6>Fecha de lanzamiento:</h6>
-                        <input type="date" value="0000-00-00" />
+                        <input type="date" name="fecha" value="0000-00-00" />
                     </div>
-                    <input class="TextFile" type="text" placeholder="Empresa Desarrolladora">
+                    <input class="TextFile" type="text" name="desarrolladora" placeholder="Empresa Desarrolladora">
 
-                    <select id="selectGen">
+                    <select id="selectGen" onchange="seleccionarGenero();" name="genero">
                         <option value="value1" selected>Elegir género</option>
                         <option value="value2">Aventura</option>
                         <option value="value3">Acción</option>
@@ -90,6 +90,7 @@
                         <option value="value12">Plataformas</option>
                         <option value="value13">MMO</option>
                     </select>
+                    <span id="generoSeleccionado"></span>
 
                     <div id="plataforma">
                         <h6>Plataformas compatibles:</h6>

@@ -12,9 +12,9 @@ router.get('/', (req, res) => {
 
 router.post('/post/new', (req, res) => {
 
-    let { name, image, description } = req.body;
+    let { name, image, description, trailer, fecha, desarrolladora, genero, consola } = req.body;
 
-    gameService.addPost({ name, image, description });
+    gameService.addPost({ name, image, description, trailer, fecha, desarrolladora, genero, consola });
 
     res.render('PaginaIntermedia',{name});
 });

@@ -1,7 +1,8 @@
 const posts = new Map();
 let nextId = 0;
 
-addPost({ name: "Red Dead Redemption 2", image: "/Imagenes_practica/RDR2.jpg", description: "Barata, barata" });
+addPost({ name: "Red Dead Redemption 2", image: "/Imagenes_practica/RDR2.jpg", description: "Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder sobrevivir. Mientras crecen las divisiones que amenazan con el fin de la pandilla Arthur debe decidir entre sus propios ideales y su lealtad a la pandilla que lo crió.",
+ fecha:'26-10-2018', trailer:'https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb', desarrolladora:'Rockstar'});
 addPost({ name: "Factorio", image:"/Imagenes_practica/Factorio.jpeg", description: "Pago bien" });
 addPost({ name: "Call of Duty", image: "/Imagenes_practica/COD.jpeg", description: "Barata, barata" });
 addPost({ name: "Grand theft auto V", image: "/Imagenes_practica/gtav.jpeg", description: "Pago bien" });
@@ -35,4 +36,11 @@ export function getPosts(){
 
 export function getPost(id){
     return posts.get(id);
+}
+
+export function seleccionarGenero(){
+    let selectGen = document.getElementById('selectGen');
+    let genero = selectGen.value;    
+
+    document.getElementById("generoSeleccionado").innerText = `Has seleccionado ${genero}`;
 }
