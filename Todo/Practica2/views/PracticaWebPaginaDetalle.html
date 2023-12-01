@@ -89,101 +89,58 @@
             </div>
         </div>
     </section>
-
-    <section>
-        <div class="formgrid">
-            <div id="contentform">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="email" placeholder="Nombre">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Reseña </label>
-                        <input type="text" class="form-control" id="pwd" placeholder="Escriba su reseña">
-                    </div>
-                    <div id="score">
-                        <form>
-                            <div class="valoracion">
-                                <input id="radio1" type="radio" name="estrellas" value="5"><!--
-                                --><label for="radio1">★</label><!--
-                                --><input id="radio2" type="radio" name="estrellas" value="4"><!--
-                                --><label for="radio2">★</label><!--
-                                --><input id="radio3" type="radio" name="estrellas" value="3"><!--
-                                --><label for="radio3">★</label><!--
-                                --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                --><label for="radio4">★</label><!--
-                                --><input id="radio5" type="radio" name="estrellas" value="1"><!--
-                                --><label for="radio5">★</label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="gridButtonLarge">
-                        <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
-                    </div>
-                </form>
+    <form action="PracticaWebPaginaDetalle" method="post">
+        <section>
+            <div class="formgrid">
+                <div id="contentform">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="name" class="form-control" id="email" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Reseña </label>
+                            <input type="text" name="text" class="form-control" id="pwd" placeholder="Escriba su reseña">
+                        </div>
+                        <div id="score">
+                            <form>
+                                <div class="valoracion">
+                                    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio1">★</label><!--
+                                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio2">★</label><!--
+                                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio3">★</label><!--
+                                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio4">★</label><!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio5">★</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="gridButtonLarge">
+                            <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload" href = '/'></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-
+        </form>
+        {{#post.comments}}
         <div class="gridReview">
             <div class="imageUser">
                 <img class="userImage" src="/Imagenes_practica/user.png">
-                <p class="userName">Alberto Mayoral Gómez</p>
+                <p class="userName">{{user}}</p>
             </div>
             <div class="review">
-                <p class="reviewtext">Red Dead Redemption es probablemente uno de los mejores videojuegos que he jugado
-                    en mi vida. Durante toda la aventura no dejas de sorprenderte por el nivel de inmersión que Rockstar
-                    ha logrado crear. Respecto a la historia y el desarrollo de todos sus personajes es sencillamente
-                    una de las mejores de todo el medio audiovisual. Si te gustan los juegos de mundo abierto, con una
-                    historia que te atrapa desde el primer momento y la ambientación western, este es tú juego.</p>
+                <p class="reviewtext">{{text}}</p>
                 <div class="ScoreReview">
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
+                    {{#reviewValue}}
+                        <p class="YellowStar">★</p>
+                    {{/reviewValue}}
                 </div>
             </div>
         </div>
-
-        <div class="gridReview">
-            <div class="imageUser">
-                <img class="userImage" src="/Imagenes_practica/user.png">
-                <p class="userName">Jorge Cimadevilla Aniz</p>
-            </div>
-            <div class="review">
-                <p class="reviewtext">Uno de los juegos más sobrevalorados de la industria del videojuego. El mundo
-                    abierto no es absolutamente nada novedoso, al igual que los gráficos. Respecto a su historia, es
-                    lenta y aburrida. No entiendo como a la gente le puede gustar.</p>
-                <div class="ScoreReview">
-                    <p class="GreyStar">★</p>
-                    <p class="GreyStar">★</p>
-                    <p class="GreyStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="gridReview">
-            <div class="imageUser">
-                <img class="userImage" src="/Imagenes_practica/user.png">
-                <p class="userName">Ronald Sebastian Silvera Llimpe</p>
-            </div>
-            <div class="review">
-                <p class="reviewtext">Simplemente un juego de locos, es un juego que eleva la narrativa en los
-                    videojuegos a un nivel que nunca antes había visto. Con su rica historia de la banda de forajidos,
-                    el juego te ofrece una experiencia emocionalmente impactante y profundamente satisfactoria que
-                    captura la esencia misma de la vida en el Oeste.</p>
-                <div class="ScoreReview">
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                    <p class="YellowStar">★</p>
-                </div>
-            </div>
-        </div>
+        {{/post.comments}}
     </section>
     <footer>
         <div class="pieDePagina">
