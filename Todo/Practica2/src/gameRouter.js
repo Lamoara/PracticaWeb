@@ -24,7 +24,10 @@ router.get('/post/:id', (req, res) => {
 
     let post = gameService.getPost(req.params.id);
 
-    res.render('PracticaWebPaginaDetalle', {post});
+    let {user, text} = req.body;
+    gameService.addComment(post, {user, text});
+
+    res.render('PracticaWebPaginaDetalle', { post });
 });
 
 router.get('/post/:id/delete', (req, res) => {

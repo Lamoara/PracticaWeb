@@ -45,7 +45,7 @@ header {
     width: 100%;
     height: 120px;
     margin-top: 30px;
-    display: flex;
+    display: flex; /*que sea flexible los elementos que este tenga dentro */
     align-items: center;
 }
 
