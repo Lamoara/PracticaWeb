@@ -1,0 +1,134 @@
+<!doctype HTML>  
+
+<head> <!-- inicio de la cabecera del programa --> 
+
+    <title>GamingRankNuevoElemento</title> <!-- título que tedrá nuestra página -->
+    <link type="text/css" rel="stylesheet" href="styleprincipal.css" /> <!-- con este link le asociamos un documento css (el estilo)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <button class="headproyect">
+            <a href="PracticaWeb.html" class="decoration">
+                <h1><img id="fantasmas" src="Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+                    </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                        id="colorK">k</span><img id="fantasmas" src="Imagenes_practica/Fantasmas.jpg"></h1>
+            </a>
+        </button>
+    </header>
+
+    <section>
+        <div class="gridButton">
+            <a class="button" href="PracticaWeb.html"><i class="bi bi-arrow-90deg-left"></i></a>
+        </div>
+    </section>
+
+    <section>
+        <div id="gridTittle">
+            <h1>Crear nuevo elemento</h1>
+        </div>
+
+        <div id="gridData">
+            <div id="NameData">
+                <p class="DataText">Título:</p>
+                <p>
+                    <input class="TextFile" type="text" placeholder="Nombre del videojuego">
+                </p>
+            </div>
+            <div class="row" id="imgandtrailer">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
+                    <p class="DataText">Imagen URL:</p>
+                    <p>
+                        <textarea class="TextFile" type="url"
+                            placeholder="Copie el enlace de la portada del videojuego"></textarea>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
+                    <p class="DataText">Trailer URL:</p>
+                    <p>
+                        <textarea class="TextFile" type="url"
+                            placeholder="Copie el enlace al trailer del videojuego"></textarea>
+                    </p>
+
+                </div>
+            </div>
+
+            <div id="DescriptionData">
+                <p class="DataText">Descripción:</p>
+                <p>
+                    <textarea class="TextFile" id="textDescription" type="text"
+                        placeholder="Escribe una breve sinopsis"></textarea>
+                </p>
+            </div>
+
+            <div id="BasicInfo">
+                <p class="DataText">Información Básica:</p>
+                <p>
+                <div id="InfoFecha">
+                    <h6>Fecha de lanzamiento:</h6>
+                    <input type="date" value="0000-00-00" />
+                </div>
+                <input class="TextFile" type="text" placeholder="Empresa Desarrolladora">
+
+                <select id="selectGen">
+                    <option value="value1" selected>Elegir género</option>
+                    <option value="value2">Aventura</option>
+                    <option value="value3">Acción</option>
+                    <option value="value4">Estrategia</option>
+                    <option value="value5">RPG</option>
+                    <option value="value6">Deporte</option>
+                    <option value="value7">Simulación</option>
+                    <option value="value8">Shooter</option>
+                    <option value="value9">Carreras</option>
+                    <option value="value10">Terror</option>
+                    <option value="value11">Puzle</option>
+                    <option value="value12">Plataformas</option>
+                    <option value="value13">MMO</option>
+                </select>
+
+                <div id="plataforma">
+                    <h6>Plataformas compatibles:</h6>
+                    <section>
+                        <div class="tablaconsola">
+                            <table>
+                                <thead>
+                                    <th class="ps"><i class="bi bi-playstation"></i></th>
+                                    <th class="xbox"><i class="bi bi-xbox"></i></th>
+                                    <th class="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                                    <th class="pc"><i class="bi bi-pc-display"></i></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" value="Ps"><br></td>
+                                        <td><input type="checkbox" value="Xbox"><br></td>
+                                        <td><input type="checkbox" value="Switch"><br></td>
+                                        <td><input type="checkbox" value="Pc"><br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="gridButtonLarge">
+            <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
+        </div>
+    </section>
+    <footer>
+        <div class="pieDePagina">
+            <a href="PracticaWeb.html" class="decoration">
+                <image class="logo" src="Imagenes_practica/LogoGR.jpg"></image>
+            </a>
+        </div>
+    </footer>
+</body>
