@@ -24,7 +24,7 @@
     <section>
         <div id="gridButton">
             <a class="button" href="/"><i class="bi bi-arrow-90deg-left"></i></a>
-            <a class="button"><i class="bi bi-pencil"></i></a>
+            <a class="button" href="/post/{{post.id}}/edit"><i class="bi bi-pencil"></i></a>
             <a href="/post/{{post.id}}/delete" class="button"><i class="bi bi-trash"></i></a>
         </div>
         <h3 id="Tittle">{{post.name}}</h3>
@@ -47,7 +47,7 @@
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 elementCenter" id="espacioTrailer">
-                                    <iframe id="trailer" src="{{post.trailer}}"
+                                    <iframe id="trailer" src={{post.trailer}}
                                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>

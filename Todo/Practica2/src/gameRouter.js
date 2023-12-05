@@ -10,6 +10,17 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/new', (req, res) => {
+
+    res.render('PracticaWebPaginaNuevoElemento');
+});
+
+router.get('/post/:id/edit', (req, res) => {
+
+    let post = gameService.getPost(req.params.id);
+    res.render('PracticaWebPaginaNuevoElemento', { post });
+});
+
 router.post('/post/new', (req, res) => {
 
     let { name, image, description, trailer, fecha, desarrolladora, genero, consola } = req.body;
