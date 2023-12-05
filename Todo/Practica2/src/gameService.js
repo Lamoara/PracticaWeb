@@ -37,10 +37,3 @@ export function getPosts(){
 export function getPost(id){
     return posts.get(id);
 }
-
-export function seleccionarGenero(){
-    let selectGen = document.getElementById('selectGen');
-    let genero = selectGen.value;    
-
-    document.getElementById("generoSeleccionado").innerText = `Has seleccionado ${genero}`;
-}
