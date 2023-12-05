@@ -23,6 +23,9 @@ router.get('/post/:id', (req, res) => {
 
     let post = gameService.getPost(req.params.id);
 
+    let {user, text} = req.body;
+    gameService.addComment(post, {user, text});
+
     res.render('PracticaWebPaginaDetalle', { post });
 });
 

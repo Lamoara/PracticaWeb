@@ -38,6 +38,12 @@ export function getPost(id){
     return posts.get(id);
 }
 
+export function addComment(post, comment)
+{
+    if(comment.user != null)
+    post.comments.push(comment);
+}
+
 export function seleccionarGenero(){
     let selectGen = document.getElementById('selectGen');
     let genero = selectGen.value;    
