@@ -34,27 +34,26 @@
         </div>
 
         <div id="gridData">
-            <form action="post/new" method="post">
+            <form action="{{funcion}}" method="post">
                 <div id="NameData">
                     <p class="DataText">Título:</p>
                     <p>
                         <input class="TextFile" type="text" name="name" placeholder="Nombre del videojuego"
-                            value={{post.name}}>
+                            value="{{post.name}}">
                     </p>
                 </div>
                 <div class="row" id="imgandtrailer">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
                         <p class="DataText">Imagen URL:</p>
                         <p>
-                            <input class="TextFile" type="url" name="image" value={{post.trailer}}
-                                placeholder="Copie el enlace de la portada del videojuego"></input>
+                            <input class="TextFile" type="url" name="image" placeholder="Copie el enlace de la portada del videojuego" value="{{post.image}}"></input>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
                         <p class="DataText">Trailer URL:</p>
                         <p>
                             <input class="TextFile" type="url" name="trailer"
-                                placeholder="Copie el enlace al trailer del videojuego"></input>
+                                placeholder="Copie el enlace al trailer del videojuego" value="{{post.trailer}}"></input>
                         </p>
 
                     </div>
@@ -63,8 +62,7 @@
                 <div id="DescriptionData">
                     <p class="DataText">Descripción:</p>
                     <p>
-                        <input class="TextFile" id="textDescription" type="text" name="description" value={{post.description}}
-                            placeholder="Escribe una breve sinopsis"></input>
+                        <input class="TextFile" id="textDescription" type="text" name="description" placeholder="Escribe una breve sinopsis" value="{{post.description}}"></input>
                     </p>
                 </div>
 
@@ -73,24 +71,24 @@
                     <p>
                     <div id="InfoFecha">
                         <h6>Fecha de lanzamiento:</h6>
-                        <input type="date" name="fecha" value="0000-00-00" value={{post.fecha}} />
+                        <input type="date" name="fecha" value="{{post.fecha}}" value="0000-00-00" />
                     </div>
-                    <input class="TextFile" type="text" name="desarrolladora" placeholder="Empresa Desarrolladora" value={{post.desarrolladora}}>
+                    <input class="TextFile" type="text" name="desarrolladora" placeholder="Empresa Desarrolladora" value="{{post.desarrolladora}}">
 
                     <select id="selectGen" name="genero">
-                        <option value="value1" selected>Elegir género</option>
-                        <option value="value2">Aventura</option>
-                        <option value="value3">Acción</option>
-                        <option value="value4">Estrategia</option>
-                        <option value="value5">RPG</option>
-                        <option value="value6">Deporte</option>
-                        <option value="value7">Simulación</option>
-                        <option value="value8">Shooter</option>
-                        <option value="value9">Carreras</option>
-                        <option value="value10">Terror</option>
-                        <option value="value11">Puzle</option>
-                        <option value="value12">Plataformas</option>
-                        <option value="value13">MMO</option>
+                        <option value="No seleccionado" selected>Elegir género</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Estrategia">Estrategia</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Deporte">Deporte</option>
+                        <option value="Simulación">Simulación</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Carreras">Carreras</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Puzzle">Puzzle</option>
+                        <option value="Plataformas">Plataformas</option>
+                        <option value="MMO">MMO</option>
                     </select>
 
                     <div id="plataforma">
@@ -106,10 +104,10 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><input type="checkbox" value="Ps"><br></td>
-                                            <td><input type="checkbox" value="Xbox"><br></td>
-                                            <td><input type="checkbox" value="Switch"><br></td>
-                                            <td><input type="checkbox" value="Pc"><br></td>
+                                            <td><input type="checkbox" name="ps" value="tick"><br></td>
+                                            <td><input type="checkbox" name="xbox" value="tick"><br></td>
+                                            <td><input type="checkbox" name="nswitch" value="tick"><br></td>
+                                            <td><input type="checkbox" name="pc" value="tick"><br></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -121,7 +119,7 @@
         </div>
     </section>
     <div class="gridButtonLarge">
-        <input class="buttonsubmitlarge" type="submit" value="Save" href="/"></input>
+        <input class="buttonsubmitlarge" type="submit" value="Save" href="{{tipo}}"></input>
     </div>
     </form>
 

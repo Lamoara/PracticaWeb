@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 elementCenter">
-                    <img class="img-fluid" src={{post.image}}>
+                    <img class="img-fluid" src="{{post.image}}">
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -47,7 +47,7 @@
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 elementCenter" id="espacioTrailer">
-                                    <iframe id="trailer" src={{post.trailer}}
+                                    <iframe id="trailer" src="{{post.trailer}}"
                                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowfullscreen></iframe>
                                 </div>
@@ -61,6 +61,7 @@
                                 <li>Empresesa desarrolladora: {{post.desarrolladora}}</li>
                                 <li>Género: {{post.genero}}</li>
                                 <section>
+                                    {{post.pc}}
                                     <div class="tablaconsola">
                                         <table>
                                             <thead>
@@ -72,11 +73,11 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Red Dead Redemption 2</td>
-                                                    <td class="tick"><i class="bi bi-check2"></i></td>
-                                                    <td class="tick"><i class="bi bi-check2"></i></td>
-                                                    <td class="tick-red"><i class="bi bi-x-lg"></i></td>
-                                                    <td class="tick"><i class="bi bi-check2"></i></td>
+                                                    <td>{{post.name}}</td>
+                                                    <td class="{{post.ps}}"><i class="{{post.symbolps}}"></i></td>
+                                                    <td class="{{post.xbox}}"><i class="{{post.symbolxbox}}"></i></td>
+                                                    <td class="{{post.nswitch}}"><i class="{{post.symbolswitch}}"></i></td>
+                                                    <td class="{{post.pc}}"><i class="{{post.symbolpc}}"></i></td>
                                                 </tr>
                                             </tbody>
                                         </table>
