@@ -31,6 +31,10 @@ export function addPost(post) {
 
 export function editPost(id, post) {
     post.id = id;
+    let savedPost = posts.get(id);
+    if (savedPost.comments) {
+        post.comments = savedPost.comments;
+    }
     posts.set(post.id, post);
 }
 
