@@ -29,7 +29,7 @@ router.get('/post/:id/edit', (req, res) => {
 
 router.post('/post/edit', (req, res) => {
 
-    let {name, image, description, trailer, fecha, desarrolladora, genero, ps ,xbox, nswitch,pc} = req.body;
+    let {name, image, description, trailer, fecha, desarrolladora, genero, ps ,xbox, nswitch, pc} = req.body;
     let symbolps = gameService.symbol(ps);
     ps = gameService.symbolcolor(ps);
     let symbolxbox = gameService.symbol(xbox);
