@@ -68,10 +68,15 @@ router.get('/post/:id', (req, res) => {
 
     let post = gameService.getPost(req.params.id);
 
-    let {user, text} = req.body;
-    gameService.addComment(post, {user, text});
-
     res.render('PracticaWebPaginaDetalle',{post});
+});
+
+router.post('/post/:id/comment', (req, res) => {
+    const postId = req.params.id;
+    const { user, text, estrellas } = req.body;
+    const reviewValue = Array.from({ length: estrellas }, (_, index) => index + 1);
+    gameService.addComment(postId, { user, text, reviewValue });
+    res.redirect(`/post/${postId}`);
 });
 
 router.get('/post/:id/delete', (req, res) => {
