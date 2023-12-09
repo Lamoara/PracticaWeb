@@ -61,7 +61,6 @@
                                 <li>Empresesa desarrolladora: {{post.desarrolladora}}</li>
                                 <li>Género: {{post.genero}}</li>
                                 <section>
-                                    {{post.pc}}
                                     <div class="tablaconsola">
                                         <table>
                                             <thead>
@@ -90,16 +89,16 @@
             </div>
         </div>
     </section>
-    <form action="PracticaWebPaginaDetalle" method="post">
+    <form action="/post/{{post.id}}/comment" method="post">
         <section>
             <div class="formgrid">
                 <div id="contentform">
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="name" class="form-control" id="email" placeholder="Nombre">
+                            <input type="text" name="user" class="form-control" id="email" placeholder="Nombre">
                         </div>
                         <div class="form-group">
-                            <label for="pwd">Reseña </label>
+                            <label for="pwd">Reseña</label>
                             <input type="text" name="text" class="form-control" id="pwd" placeholder="Escriba su reseña">
                         </div>
                         <div id="score">
@@ -117,7 +116,7 @@
                                 </div>
                         </div>
                         <div class="gridButtonLarge">
-                            <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload" href = '/post/:id'></i></button>
+                            <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
                         </div>
                 </div>
             </div>
@@ -139,7 +138,6 @@
         </div>
         {{/post.comments}}
         {{^post.comments}}
-        SUIUIIUUUUU
         {{/post.comments}}
     </section>
     <footer>

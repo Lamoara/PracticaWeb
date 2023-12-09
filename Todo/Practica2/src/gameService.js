@@ -3,14 +3,8 @@ let idVariable;
 let nextId = 0;
 
 addPost({
-    name: "Red Dead Redemption 2",
-    image: "/Imagenes_practica/RDR2.jpg",
-    description: "Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder sobrevivir. Mientras crecen las divisiones que amenazan con el fin de la pandilla Arthur debe decidir entre sus propios ideales y su lealtad a la pandilla que lo crió.",
-    fecha: "2018-10-26", 
-    trailer: "https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb",
-    desarrolladora: "Rockstar",
-    ps: "tick",
-    comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [, , , ,] }, { user: "Jorge", text: "Tambien", reviewValue: [, , ,] }]
+    name: "Red Dead Redemption 2", image: "/Imagenes_practica/RDR2.jpg", description: "Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder sobrevivir. Mientras crecen las divisiones que amenazan con el fin de la pandilla Arthur debe decidir entre sus propios ideales y su lealtad a la pandilla que lo crió.",
+    fecha: "2018-10-26", trailer: "https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb", desarrolladora: "Rockstar", ps: "tick", comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [,,,,] }, { user: "Jorge", text: "Tambien", reviewValue: [,,,] }]
 });
 
 addPost({ name: "Factorio", image: "/Imagenes_practica/Factorio.jpeg", description: "Pago bien" });
@@ -38,6 +32,10 @@ export function addPost(post) {
 
 export function editPost(id, post) {
     post.id = id;
+    let savedPost = posts.get(id);
+    if (savedPost.comments) {
+        post.comments = savedPost.comments;
+    }
     posts.set(post.id, post);
 }
 
@@ -82,7 +80,12 @@ export function symbolcolor(console) {
 }
 
 
-export function addComment(post, comment) {
-    if (comment.user != null)
+export function addComment(postId, comment) {
+    const post = posts.get(postId);
+    if (post) {
+        if (!post.comments) {
+            post.comments = [];
+        }
         post.comments.push(comment);
+    }
 }

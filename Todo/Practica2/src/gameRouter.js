@@ -29,7 +29,7 @@ router.get('/post/:id/edit', (req, res) => { //esta cuando el que pida sea con u
 
 router.post('/post/edit', (req, res) => {
 
-    let {name, image, description, trailer, fecha, desarrolladora, genero, ps ,xbox, nswitch,pc} = req.body;
+    let {name, image, description, trailer, fecha, desarrolladora, genero, ps ,xbox, nswitch, pc} = req.body;
     let symbolps = gameService.symbol(ps);
     ps = gameService.symbolcolor(ps);
     let symbolxbox = gameService.symbol(xbox);
@@ -42,9 +42,15 @@ router.post('/post/edit', (req, res) => {
     let paginaName = "detalle";
     let id = gameService.getId();
     let pagina = "/post/" + id;
-    gameService.editPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
-    res.render('PaginaIntermedia',{name,accion,pagina,paginaName});
+    if(name&&image&&description&&trailes&&fecha&&desarrolladora&&genero&&ps&&symbolps&&xbox&&symbolxbox&&nswitch&&symbolswitch&&pc&&symbolpc) {
+        gameService.editPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
+        res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
+    }
+    else {
+        res.render('PaginaError');
+    }
 });
+
 
 router.post('/post/new', (req, res) => {
 
@@ -68,10 +74,15 @@ router.get('/post/:id', (req, res) => {
 
     let post = gameService.getPost(req.params.id);
 
-    let {user, text} = req.body;
-    gameService.addComment(post, {user, text});
-
     res.render('PracticaWebPaginaDetalle',{post});
+});
+
+router.post('/post/:id/comment', (req, res) => {
+    const postId = req.params.id;
+    const { user, text, estrellas } = req.body;
+    const reviewValue = Array.from({ length: estrellas }, (_, index) => index + 1);
+    gameService.addComment(postId, { user, text, reviewValue });
+    res.redirect(`/post/${postId}`);
 });
 
 router.get('/post/:id/delete', (req, res) => {
