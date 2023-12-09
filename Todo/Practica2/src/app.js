@@ -14,6 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/../public'));
 
-app.use('/', gameRouter);
+app.use('/', gameRouter); //todas las solicitudes  con raiz / seran procesadas por gamerouter
 
 app.listen(3000, () => console.log('Listening on port 3000!'));

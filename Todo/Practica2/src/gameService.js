@@ -3,9 +3,16 @@ let idVariable;
 let nextId = 0;
 
 addPost({
-    name: "Red Dead Redemption 2", image: "/Imagenes_practica/RDR2.jpg", description: "Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder sobrevivir. Mientras crecen las divisiones que amenazan con el fin de la pandilla Arthur debe decidir entre sus propios ideales y su lealtad a la pandilla que lo crió.",
-    fecha: "2018-10-26", trailer: "https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb", desarrolladora: "Rockstar", ps: "tick", comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [, , , ,] }, { user: "Jorge", text: "Tambien", reviewValue: [, , ,] }]
+    name: "Red Dead Redemption 2",
+    image: "/Imagenes_practica/RDR2.jpg",
+    description: "Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder sobrevivir. Mientras crecen las divisiones que amenazan con el fin de la pandilla Arthur debe decidir entre sus propios ideales y su lealtad a la pandilla que lo crió.",
+    fecha: "2018-10-26", 
+    trailer: "https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb",
+    desarrolladora: "Rockstar",
+    ps: "tick",
+    comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [, , , ,] }, { user: "Jorge", text: "Tambien", reviewValue: [, , ,] }]
 });
+
 addPost({ name: "Factorio", image: "/Imagenes_practica/Factorio.jpeg", description: "Pago bien" });
 addPost({ name: "Call of Duty", image: "/Imagenes_practica/COD.jpeg", description: "Barata, barata" });
 addPost({ name: "Grand theft auto V", image: "/Imagenes_practica/gtav.jpeg", description: "Pago bien" });
@@ -24,9 +31,9 @@ addPost({ name: "Mafia City", image: "/Imagenes_practica/mafiacity.jpeg", descri
 
 
 export function addPost(post) {
-    let id = nextId++;
-    post.id = id.toString();
-    posts.set(post.id, post);
+    let id = nextId++; //se le suma 1 al id
+    post.id = id.toString(); //al id del elemento post se le asigna el valor del "id" pero en string
+    posts.set(post.id, post);// al mapa "posts" se le agrega el id de post(como etiqueta) y el propio elemento post
 }
 
 export function editPost(id, post) {

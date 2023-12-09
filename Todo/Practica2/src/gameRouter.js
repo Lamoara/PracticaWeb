@@ -1,23 +1,23 @@
 import express from 'express';
 import * as gameService from './gameService.js';
 
-const router = express.Router();
+const router = express.Router(); //router sera el encargado de controlar todas las peticiones del servidor 
 
-router.get('/', (req, res) => {
+router.get('/', (req, res) => { //esta cuando el que pida sea con una raiz "/"
 
     res.render('PracticaWeb', { 
         posts: gameService.getPosts() 
     });
 });
 
-router.get('/new', (req, res) => {
+router.get('/new', (req, res) => { //esta cuando el que pida sea con una raiz "/new"
 
     let tipo = "/";
     let funcion = "/post/new";
     res.render('PracticaWebPaginaNuevoElemento',{tipo,funcion});
 });
 
-router.get('/post/:id/edit', (req, res) => {
+router.get('/post/:id/edit', (req, res) => { //esta cuando el que pida sea con una raiz "/post/:id/edit"
 
     let post = gameService.getPost(req.params.id);
     let tipo = "/post/:id";
