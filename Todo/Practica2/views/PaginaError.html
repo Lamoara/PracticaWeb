@@ -21,6 +21,10 @@
             </button>
         </header>
 
+        <section>
+            <a class="button" href="/new"><i class="bi bi-arrow-90deg-left"></i></a>
+        </section>
+
         <section id="errorpage">
                 <div id="gridError">
                         <h1>No se han completado correctamente</h1>
@@ -28,42 +32,39 @@
                 <div id="gridList">
                         <ul>
                             {{#name}}
-                            <li>Name correct</li>
+                            <li>Name: correct</li>
                             {{/name}}
                             {{^name}}
-                            <li>Name error</li>
+                            <li>Name: error</li>
                             {{/name}}
                             
                             {{#image}}
-                            <li>Image correct</li>
+                            <li>Image: correct</li>
                             {{/image}}
                         
                             {{^image}}
-                            <li>Image error</li>
+                            <li>Image: error</li>
                             {{/image}}
 
                             {{#description}}
-                            <li>Description correct</li>
+                            <li>Description: correct</li>
                             {{/description}}
 
                             {{^description}}
-                            <li>Description error</li>
+                            <li>Description: error</li>
                             {{/description}}
 
                             {{#trailer}}
-                            <li>Trailer correct</li>
+                            <li>Trailer: correct</li>
                             {{/trailer}}
                             
                             {{^trailer}}
-                            <li>Trailer error</li>
+                            <li>Trailer: error</li>
                             {{/trailer}}
                     </ul>
                 </div>
         </section>
 
-        <section>
-            
-        </section>
 
         <footer>
             <div class="pieDePagina">
