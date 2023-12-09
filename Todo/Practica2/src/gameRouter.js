@@ -42,12 +42,12 @@ router.post('/post/edit', (req, res) => {
     let paginaName = "detalle";
     let id = gameService.getId();
     let pagina = "/post/" + id;
-    if(name&&image&&description&&trailer&&fecha&&desarrolladora&&genero&&(ps||xbox||nswitch||pc)) {
+    if(name&&image&&description&&traile) {
         gameService.editPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }
     else {
-        res.render('PaginaError');
+        res.render('PaginaError',{name,image,description,trailer});
     }
 });
 
@@ -66,12 +66,12 @@ router.post('/post/new', (req, res) => {
     let accion = "creado";
     let paginaName = "principal";
     let pagina = "/";
-    if(name&&image&&description&&trailer&&fecha&&desarrolladora&&genero&&(ps||xbox||nswitch||pc)) {
+    if(name&&image&&description&&trailer) {
         gameService.addPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }
     else {
-        res.render('PaginaError');
+        res.render('PaginaError',{name,image,description,trailer});
     }
 });
 
