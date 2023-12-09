@@ -596,6 +596,7 @@ body {
 #errorpage{
     margin-top: 30px;
     margin-bottom: 30px;
+    
 }
 #gridError {
     text-align: center;
@@ -621,5 +622,11 @@ body {
 #gridList>ul>li{
     color:yellow;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ 
+#gridimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
