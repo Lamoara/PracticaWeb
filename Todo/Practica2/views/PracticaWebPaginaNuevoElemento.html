@@ -24,7 +24,7 @@
 
     <section>
         <div class="gridButton">
-            <a class="button" href="/"><i class="bi bi-arrow-90deg-left"></i></a>
+            <a class="button" href="{{tipo}}"><i class="bi bi-arrow-90deg-left"></i></a>
         </div>
     </section>
 
@@ -46,14 +46,17 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
                         <p class="DataText">Imagen URL:</p>
                         <p>
-                            <input class="TextFile" type="url" name="image" placeholder="Copie el enlace de la portada del videojuego" value="{{post.image}}"></input>
+                            <input class="TextFile" type="url" name="image"
+                                placeholder="Copie el enlace de la portada del videojuego"
+                                value="{{post.image}}"></input>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
                         <p class="DataText">Trailer URL:</p>
                         <p>
                             <input class="TextFile" type="url" name="trailer"
-                                placeholder="Copie el enlace al trailer del videojuego" value="{{post.trailer}}"></input>
+                                placeholder="Copie el enlace al trailer del videojuego"
+                                value="{{post.trailer}}"></input>
                         </p>
 
                     </div>
@@ -62,7 +65,8 @@
                 <div id="DescriptionData">
                     <p class="DataText">Descripción:</p>
                     <p>
-                        <input class="TextFile" id="textDescription" type="text" name="description" placeholder="Escribe una breve sinopsis" value="{{post.description}}"></input>
+                        <input class="TextFile" id="textDescription" type="text" name="description"
+                            placeholder="Escribe una breve sinopsis" value="{{post.description}}"></input>
                     </p>
                 </div>
 
@@ -73,10 +77,18 @@
                         <h6>Fecha de lanzamiento:</h6>
                         <input type="date" name="fecha" value="{{post.fecha}}" value="0000-00-00" />
                     </div>
-                    <input class="TextFile" type="text" name="desarrolladora" placeholder="Empresa Desarrolladora" value="{{post.desarrolladora}}">
+                    <input class="TextFile" type="text" name="desarrolladora" placeholder="Empresa Desarrolladora"
+                        value="{{post.desarrolladora}}">
 
                     <select id="selectGen" name="genero">
+                        {{#post.genero}}
+                        <option value="{{post.genero}}" selected>{{post.genero}}</option>
+                        {{/post.genero}}
+
+                        {{^post.genero}}
                         <option value="No seleccionado" selected>Elegir género</option>
+                        {{/post.genero}}
+                        
                         <option value="Aventura">Aventura</option>
                         <option value="Acción">Acción</option>
                         <option value="Estrategia">Estrategia</option>
@@ -104,7 +116,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><input type="checkbox" name="ps" value="tick"><br></td>
+                                            <td><input type="checkbox" name="ps" value="{{post.ps}}"><br></td>
                                             <td><input type="checkbox" name="xbox" value="tick"><br></td>
                                             <td><input type="checkbox" name="nswitch" value="tick"><br></td>
                                             <td><input type="checkbox" name="pc" value="tick"><br></td>

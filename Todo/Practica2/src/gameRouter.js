@@ -20,9 +20,9 @@ router.get('/new', (req, res) => { //esta cuando el que pida sea con una raiz "/
 router.get('/post/:id/edit', (req, res) => { //esta cuando el que pida sea con una raiz "/post/:id/edit"
 
     let post = gameService.getPost(req.params.id);
-    let tipo = "/post/:id";
-    let funcion = "/post/edit";
     let id = req.params.id;
+    let tipo = "/post/" + id;
+    let funcion = "/post/edit";
     gameService.saveId(id);
     res.render('PracticaWebPaginaNuevoElemento',{post,tipo,funcion});
 });
@@ -47,7 +47,9 @@ router.post('/post/edit', (req, res) => {
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }
     else {
-        res.render('PaginaError',{name,image,description,trailer});
+        let id = gameService.getId();
+        let volver = "/post/" + id +"/edit";
+        res.render('PaginaError',{name,image,description,trailer,volver});
     }
 });
 
@@ -67,11 +69,12 @@ router.post('/post/new', (req, res) => {
     let paginaName = "principal";
     let pagina = "/";
     if(name&&image&&description&&trailer) {
-        gameService.addPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
+        gameService.addPost({name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }
     else {
-        res.render('PaginaError',{name,image,description,trailer});
+        let volver = "/new";
+        res.render('PaginaError',{name,image,description,trailer,volver});
     }
 });
 
