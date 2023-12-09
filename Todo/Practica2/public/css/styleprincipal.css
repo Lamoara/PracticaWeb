@@ -422,9 +422,6 @@ table>tbody {
     margin: 10px;
 }
 
-
-
-
 #gridTittle {
     text-align: center;
     background-color: rgb(255, 255, 62);
@@ -595,3 +592,34 @@ body {
     background-color: rgb(116, 206, 26);
     border-color: rgb(9, 72, 9);
 }
+
+#errorpage{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#gridError {
+    text-align: center;
+    background-color: rgb(255, 255, 62);
+    border-color: black;
+    border-style: solid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#gridList{
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-color: black;
+    border-style: solid;
+    background-color:black;
+}
+
+#gridList>ul>li{
+    color:yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

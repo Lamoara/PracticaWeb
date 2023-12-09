@@ -42,7 +42,7 @@ router.post('/post/edit', (req, res) => {
     let paginaName = "detalle";
     let id = gameService.getId();
     let pagina = "/post/" + id;
-    if(name&&image&&description&&traile) {
+    if(name&&image&&description&&trailer) {
         gameService.editPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }

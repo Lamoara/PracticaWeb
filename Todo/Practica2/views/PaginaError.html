@@ -21,47 +21,57 @@
             </button>
         </header>
 
-        <section>
-            <div  class="container">
-                <div class=" row">
-                    <div>
-                        <p>No se han completado correctamente:</p>
-                    </div>
-                    <ul>
-                        {{#name}}
-                        <li>Name correct</li>
-                        {{/name}}
-                        {{^name}}
-                        <li>Name error</li>
-                        {{/name}}
-
-                        {{#image}}
-                        <li>Image correct</li>
-                        {{/image}}
-                    
-                        {{^image}}
-                        <li>Image error</li>
-                        {{/image}}
-
-                        {{#description}}
-                        <li>Description correct</li>
-                        {{/description}}
-
-                        {{^description}}
-                        <li>Description error</li>
-                        {{/description}}
-
-                        {{#trailer}}
-                        <li>Trailer correct</li>
-                        {{/trailer}}
-
-                        {{^trailer}}
-                        <li>Trailer error</li>
-                        {{/trailer}}
-                    </ul> 
+        <section id="errorpage">
+                <div id="gridError">
+                        <h1>No se han completado correctamente</h1>
                 </div>
-            </div>
+                <div id="gridList">
+                        <ul>
+                            {{#name}}
+                            <li>Name correct</li>
+                            {{/name}}
+                            {{^name}}
+                            <li>Name error</li>
+                            {{/name}}
+                            
+                            {{#image}}
+                            <li>Image correct</li>
+                            {{/image}}
+                        
+                            {{^image}}
+                            <li>Image error</li>
+                            {{/image}}
+
+                            {{#description}}
+                            <li>Description correct</li>
+                            {{/description}}
+
+                            {{^description}}
+                            <li>Description error</li>
+                            {{/description}}
+
+                            {{#trailer}}
+                            <li>Trailer correct</li>
+                            {{/trailer}}
+                            
+                            {{^trailer}}
+                            <li>Trailer error</li>
+                            {{/trailer}}
+                    </ul>
+                </div>
         </section>
+
+        <section>
+            
+        </section>
+
+        <footer>
+            <div class="pieDePagina">
+                <a href="/" class="decoration">
+                    <image class="logo" src="/Imagenes_practica/LogoGR.jpg"></image>
+                </a>
+            </div>
+        </footer>
     </body>
 
 
