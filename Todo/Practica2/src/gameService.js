@@ -10,13 +10,14 @@ addPost({
     {user: "Sebas", text: "Simplemente un juego de locos, es un juego que eleva la narrativa en los videojuegos a un nivel que nunca antes había visto. Con su rica historia de la banda de forajidos, el juego te ofrece una experiencia emocionalmente impactante y profundamente satisfactoria que captura la esencia misma de la vida en el Oeste.", reviewValue: [,,,]}]
 });
 
-addPost({ name: "Factorio", image: "https://assetsio.reedpopcdn.com/co1tfy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp", description: "Factorio es un juego sobre la construcción y creación de fábricas automatizadas para producir elementos de complejidad creciente, dentro de un mundo 2D infinito. Usa tu imaginación para diseñar tu fábrica, combina elementos simples en estructuras ingeniosas y, finalmente, protégela de las criaturas a las que realmente no les agradas.",
- fecha: "2016-15-02", trailer: "https://www.youtube.com/embed/J8SBp4SyvLc?si=taNZWEW5IUAM-fQg", desarrolladora: "Wube Software LTD", genero: "Estrategia", comments :[{user: "Jorge", text:"Compré este juego hace mucho tiempo y no me ha decepcionado, una maravillosa experiencia. 10/10 Lo recomiendo.", reviewValue: [,,,,,]}]
+addPost({ 
+    name: "Factorio", image: "https://assetsio.reedpopcdn.com/co1tfy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp", description: "Factorio es un juego sobre la construcción y creación de fábricas automatizadas para producir elementos de complejidad creciente, dentro de un mundo 2D infinito. Usa tu imaginación para diseñar tu fábrica, combina elementos simples en estructuras ingeniosas y, finalmente, protégela de las criaturas a las que realmente no les agradas.",
+    fecha: "2016-15-02", trailer: "https://www.youtube.com/embed/J8SBp4SyvLc?si=taNZWEW5IUAM-fQg", desarrolladora: "Wube Software LTD", genero: "Estrategia", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question",comments :[{user: "Jorge", text:"Compré este juego hace mucho tiempo y no me ha decepcionado, una maravillosa experiencia. 10/10 Lo recomiendo.", reviewValue: [,,,,,]}]
  });
 addPost({ 
     name: "COD Black OPS 3", image: "https://m.media-amazon.com/images/I/51B1FAeNnCL._AC_UF894,1000_QL80_.jpg", description: "40 años después de los acontecimientos en Call of Duty: Black Ops II, el mundo tiene lugar en un futuro distópico, situado en 2065, donde la ciencia y la tecnología han cambiado radicalmente a la especie humana, con la sociedad violenta y las protestas y el intento de detener el progreso de la tecnología. La tecnología militar ha avanzado hasta el punto que la robótica juega un papel principal, y se han desarrollado supersoldados.",
     fecha: "2015-11-05", trailer: "https://www.youtube.com/embed/qAUYNIDEJ6o?si=qqs_TdW_fB-jSI1F", desarrolladora: "Treyarch", genero:"Shooter", symbolps:"bi bi-check2", ps:"tick", checkedps:"checked", symbolxbox:"bi bi-check2", xbox:"tick", checkedxbox:"checked",symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-check2", pc:"tick", checkedpc:"checked",
-    comments: [{ user: "Pablo Martínez", text: "Buen juego, recuerdo jugarlo con mi hermano de peqeño", reviewValue: [,,,,]}]
+    comments: [{ user: "Pablo Martínez", text: "Buen juego, recuerdo jugarlo con mi hermano de pequeño", reviewValue: [,,,,]}]
 });
 addPost({ 
     name: "Grand Theft Auto V", image: "https://i.ebayimg.com/images/g/gXoAAOSwgn1dWpwt/s-l1600.jpg", description: "En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida, planea un atraco falso junto al agente federal corrupto Dave Norton. Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte, pero todo sale mal porque Dave, en vez de dispararle a Trevor, le dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».",
@@ -24,35 +25,44 @@ addPost({
     comments: [{ user: "Pedro", text: "Un juego muy violento", reviewValue: [,]}]
 });
 addPost({ name: "Mario Galaxy", image: "https://m.media-amazon.com/images/I/71gOWJnWXaL._AC_UF894,1000_QL80_.jpg", description: "El «Festival de las Estrellas» se celebra en el Reino Champiñón cada cien años para conmemorar el paso de un cometa gigantesco. Con motivo de esta festividad, Mario ha sido invitado al castillo por la Princesa Peach, pero cuando llega el día de dicho evento aparece Bowser, quien, descendiendo del cielo, viene acompañado de varios barcos voladores con los que pretende invadir el lugar y secuestrar a la princesa. Con una de sus gigantescas máquinas, semejante a un platillo volador, arranca el castillo del suelo, marchándose así junto con Peach al espacio. Cuando él intenta detenerlo, el esbirro de Bowser, Kamek, usa su varita mágica para deshacerse de Mario, enviándolo a través del cosmos.",
-    trailer: "https://www.youtube.com/embed/8Mng-r3D20Y?si=AzInSerVcV2M8_Og"
+    trailer: "https://www.youtube.com/embed/8Mng-r3D20Y?si=AzInSerVcV2M8_Og", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
 });
-addPost({ name: "God of War Ragnarok", image: "https://i.3djuegos.com/juegos/17544/god_of_war_ragnarok/fotos/ficha/god_of_war_ragnarok-5732813.webp", description: "En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida, planea un atraco falso junto al agente federal corrupto Dave Norton. Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte, pero todo sale mal porque Dave, en vez de dispararle a Trevor, le dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».",
+addPost({ name: "God of War Ragnarok", image: "https://ae01.alicdn.com/kf/Sa8078be663894af7aad1a359dae1d840h/P-ster-de-lienzo-art-stico-impreso-de-God-of-War-Ragnarok-Game-para-decoraci-n.jpg", description: "En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida, planea un atraco falso junto al agente federal corrupto Dave Norton. Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte, pero todo sale mal porque Dave, en vez de dispararle a Trevor, le dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».",
     trailer: "https://www.youtube.com/embed/-tIAazzD1gk?si=FXa8OkgjRM_5pMm9", desarrolladora: "Santa Mónica", genero:"Aventura", symbolps:"bi bi-check2", ps:"tick", checkedps:"checked", symbolxbox:"bi bi-x-lg", xbox:"tick-red", symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-x-lg", pc:"tick-red",
     comments: [{ user: "Lucía", text: "Buena segunda parte", reviewValue: [,,,,]}] 
 });
 
 addPost({ 
     name: "ARK", image: "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg", description: "Juega como un hombre o una mujer desnudo, congelándote y muriéndote de hambre en una isla misteriosa. Debes cazar, cosechar, crear objetos, cultivar, y construir refugios para sobrevivir. Usa tu habilidad y astucia para matar, domesticar, criar y cabalgar dinosaurios y otras criaturas primitivas." ,
-    fecha: "2015-06-02", trailer: "https://www.youtube.com/embed/FW9vsrPWujI?si=JFYjsxmCCG4nHdPs", desarrolladora: "Studio Wildcard, Instinct Games, Efecto Studios, Virtual Basement LLC", genero: "Supervivencia",
+    fecha: "2015-06-02", trailer: "https://www.youtube.com/embed/FW9vsrPWujI?si=JFYjsxmCCG4nHdPs", desarrolladora: "Studio Wildcard, Instinct Games, Efecto Studios, Virtual Basement LLC", genero: "Supervivencia", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
 });
 
 addPost({ 
     name: "Deep Rock Galactic", image: "https://i.3djuegos.com/juegos/14980/deep_rock_galactic/fotos/ficha/deep_rock_galactic-5166570.jpg", description: "Deep Rock Galactic es un shooter cooperativo de ciencia ficción en primera persona con enanos espaciales de armas tomar, entornos totalmente destruibles, cuevas generadas procedimentalmente y hordas interminables de monstruos alienígenas." ,
-    fecha: "2020-05-13", trailer: "https://www.youtube.com/embed/2_GV33zBf3A?si=sJRjB8RmJMZyHCWl", desarrolladora: "Ghost Ship Games", genero: "Acción", comments: [{user: "Mecánico Pepe", text: "Mi amigo me obligo a comprarlo, jugue una partida pero como soy muy malo me da pereza jugarlo mas, de todas formas me lo pase muy bien. Buen juego", reviewValue: [,,,,]}]
+    fecha: "2020-05-13", trailer: "https://www.youtube.com/embed/2_GV33zBf3A?si=sJRjB8RmJMZyHCWl", desarrolladora: "Ghost Ship Games", genero: "Acción", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question",
+    comments: [{user: "Mecánico Pepe", text: "Mi amigo me obligó a comprarlo, jugué una partida pero como soy muy malo me da pereza jugarlo más, de todas formas me lo pase muy bien. Buen juego", reviewValue: [,,,,]}]
     
 });
 
 addPost({
     name: "Minecraft", image: "https://i.pinimg.com/originals/1b/9f/77/1b9f772d10ae2cfce18fab1b05705810.png", description: "Minecraft es un videojuego tipo sandbox, su traducción literal sería “caja de arena” y es lo que representa la experiencia de juego. Los jugadores pueden modelar el mundo a su gusto, destruir y construir, como si estuviesen jugando en una caja de arena.",
-    trailer:"https://www.youtube.com/embed/MmB9b5njVbA?si=TBDghXWX6LTJ-ZFa"
+    trailer:"https://www.youtube.com/embed/MmB9b5njVbA?si=TBDghXWX6LTJ-ZFa", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
 });
-addPost({ name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
+addPost({ 
+    name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
 
-addPost({ name: "BloodBorne", image: "/Imagenes_practica/BloodBorne.jpeg", description: "Pago bien" });
-addPost({ name: "The last of us", image: "/Imagenes_practica/thelastofus.jpeg", description: "Pago bien" });
-addPost({ name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
-addPost({ name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
-addPost({ name: "Mafia City", image: "/Imagenes_practica/mafiacity.jpeg", description: "Pago bien" });
+addPost({ 
+    name: "BloodBorne", image: "/Imagenes_practica/BloodBorne.jpeg", description: "Pago bien" });
+addPost({ 
+    name: "The last of us", image: "https://static.posters.cz/image/750/the-last-of-us-key-art-i127761.jpg", description: "De acuerdo con la trama de The Last of Us, en septiembre de 2013 se desata una pandemia en Estados Unidos ocasionada por una cepa del hongo Cordyceps, que al infectar a los humanos los convierte en criaturas caníbales, y que se transmite a través de una simple mordedura. En medio de la histeria colectiva, Joel (Troy Baker), su hija Sarah (Hana Hayes) y su hermano Tommy (Jeffrey Pierce) abandonan su hogar en los suburbios de Austin, Texas para evitar la infección, pero en el camino son interceptados por un oficial que asesina a Sarah al creer que está infectada.",
+    trailer:"https://www.youtube.com/embed/JZ-YYj7VopU?si=GQU-kmQ_V5-1gWqw", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
+});
+addPost({ 
+    name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
+addPost({ 
+    name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
+addPost({ 
+    name: "Mafia City", image: "/Imagenes_practica/mafiacity.jpeg", description: "Pago bien" });
 
 
 
