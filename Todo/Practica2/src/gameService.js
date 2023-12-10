@@ -25,10 +25,11 @@ addPost({
     fecha: "2020-05-13", trailer: "https://www.youtube.com/embed/2_GV33zBf3A?si=sJRjB8RmJMZyHCWl", desarrolladora: "Ghost Ship Games", genero: "Acción", comments: [{user: "Mecánico Pepe", text: "Mi amigo me obligo a comprarlo, jugue una partida pero como soy muy malo me da pereza jugarlo mas, de todas formas me lo pase muy bien. Buen juego", reviewValue: [,,,,]}]
     
 });
+
 addPost({ name: "Minecraft", image: "/Imagenes_practica/minecraft.jpeg", description: "Barata, barata" });
 addPost({ name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
 
-addPost({ name: "BloodBorne", image: "/Imagenes_practica/BlodBorne.jpeg", description: "Pago bien" });
+addPost({ name: "BloodBorne", image: "/Imagenes_practica/BloodBorne.jpeg", description: "Pago bien" });
 addPost({ name: "The last of us", image: "/Imagenes_practica/thelastofus.jpeg", description: "Pago bien" });
 addPost({ name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
 addPost({ name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
