@@ -8,19 +8,32 @@ addPost({
     comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [,,,,] }, { user: "Jorge", text: "Tambien", reviewValue: [,,,] }]
 });
 
-addPost({ name: "Factorio", image: "/Imagenes_practica/Factorio.jpeg", description: "Pago bien" });
+addPost({ name: "Factorio", image: "https://assetsio.reedpopcdn.com/co1tfy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp", description: "Factorio es un juego sobre la construcción y creación de fábricas automatizadas para producir elementos de complejidad creciente, dentro de un mundo 2D infinito. Usa tu imaginación para diseñar tu fábrica, combina elementos simples en estructuras ingeniosas y, finalmente, protégela de las criaturas a las que realmente no les agradas.",
+ fecha: "2016-15-02", trailer: "https://www.youtube.com/embed/J8SBp4SyvLc?si=taNZWEW5IUAM-fQg", desarrolladora: "Wube Software LTD", genero: "Estrategia", comments :[{user: "Jorge", text:"Compré este juego hace mucho tiempo y no me ha decepcionado, una maravillosa experiencia. 10/10 Lo recomiendo.", reviewValue: [,,,,,]}]
+ });
 addPost({ name: "Call of Duty", image: "/Imagenes_practica/COD.jpeg", description: "Barata, barata" });
 addPost({ name: "Grand theft auto V", image: "/Imagenes_practica/gtav.jpeg", description: "Pago bien" });
 addPost({ name: "Mario Galaxy", image: "/Imagenes_practica/MarioGalaxy.jpg", description: "Barata, barata" });
 addPost({ name: "God of War Ragnarok", image: "/Imagenes_practica/godofwar.jpeg", description: "Barata, barata" });
-addPost({ name: "The last of us", image: "/Imagenes_practica/thelastofus.jpeg", description: "Pago bien" });
-addPost({ name: "ARK", image: "/Imagenes_practica/ARK.jpeg", description: "Pago bien" });
-addPost({ name: "Bloodborne", image: "/Imagenes_practica/Bloodborne.jpeg", description: "Pago bien" });
-addPost({ name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
-addPost({ name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
-addPost({ name: "Depprock", image: "/Imagenes_practica/depprock.jpeg", description: "Pago bien" });
-addPost({ name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
+
+addPost({ 
+    name: "ARK", image: "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg", description: "Juega como un hombre o una mujer desnudo, congelándote y muriéndote de hambre en una isla misteriosa. Debes cazar, cosechar, crear objetos, cultivar, y construir refugios para sobrevivir. Usa tu habilidad y astucia para matar, domesticar, criar y cabalgar dinosaurios y otras criaturas primitivas." ,
+    fecha: "2015-06-02", trailer: "https://www.youtube.com/embed/FW9vsrPWujI?si=JFYjsxmCCG4nHdPs", desarrolladora: "Studio Wildcard, Instinct Games, Efecto Studios, Virtual Basement LLC", genero: "Supervivencia",
+});
+
+addPost({ 
+    name: "Deep Rock Galactic", image: "https://i.3djuegos.com/juegos/14980/deep_rock_galactic/fotos/ficha/deep_rock_galactic-5166570.jpg", description: "Deep Rock Galactic es un shooter cooperativo de ciencia ficción en primera persona con enanos espaciales de armas tomar, entornos totalmente destruibles, cuevas generadas procedimentalmente y hordas interminables de monstruos alienígenas." ,
+    fecha: "2020-05-13", trailer: "https://www.youtube.com/embed/2_GV33zBf3A?si=sJRjB8RmJMZyHCWl", desarrolladora: "Ghost Ship Games", genero: "Acción", comments: [{user: "Mecánico Pepe", text: "Mi amigo me obligo a comprarlo, jugue una partida pero como soy muy malo me da pereza jugarlo mas, de todas formas me lo pase muy bien. Buen juego", reviewValue: [,,,,]}]
+    
+});
+
 addPost({ name: "Minecraft", image: "/Imagenes_practica/minecraft.jpeg", description: "Barata, barata" });
+addPost({ name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
+
+addPost({ name: "BloodBorne", image: "/Imagenes_practica/BloodBorne.jpeg", description: "Pago bien" });
+addPost({ name: "The last of us", image: "/Imagenes_practica/thelastofus.jpeg", description: "Pago bien" });
+addPost({ name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
+addPost({ name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
 addPost({ name: "Mafia City", image: "/Imagenes_practica/mafiacity.jpeg", description: "Pago bien" });
 
 
