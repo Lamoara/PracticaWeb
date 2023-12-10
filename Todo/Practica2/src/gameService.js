@@ -14,14 +14,24 @@ addPost({ name: "Call of Duty", image: "/Imagenes_practica/COD.jpeg", descriptio
 addPost({ name: "Grand theft auto V", image: "/Imagenes_practica/gtav.jpeg", description: "Pago bien" });
 addPost({ name: "Mario Galaxy", image: "/Imagenes_practica/MarioGalaxy.jpg", description: "Barata, barata" });
 addPost({ name: "God of War Ragnarok", image: "/Imagenes_practica/godofwar.jpeg", description: "Barata, barata" });
-addPost({ name: "ARK", image: "/Imagenes_practica/ARK.jpeg", description: "Pago bien" });
-addPost({ name: "Bloodborne", image: "/Imagenes_practica/Bloodborne.jpeg", description: "Pago bien" });
-addPost({ name: "Depprock", image: "/Imagenes_practica/depprock.jpeg", description: "Pago bien" });
+
+addPost({ 
+    name: "ARK", image: "https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg", description: "Juega como un hombre o una mujer desnudo, congelándote y muriéndote de hambre en una isla misteriosa. Debes cazar, cosechar, crear objetos, cultivar, y construir refugios para sobrevivir. Usa tu habilidad y astucia para matar, domesticar, criar y cabalgar dinosaurios y otras criaturas primitivas." ,
+    fecha: "20015-05-02", trailer: "https://www.youtube.com/embed/FW9vsrPWujI?si=JFYjsxmCCG4nHdPs", desarrolladora: "Studio Wildcard, Instinct Games, Efecto Studios, Virtual Basement LLC", genero: "Supervivencia",
+});
+
+addPost({ 
+    name: "Deep rock galactic", image: "https://i.3djuegos.com/juegos/14980/deep_rock_galactic/fotos/ficha/deep_rock_galactic-5166570.jpg", description: "Pago bien" ,
+    fecha: "",trailer: "https://www.youtube.com/embed/2_GV33zBf3A?si=sJRjB8RmJMZyHCWl", desarrolladora: "Ghost Ship Games"
+    
+});
+addPost({ name: "Minecraft", image: "/Imagenes_practica/minecraft.jpeg", description: "Barata, barata" });
 addPost({ name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
+
+addPost({ name: "BloodBorne", image: "/Imagenes_practica/BlodBorne.jpeg", description: "Pago bien" });
 addPost({ name: "The last of us", image: "/Imagenes_practica/thelastofus.jpeg", description: "Pago bien" });
 addPost({ name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
 addPost({ name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
-addPost({ name: "Minecraft", image: "/Imagenes_practica/minecraft.jpeg", description: "Barata, barata" });
 addPost({ name: "Mafia City", image: "/Imagenes_practica/mafiacity.jpeg", description: "Pago bien" });
 
 
