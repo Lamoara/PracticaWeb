@@ -29,21 +29,21 @@ router.get('/post/:id/edit', (req, res) => { //esta cuando el que pida sea con u
 
 router.post('/post/edit', (req, res) => {
 
-    let {name, image, description, trailer, fecha, desarrolladora, genero, ps ,xbox, nswitch, pc} = req.body;
-    let symbolps = gameService.symbol(ps);
-    ps = gameService.symbolcolor(ps);
-    let symbolxbox = gameService.symbol(xbox);
-    xbox = gameService.symbolcolor(xbox);
-    let symbolswitch = gameService.symbol(nswitch);
-    nswitch = gameService.symbolcolor(nswitch);
-    let symbolpc = gameService.symbol(pc);
-    pc = gameService.symbolcolor(pc);
+    let {name, image, description, trailer, fecha, desarrolladora, genero, checkedps, checkedxbox, checkednswitch, checkedpc} = req.body;
+    let symbolps = gameService.symbol(checkedps);
+    let ps = gameService.symbolcolor(checkedps);
+    let symbolxbox = gameService.symbol(checkedxbox);
+    let xbox = gameService.symbolcolor(checkedxbox);
+    let symbolswitch = gameService.symbol(checkednswitch);
+    let nswitch = gameService.symbolcolor(checkednswitch);
+    let symbolpc = gameService.symbol(checkedpc);
+    let pc = gameService.symbolcolor(checkedpc);
     let accion = "editado";
     let paginaName = "detalle";
     let id = gameService.getId();
     let pagina = "/post/" + id;
     if(name&&image&&description&&trailer) {
-        gameService.editPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
+        gameService.editPost(id,{name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, checkedps, xbox, symbolxbox, checkedxbox, nswitch, symbolswitch, checkednswitch, pc, symbolpc, checkedpc});
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }
     else {
@@ -56,20 +56,20 @@ router.post('/post/edit', (req, res) => {
 
 router.post('/post/new', (req, res) => {
 
-    let {name, image, description, trailer, fecha, desarrolladora, genero, ps ,xbox, nswitch, pc} = req.body;
-    let symbolps = gameService.symbol(ps);
-    ps = gameService.symbolcolor(ps);
-    let symbolxbox = gameService.symbol(xbox);
-    xbox = gameService.symbolcolor(xbox);
-    let symbolswitch = gameService.symbol(nswitch);
-    nswitch = gameService.symbolcolor(nswitch);
-    let symbolpc = gameService.symbol(pc);
-    pc = gameService.symbolcolor(pc);
+    let {name, image, description, trailer, fecha, desarrolladora, genero, checkedps, checkedxbox, checkednswitch, checkedpc} = req.body;
+    let symbolps = gameService.symbol(checkedps);
+    let ps = gameService.symbolcolor(checkedps);
+    let symbolxbox = gameService.symbol(checkedxbox);
+    let xbox = gameService.symbolcolor(checkedxbox);
+    let symbolswitch = gameService.symbol(checkednswitch);
+    let nswitch = gameService.symbolcolor(checkednswitch);
+    let symbolpc = gameService.symbol(checkedpc);
+    let pc = gameService.symbolcolor(checkedpc);
     let accion = "creado";
     let paginaName = "principal";
     let pagina = "/";
     if(name&&image&&description&&trailer) {
-        gameService.addPost({name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc});
+        gameService.addPost({name, image, description, trailer, fecha, desarrolladora, genero, ps, symbolps, xbox, symbolxbox, nswitch, symbolswitch, pc, symbolpc, checkedps, checkedxbox, checkednswitch, checkedpc});
         res.render('PaginaIntermedia',{name,accion,pagina,paginaName});  
     }
     else {

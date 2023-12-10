@@ -4,7 +4,8 @@ let nextId = 0;
 
 addPost({
     name: "Red Dead Redemption 2", image: "/Imagenes_practica/RDR2.jpg", description: "Tras un asalto fallido en el pueblo de Blackwater, Arthur Morgan y la pandilla de Van der Linde se ven forzados a huir. Con agentes federales y los mejores cazarrecompensas pisando sus talones, la pandilla deberá asaltar, robar y hacerse camino a través de una América despiadada para poder sobrevivir. Mientras crecen las divisiones que amenazan con el fin de la pandilla Arthur debe decidir entre sus propios ideales y su lealtad a la pandilla que lo crió.",
-    fecha: "2018-10-26", trailer: "https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb", desarrolladora: "Rockstar", genero:"Aventura", ps: "tick", comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [,,,,] }, { user: "Jorge", text: "Tambien", reviewValue: [,,,] }]
+    fecha: "2018-10-26", trailer: "https://www.youtube.com/embed/MyaYlbizpvs?si=VCBSoHWHA-EuwMwb", desarrolladora: "Rockstar", genero:"Aventura", symbolps:"bi bi-check2", ps:"tick", checkedps:"checked", symbolxbox:"bi bi-check2", xbox:"tick", checkedxbox:"checked",symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-check2", pc:"tick", checkedpc:"checked",
+    comments: [{ user: "Sebas", text: "Si", reviewValue: [,] }, { user: "Alberto", text: "No", reviewValue: [,,,,] }, { user: "Jorge", text: "Tambien", reviewValue: [,,,] }]
 });
 
 addPost({ name: "Factorio", image: "https://assetsio.reedpopcdn.com/co1tfy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp", description: "Factorio es un juego sobre la construcción y creación de fábricas automatizadas para producir elementos de complejidad creciente, dentro de un mundo 2D infinito. Usa tu imaginación para diseñar tu fábrica, combina elementos simples en estructuras ingeniosas y, finalmente, protégela de las criaturas a las que realmente no les agradas.",
@@ -76,17 +77,17 @@ export function getPost(id) {
 }
 
 export function symbol(console) {
-    if (console != "tick") {
-        return "bi bi-x-lg";
+    if (console) {
+        return "bi bi-check2";
     }
 
     else {
-        return "bi bi-check2"
+        return "bi bi-x-lg";
     }
 }
 
 export function symbolcolor(console) {
-    if (console != "tick") {
+    if (console != "checked") {
         return "tick-red";
     }
 
@@ -94,7 +95,6 @@ export function symbolcolor(console) {
         return "tick";
     }
 }
-
 
 export function addComment(postId, comment) {
     const post = posts.get(postId);
