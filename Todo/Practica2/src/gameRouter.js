@@ -89,8 +89,9 @@ router.post('/post/:id/comment', (req, res) => {
     const postId = req.params.id;
     const { user, text, estrellas } = req.body;
     const reviewValue = Array.from({ length: estrellas }, (_, index) => index + 1);
+    if(user){
     gameService.addComment(postId, { user, text, reviewValue });
-    res.redirect(`/post/${postId}`);
+    res.redirect(`/post/${postId}`);}
 });
 
 router.get('/post/:id/delete', (req, res) => {
