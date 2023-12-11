@@ -15,8 +15,8 @@ addPost({
     symbolswitch:"bi bi-x-lg", nswitch:"tick-red",
     symbolpc:"bi bi-check2", pc:"tick", checkedpc:"checked",
     comments: [{ user: "Alberto Mayoral", text: "Red Dead Redemption es probablemente uno de los mejores videojuegos que he jugado en mi vida. Durante toda la aventura no dejas de sorprenderte por el nivel de inmersión que Rockstar ha logrado crear. Respecto a la historia y el desarrollo de todos sus personajes es sencillamente una de las mejores de todo el medio audiovisual. Si te gustan los juegos de mundo abierto, con una historia que te atrapa desde el primer momento y la ambientación western, este es tú juego.", reviewValue: [,,,,]}, 
-    { user: "Jorge", text: "Uno de los juegos más sobrevalorados de la industria del videojuego. El mundo abierto no es absolutamente nada novedoso, al igual que los gráficos. Respecto a su historia, es lenta y aburrida. No entiendo como a la gente le puede gustar.", reviewValue: [,,]},
-    {user: "Sebas", text: "Simplemente un juego de locos, es un juego que eleva la narrativa en los videojuegos a un nivel que nunca antes había visto. Con su rica historia de la banda de forajidos, el juego te ofrece una experiencia emocionalmente impactante y profundamente satisfactoria que captura la esencia misma de la vida en el Oeste.", reviewValue: [,,,]}]
+    { user: "Jorge Cimadevilla", text: "Uno de los juegos más sobrevalorados de la industria del videojuego. El mundo abierto no es absolutamente nada novedoso, al igual que los gráficos. Respecto a su historia, es lenta y aburrida. No entiendo como a la gente le puede gustar.", reviewValue: [,,]},
+    {user: "Sebas Silvera", text: "Simplemente un juego de locos, es un juego que eleva la narrativa en los videojuegos a un nivel que nunca antes había visto. Con su rica historia de la banda de forajidos, el juego te ofrece una experiencia emocionalmente impactante y profundamente satisfactoria que captura la esencia misma de la vida en el Oeste.", reviewValue: [,,,]}]
 });
 
 addPost({ 
