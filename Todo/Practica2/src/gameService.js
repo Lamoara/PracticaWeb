@@ -126,7 +126,7 @@ addPost({
 addPost({ 
     name: "Hades",
      image: "https://i.3djuegos.com/juegos/16330/hades/fotos/ficha/hades-5231058.jpg", 
-     description: "ades es un juego roguelike de exploración de mazmorras que combina los mejores aspectos de los aclamados títulos anteriores de Supergiant, como la acción rápida de Bastion, la atmósfera y la profundidad de Transistor y la narrativa centrada en los personajes de Pyre.",
+     description: "Hades es un juego roguelike de exploración de mazmorras que combina los mejores aspectos de los aclamados títulos anteriores de Supergiant, como la acción rápida de Bastion, la atmósfera y la profundidad de Transistor y la narrativa centrada en los personajes de Pyre.",
     fecha:"2018-12-6",
     trailer:"https://www.youtube.com/embed/iRDeQoad80s?si=xh4HQkYRBC4GAR3w",
     desarrolladora:"Supergiant Games, Supergiant Games, LLC", 
@@ -140,7 +140,7 @@ addPost({
 addPost({ 
     name: "BloodBorne", 
     image: "https://www.tebeosfera.com/T3content/img/T3_numeros/0/1/num1_vBtD-001.jpg",
-    description: "el juego de tablero es un desafiante y tenebroso juego cooperativo donde 1 a 4 Cazadores deberán explorar la ciudad de Yharnam y luchar contra bestias, monstruos y ciudadanos enloquecidos. Solo así sobrevivirán a la noche y erradicarán la fuente de la locura que la consume.",
+    description: "El juego de tablero es un desafiante y tenebroso juego cooperativo donde 1 a 4 Cazadores deberán explorar la ciudad de Yharnam y luchar contra bestias, monstruos y ciudadanos enloquecidos. Solo así sobrevivirán a la noche y erradicarán la fuente de la locura que la consume.",
     fecha:"2015-03-24",
     trailer:"https://www.youtube.com/embed/2Crk_GpxGQE?si=44eBOpToSmN5_-v3",
     desarrolladora:"FromSoftware",
