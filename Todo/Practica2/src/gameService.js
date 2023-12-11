@@ -49,20 +49,31 @@ addPost({
     trailer:"https://www.youtube.com/embed/MmB9b5njVbA?si=TBDghXWX6LTJ-ZFa", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
 });
 addPost({ 
-    name: "Hades", image: "/Imagenes_practica/Hades.jpeg", description: "Pago bien" });
+    name: "Hades", image: "https://i.3djuegos.com/juegos/16330/hades/fotos/ficha/hades-5231058.jpg", description: "ades es un juego roguelike de exploración de mazmorras que combina los mejores aspectos de los aclamados títulos anteriores de Supergiant, como la acción rápida de Bastion, la atmósfera y la profundidad de Transistor y la narrativa centrada en los personajes de Pyre.",
+    fecha:"2018-12-6",trailer:"https://youtu.be/RXq0yBmfiC8",desarrolladora:"Supergiant Games, Supergiant Games, LLC", genero:"Acción", symbolps:"bi bi-check2", ps:"tick", checkedps:"checked", symbolxbox:"bi bi-check2", xbox:"tick", checkedxbox:"checked",symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-check2", pc:"tick", checkedpc:"checked" 
+});
 
 addPost({ 
-    name: "BloodBorne", image: "/Imagenes_practica/BloodBorne.jpeg", description: "Pago bien" });
+    name: "BloodBorne", image: "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/NVmnBXze9ElHzU6SmykrJLIV.png", description: "el juego de tablero es un desafiante y tenebroso juego cooperativo donde 1 a 4 Cazadores deberán explorar la ciudad de Yharnam y luchar contra bestias, monstruos y ciudadanos enloquecidos. Solo así sobrevivirán a la noche y erradicarán la fuente de la locura que la consume.",
+    fecha:"2015-03-24",trailer:"https://www.youtube.com/embed/2Crk_GpxGQE?si=44eBOpToSmN5_-v3",desarrolladora:"FromSoftware", genero:"Acción", symbolps:"bi bi-check2", ps:"tick", checkedps:"checked",symbolxbox:"bi bi-x-lg",xbox:"tick-red", symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-x-lg", pc:"tick-red"
+});
 addPost({ 
     name: "The last of us", image: "https://static.posters.cz/image/750/the-last-of-us-key-art-i127761.jpg", description: "De acuerdo con la trama de The Last of Us, en septiembre de 2013 se desata una pandemia en Estados Unidos ocasionada por una cepa del hongo Cordyceps, que al infectar a los humanos los convierte en criaturas caníbales, y que se transmite a través de una simple mordedura. En medio de la histeria colectiva, Joel (Troy Baker), su hija Sarah (Hana Hayes) y su hermano Tommy (Jeffrey Pierce) abandonan su hogar en los suburbios de Austin, Texas para evitar la infección, pero en el camino son interceptados por un oficial que asesina a Sarah al creer que está infectada.",
     trailer:"https://www.youtube.com/embed/JZ-YYj7VopU?si=GQU-kmQ_V5-1gWqw", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
 });
 addPost({ 
-    name: "Dantes Inferno", image: "/Imagenes_practica/dantes.jpeg", description: "Pago bien" });
+    name: "Dantes Inferno", image: "https://media.vandal.net/m/9705/201011910547_1.jpg", description: "Narra la historia de Dante, un caballero Templario que tras volver de una sangrienta cruzada, descubre que su amada Beatriz ha muerto y debe de bajar hasta el infierno para salvar su alma de las manos de Lucifer.",
+    fecha:"2010-02-05",trailer:"https://www.youtube.com/embed/UUOZRRU_Dyg?si=vrQdpUdU7pU1Keoa",desarrolladora:"Electronic Arts, Visceral Games, Behaviour Interactive, Artificial Mind & Movement", genero:"Acción", symbolps:"bi bi-question", symbolxbox:"bi bi-question", symbolswitch:"bi bi-question", symbolpc:"bi bi-question"
+});
 addPost({ 
-    name: "EA Sports 24", image: "/Imagenes_practica/fifa24.jpeg", description: "Pago bien" });
+    name: "EA Sports 24", image: "https://i.blogs.es/156597/51cjvxc5xwl._sl500_/original.jpeg", description: "Juego el cual se centra en recrear de manera virtual lo que sería un partido de fúbol, con mas de 19 000 futbolistas asosiados, 700 clubes, 100 estadios y 30 ligas de todo el mundo.",
+    fecha:"2023-9-29",trailer:"https://youtu.be/-vL01jbgENE",desarrolladora:"EA Sports", genero:"Deporte", symbolps:"bi bi-check2", ps:"tick", checkedps:"checked", symbolxbox:"bi bi-check2", xbox:"tick", checkedxbox:"checked",symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-check2", pc:"tick", checkedpc:"checked"
+
+});
 addPost({ 
-    name: "Mafia City", image: "/Imagenes_practica/mafiacity.jpeg", description: "Pago bien" });
+    name: "Mafia City", image: "https://static.tvtropes.org/pmwiki/pub/images/950x950bb.jpg", description: "Lucha por el poder para alcanzar tus sueños, ¡no podrás parar de jugar! ☆Batallas entre territorios cada día, guerras durante todo el año. Función de zoom, multiángulo de 360 grados con una imagen gráfica que proporciona una realidad virtual sin igual.",
+    fecha:"2018-11-12",trailer:"https://youtu.be/GwR6Vm4Lp54",desarrolladora:"VoyagerOne Pte. Ltd.", genero:"Simulación", symbolps:"bi bi-x-lg",ps:"tick-red", symbolxbox:"bi bi-x-lg",xbox:"tick-red", symbolswitch:"bi bi-x-lg", nswitch:"tick-red", symbolpc:"bi bi-x-lg", pc:"tick-red"
+});
 
 
 
