@@ -241,7 +241,6 @@ export function symbol(console) {
     if (console) {
         return "bi bi-check2";
     }
-
     else {
         return "bi bi-x-lg";
     }
@@ -251,7 +250,6 @@ export function symbolcolor(console) {
     if (console != "checked") {
         return "tick-red";
     }
-
     else {
         return "tick";
     }
