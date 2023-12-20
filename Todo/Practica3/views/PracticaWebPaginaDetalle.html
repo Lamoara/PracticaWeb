@@ -1,0 +1,172 @@
+<!doctype HTML>
+
+<head>
+    <title>GamingRankDetalle</title>
+    <link type="text/css" rel="stylesheet" href="/css/styleprincipal.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <button class="headproyect">
+            <a href="/" class="decoration">
+                <h1><img id="fantasmas" src="/Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+                    </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                        id="colorK">k</span><img id="fantasmas" src="/Imagenes_practica/Fantasmas.jpg"></h1>
+            </a>
+        </button>
+    </header>
+
+    <section>
+        <div id="gridButton">
+            <a class="button" href="/"><i class="bi bi-arrow-90deg-left"></i></a>
+            <a class="button" href="/post/{{post.id}}/edit"><i class="bi bi-pencil"></i></a>
+            <a href="/post/{{post.id}}/delete" class="button"><i class="bi bi-trash"></i></a>
+        </div>
+        <h3 id="Tittle">{{post.name}}</h3>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 elementCenter">
+                    <img class="img-fluid" src="{{post.image}}">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="description">
+                                    <h3>Historia</h3>
+                                    <p>{{post.description}}
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 elementCenter" id="espacioTrailer">
+                                    <iframe id="trailer" src="{{post.trailer}}"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="info">
+                            <h3>Información Básica</h3>
+                            <ul>
+                                <li>Fecha de lanzamiento:
+                                    {{#post.fecha}}
+                                    {{post.fecha}}
+                                    {{/post.fecha}}
+                                    {{^post.fecha}}
+                                    No seleccionada
+                                    {{/post.fecha}}
+                                </li>
+                                <li>Empresesa desarrolladora:
+                                    {{#post.desarrolladora}}
+                                    {{post.desarrolladora}}
+                                    {{/post.desarrolladora}}
+                                    {{^post.desarrolladora}}
+                                    No seleccionada
+                                    {{/post.desarrolladora}}
+                                </li>
+                                <li>Género:
+                                    {{#post.genero}}
+                                    {{post.genero}}
+                                    {{/post.genero}}
+                                    {{^post.genero}}
+                                    No seleccionado
+                                    {{/post.genero}}
+                                </li>
+                                <section>
+                                    <div class="tablaconsola">
+                                        <table>
+                                            <thead>
+                                                <th class="videojuego"><i class="bi bi-controller"></i></th>
+                                                <th class="ps"><i class="bi bi-playstation"></i></th>
+                                                <th class="xbox"><i class="bi bi-xbox"></i></th>
+                                                <th class="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                                                <th class="pc"><i class="bi bi-pc-display"></i></th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>{{post.name}}</td>
+                                                    <td class="{{post.ps}}"><i class="{{post.symbolps}}"></i></td>
+                                                    <td class="{{post.xbox}}"><i class="{{post.symbolxbox}}"></i></td>
+                                                    <td class="{{post.nswitch}}"><i class="{{post.symbolswitch}}"></i>
+                                                    </td>
+                                                    <td class="{{post.pc}}"><i class="{{post.symbolpc}}"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <form action="/post/{{post.id}}/comment" method="post">
+        <section>
+            <div class="formgrid">
+                <div id="contentform">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="user" class="form-control" id="email" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Reseña</label>
+                        <input type="text" name="text" class="form-control" id="pwd" placeholder="Escriba su reseña">
+                    </div>
+                    <div id="score">
+                        <div class="valoracion">
+                            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                                    --><label for="radio1">★</label><!--
+                                    --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                                    --><label for="radio2">★</label><!--
+                                    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                                    --><label for="radio3">★</label><!--
+                                    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                                    --><label for="radio4">★</label><!--
+                                    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                                    --><label for="radio5">★</label>
+                        </div>
+                    </div>
+                    <div class="gridButtonLarge">
+                        <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
+                    </div>
+                </div>
+            </div>
+    </form>
+    {{#post.comments}}
+    <div class="gridReview">
+        <div class="imageUser">
+            <img class="userImage" src="/Imagenes_practica/user.png">
+            <p class="userName">{{user}}</p>
+        </div>
+        <div class="review">
+            <p class="reviewtext">{{text}}</p>
+            <div class="ScoreReview">
+                {{#reviewValue}}
+                <p class="YellowStar">★</p>
+                {{/reviewValue}}
+            </div>
+        </div>
+    </div>
+    {{/post.comments}}
+    {{^post.comments}}
+    {{/post.comments}}
+    </section>
+    <footer>
+        <div class="pieDePagina">
+            <a href="/" class="decoration">
+                <image class="logo" src="/Imagenes_practica/LogoGR.jpg"></image>
+            </a>
+        </div>
+    </footer>
+</body>

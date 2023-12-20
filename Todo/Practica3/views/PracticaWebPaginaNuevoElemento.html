@@ -1,0 +1,147 @@
+<!doctype HTML>
+
+<head> <!-- inicio de la cabecera del programa -->
+    <title>GamingRankNuevoElemento</title> <!-- título que tedrá nuestra página -->
+    <link type="text/css" rel="stylesheet" href="/css/styleprincipal.css" />
+    <!-- con este link le asociamos un documento css (el estilo)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <button class="headproyect">
+            <a href="/" class="decoration">
+                <h1><img id="fantasmas" src="/Imagenes_practica/Pacman.jpg"><span id="colorGaming">Gaming
+                    </span><span id="colorR">R</span><span id="colorA">a</span><span id="colorN">n</span><span
+                        id="colorK">k</span><img id="fantasmas" src="/Imagenes_practica/Fantasmas.jpg"></h1>
+            </a>
+        </button>
+    </header>
+
+    <section>
+        <div class="gridButton">
+            <a class="button" href="{{tipo}}"><i class="bi bi-arrow-90deg-left"></i></a>
+        </div>
+    </section>
+
+    <section>
+        <div id="gridTittle">
+            <h1>Crear nuevo elemento</h1>
+        </div>
+
+        <form action="{{funcion}}" method="post">
+        <div id="gridData">
+            <div id="NameData">
+                <p class="DataText">Título:</p>
+                <p>
+                    <input class="TextFile" type="text" name="name" placeholder="Nombre del videojuego"
+                        value="{{post.name}}">
+                </p>
+            </div>
+            <div class="row" id="imgandtrailer">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="ImageData">
+                    <p class="DataText">Imagen URL:</p>
+                    <p>
+                        <input class="TextFile" type="url" name="image"
+                            placeholder="Copie el enlace de la portada del videojuego" value="{{post.image}}"></input>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
+                    <p class="DataText">Trailer URL:</p>
+                    <p>
+                        <input class="TextFile" type="url" name="trailer"
+                            placeholder="Copie el enlace al trailer del videojuego" value="{{post.trailer}}"></input>
+                    </p>
+
+                </div>
+            </div>
+
+            <div id="DescriptionData">
+                <p class="DataText">Descripción:</p>
+                <p>
+                    <input class="TextFile" id="textDescription" type="text" name="description"
+                        placeholder="Escribe una breve sinopsis" value="{{post.description}}"></input>
+                </p>
+            </div>
+
+            <div id="BasicInfo">
+                <p class="DataText">Información Básica:</p>
+                <p>
+                <div id="InfoFecha">
+                    <h6>Fecha de lanzamiento:</h6>
+                    <input type="date" name="fecha" value="{{post.fecha}}" value="0000-00-00" />
+                </div>
+                <input class="TextFile" type="text" name="desarrolladora" placeholder="Empresa Desarrolladora"
+                    value="{{post.desarrolladora}}">
+
+                <select id="selectGen" name="genero">
+                    {{#post.genero}}
+                    <option value="{{post.genero}}" selected>{{post.genero}}</option>
+                    {{/post.genero}}
+
+                    {{^post.genero}}
+                    <option value="No seleccionado" selected>Elegir género</option>
+                    {{/post.genero}}
+
+                    <option value="Aventura">Aventura</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Estrategia">Estrategia</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Deporte">Deporte</option>
+                    <option value="Simulación">Simulación</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Carreras">Carreras</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Puzzle">Puzzle</option>
+                    <option value="Plataformas">Plataformas</option>
+                    <option value="MMO">MMO</option>
+                </select>
+
+                <div id="plataforma">
+                    <h6>Plataformas compatibles:</h6>
+                    <section>
+                        <div class="tablaconsola">
+                            <table>
+                                <thead>
+                                    <th class="ps"><i class="bi bi-playstation"></i></th>
+                                    <th class="xbox"><i class="bi bi-xbox"></i></th>
+                                    <th class="nintendo"><i class="bi bi-nintendo-switch"></i></th>
+                                    <th class="pc"><i class="bi bi-pc-display"></i></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" name="checkedps" {{post.checkedps}}
+                                                value="checked"><br></td>
+                                        <td><input type="checkbox" name="checkedxbox" {{post.checkedxbox}}
+                                                value="checked"><br></td>
+                                        <td><input type="checkbox" name="checkednswitch" {{post.checkednswitch}}
+                                                value="checked"><br></td>
+                                        <td><input type="checkbox" name="checkedpc" {{post.checkedpc}}
+                                                value="checked"><br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="gridButtonLarge">
+        <input class="buttonsubmitlarge" type="submit" value="Save" href="{{tipo}}"></input>
+    </div>
+    </form>
+
+    <footer>
+        <div class="pieDePagina">
+            <a href="/" class="decoration">
+                <image class="logo" src="/Imagenes_practica/LogoGR.jpg"></image>
+            </a>
+        </div>
+    </footer>
+</body>
