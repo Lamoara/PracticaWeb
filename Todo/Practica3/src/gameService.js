@@ -1,7 +1,7 @@
 const posts = new Map();
 let idVariable;
 let nextId = 0;
-
+export function añadir(){
 addPost({
     name: "Red Dead Redemption 2", 
     image: "https://i.blogs.es/juegos/13424/red_dead_3__nombre_temporal_/fotos/maestras/red_dead_3__nombre_temporal_-4030936.jpg", 
@@ -199,8 +199,9 @@ addPost({
     symbolswitch:"bi bi-x-lg", nswitch:"tick-red", 
     symbolpc:"bi bi-x-lg", pc:"tick-red"
 });
+}
 
-
+añadir();
 
 export function addPost(post) {
     let id = nextId++; //se le suma 1 al id
@@ -229,8 +230,13 @@ export function deletePost(id) {
     posts.delete(id);
 }
 
-export function getPosts() {
-    return [...posts.values()];
+export function getPosts(from,to) { 
+    let values=[...posts.values()];
+    if (from!==undefined){
+        return values.slice(from,to);
+    } else{
+        return values;
+    }
 }
 
 export function getPost(id) {

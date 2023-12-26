@@ -4,11 +4,21 @@ import * as gameService from './gameService.js';
 const router = express.Router(); //router sera el encargado de controlar todas las peticiones del servidor
 
 router.get('/', (req, res) => { //esta cuando el que pida sea con una raiz "/"
-
     res.render('PracticaWeb', { 
-        posts: gameService.getPosts() 
+        posts: gameService.getPosts(0,8)
     });
 });
+
+router.get("/moregames",(res,req)=>{
+    const from = parseInt(req.query.from); //se obtiene el valor de from pasado 
+    const to = paraseInt(req.query.to); // se obtiene el valor de to 
+
+    //const games= gameService.getPosts(from,to); //games almacena los post desde from hasta to
+
+    res.render('moregames',{
+        posts:gameService.getPosts(from,to) //donde exista posts, se mostrarán los valores de games
+    });
+})
 
 router.get('/new', (req, res) => { //esta cuando el que pida sea con una raiz "/new"
 
