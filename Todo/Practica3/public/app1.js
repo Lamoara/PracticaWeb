@@ -5,6 +5,7 @@ async function loadGames(){
 
     const to = from + Result_Numbres; // hasta el elemento 16  si se le da al botón por 1ra vez
 
+    console.log("Moregames");
     const response = await fetch(`/moregames?from=${from}&to=${to}`); //se le envia una solicitud a /moregames y le envia 2 parametros
     
     const newGames= await response.text();// se transforma la respuesta en texto
