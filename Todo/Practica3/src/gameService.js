@@ -203,6 +203,16 @@ addPost({
 
 añadir();
 
+
+export function getPosts(from, to) {
+    let values = [...posts.values()];
+    if (from !== undefined) {
+        return values.slice(from, to);
+    } else {
+        return values;
+    }
+}
+
 export function addPost(post) {
     let id = nextId++; //se le suma 1 al id
     post.id = id.toString(); //al id del elemento post se le asigna el valor del "id" pero en string
@@ -230,15 +240,6 @@ export function deletePost(id) {
     posts.delete(id);
 }
 
-export function getPosts(from,to) { 
-    let values=[...posts.values()];
-    if (from!==undefined){
-        return values.slice(from,to);
-    } else{
-        return values;
-    }
-}
-
 export function getPost(id) {
     return posts.get(id);
 }
@@ -247,7 +248,6 @@ export function symbol(console) {
     if (console) {
         return "bi bi-check2";
     }
-
     else {
         return "bi bi-x-lg";
     }
@@ -257,7 +257,6 @@ export function symbolcolor(console) {
     if (console != "checked") {
         return "tick-red";
     }
-
     else {
         return "tick";
     }
