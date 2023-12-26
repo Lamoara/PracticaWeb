@@ -1,4 +1,4 @@
-const NUM_RESULTS = 8;
+const NUM_RESULTS = 4;
 
 let loadMoreRequests = 0;
 
