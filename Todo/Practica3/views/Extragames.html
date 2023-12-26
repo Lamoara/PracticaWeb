@@ -1,17 +1,15 @@
-<div class="container"> <!--agrupar elementos (menos definido semánticamente)-->
-    <div class="row">
-        {{#posts}}
-        <div class="col-lg-3 col-md-6"> <!--en bootstrap hay 12 columnas -->
-            <a href="post/{{id}}" class="decoration">
-                <image class="img-responsive" src={{image}}></image>
-                <p class="GameName">{{name}}</p>
-            </a>
-        </div>
-        {{/posts}}
+<div class="row">
+    {{#posts}}
+    <div class="col-lg-3 col-md-6"> <!--en bootstrap hay 12 columnas -->
+        <a href="post/{{id}}" class="decoration">
+            <image class="img-responsive" src={{image}}></image>
+            <p class="GameName">{{name}}</p>
+        </a>
     </div>
+    {{/posts}}
 
     {{^posts}}
-    <p>No posts yet.</p>
+    <p>No se pueden cargar más elementos</p>
     {{/posts}}
     <br>
 </div>

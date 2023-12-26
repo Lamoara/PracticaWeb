@@ -630,3 +630,41 @@ body {
     align-items: center;
 }
 
+#searchDiv{
+    display: flex;
+}
+
+#username {
+    flex: 70%;
+    margin: 20px;
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#search-button {
+    margin: 20px;
+    margin-left: 0px;
+    flex: 30%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5f9ee6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#buttonmore{
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+}

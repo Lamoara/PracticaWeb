@@ -3,11 +3,15 @@
 <head>
     <title>GamingRank</title>
     <link type="text/css" rel="stylesheet" href="/css/styleprincipal.css" /> <!--con esto se le asocia el css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- estamos importando ese fichero que incluye las reglas de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script><!--fichero que incluye código JavaScript que aporta interactividad con algunos componentes -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!-- permite el uso de íconos-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- estamos importando ese fichero que incluye las reglas de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
+    <!--fichero que incluye código JavaScript que aporta interactividad con algunos componentes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- permite el uso de íconos-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--permite que la página se adapte al ancho de la pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--permite que la página se adapte al ancho de la pantalla -->
     <script src="app2.js"></script>
 </head>
 
@@ -21,6 +25,15 @@
             </a>
         </button>
     </header>
+
+
+    <form>
+        <div id="searchDiv">
+          <input id='username' type="text" name="search" placeholder="Buscar">
+          <button type="button" onclick='checkUsernameAvailability()' id="search-button"><i class="bi bi-search"></i></button>
+        </div>
+      </form>
+    <div id="message"></div>
 
     <section> <!--significado semántico mas definido-->
         <div id="extraGames" class="container"> <!--agrupar elementos (menos definido semánticamente)-->
@@ -43,11 +56,10 @@
     </section>
 
 
-    <button onclick='loadMore()'>Load more</button>
+    <button id="buttonmore" onclick='loadMore()'>Cargar más</button>
 
     <div class="gridButtonLarge">
-        <a class="buttonsubmitlarge" id="buttonnew" href="/new" type="submit"><i
-                class="bi bi-plus-circle"></i></a>
+        <a class="buttonsubmitlarge" id="buttonnew" href="/new" type="submit"><i class="bi bi-plus-circle"></i></a>
     </div>
 
     <footer>

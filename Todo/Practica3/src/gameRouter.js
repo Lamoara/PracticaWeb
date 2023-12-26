@@ -1,6 +1,8 @@
 import express from 'express';
 import * as gameService from './gameService.js';
 
+let existingUsernames = [ 'user23', 'pepito', 'juan' ];
+
 const router = express.Router(); //router sera el encargado de controlar todas las peticiones del servidor 
 
 router.get('/', (req, res) => {
@@ -22,6 +24,19 @@ router.get('/moreGames', (req, res) => {
     res.render('Extragames', {
         posts: game
     });
+});
+
+router.get('/availableUsername', (req, res) => {
+
+    let username = req.query.username;
+
+    let availableUsername = existingUsernames.indexOf(username) === -1;
+
+    let response = {
+        available: availableUsername
+    }
+
+    res.json(response);
 });
 
 
