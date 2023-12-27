@@ -2,15 +2,15 @@ const NUM_RESULTS = 4;
 
 let loadMoreRequests = 0;
 
-async function loadMore(){
+async function loadMore() {
 
-    const from = (loadMoreRequests+1) * NUM_RESULTS;
+    const from = (loadMoreRequests + 1) * NUM_RESULTS;
     const to = from + NUM_RESULTS;
 
     const response = await fetch(`/moreGames?from=${from}&to=${to}`);
 
     const newGame = await response.text();
-  
+
     const gameDiv = document.getElementById("extraGames");
 
     gameDiv.innerHTML += newGame;
@@ -30,28 +30,17 @@ async function checkUsernameAvailability() {
     const responseObj = await response.json();
 
     let message = responseObj.available ? `
-    <section>
-        <div id="extraGames" class="container">
-            <div class="row">
-                {{#posts}}
-                <div class="col-lg-3 col-md-6">
-                    <a href="post/{{id}}" class="decoration">
-                        <img class="img-responsive" src="{{image}}" alt="{{name}}">
-                        <p class="GameName">{{name}}</p>
-                    </a>
-                </div>
-                {{/posts}}
-            </div>
-
-            {{^posts}}
-            <p>No posts yet.</p>
-            {{/posts}}
-            <br>
-        </div>
-    </section>
-    <button id="buttonmore" onclick="loadMore()">Cargar más</button>` :
+    <p>Disponible</p>` :
     '<p>No disponible</p>';
 
     const messageDiv = document.getElementById('message');
     messageDiv.innerHTML = message;
+}
+
+function filtra() {
+
+    let genero = document.getElementById('filter-button').value;
+
+    let content = document.getElementById('content');
+    content.innerHTML += '<p>Hola '+genero+'!</p>';
 }

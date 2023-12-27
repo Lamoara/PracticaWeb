@@ -213,6 +213,25 @@ export function getPosts(from, to) {
     }
 }
 
+export function getPostsFilter(from, to, genero) {
+    // Obtiene todas las publicaciones y las almacena en el array 'values'
+    let values = [...posts.values()];
+
+    // Filtra las publicaciones por el atributo 'genero' si se proporciona el parámetro 'genero'
+    if (genero !== undefined) {
+        values = values.filter(post => post.genero === genero);
+    }
+
+    // Verifica si se proporciona el parámetro 'from' (inicio del rango)
+    if (from !== undefined) {
+        // Devuelve un subconjunto de las publicaciones desde 'from' hasta 'to'
+        return values.slice(from, to);
+    } else {
+        // Si no se proporciona 'from', devuelve todas las publicaciones
+        return values;
+    }
+}
+
 export function addPost(post) {
     let id = nextId++; //se le suma 1 al id
     post.id = id.toString(); //al id del elemento post se le asigna el valor del "id" pero en string

@@ -27,31 +27,47 @@
     </header>
 
 
-    <form>
-        <div id="searchDiv">
-          <input id='username' type="text" name="search" placeholder="Buscar">
-          <button type="button" onclick='checkUsernameAvailability()' id="search-button"><i class="bi bi-search"></i></button>
-        </div>
-      </form>
-    <div id="message"></div>
+    <div id="searchDiv">
+        <form id="formFilter">
+            <select id="filter-button" name="genero">
+                <option value="No seleccionado" selected>Elegir género</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Acción">Acción</option>
+                <option value="Estrategia">Estrategia</option>
+                <option value="RPG">RPG</option>
+                <option value="Deporte">Deporte</option>
+                <option value="Simulación">Simulación</option>
+                <option value="Shooter">Shooter</option>
+                <option value="Carreras">Carreras</option>
+                <option value="Terror">Terror</option>
+                <option value="Puzzle">Puzzle</option>
+                <option value="Plataformas">Plataformas</option>
+                <option value="MMO">MMO</option>
+            </select>
+            <button type="button" onclick='filtra()' id="accept-button"><i class="bi bi-filter-left"></i></button>
+        </form>
+        <form id="formSearch">
+            <input id='username' type="text" name="search" placeholder="Buscar">
+            <button type="button" onclick='checkUsernameAvailability()' id="search-button"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
 
+    <div id='content'></div>
+
+
+    <section id="message"></section>
     <section> <!--significado semántico mas definido-->
         <div id="extraGames" class="container"> <!--agrupar elementos (menos definido semánticamente)-->
             <div class="row">
                 {{#posts}}
-                <div class="col-lg-3 col-md-6"> <!--en bootstrap hay 12 columnas -->
+                <div class="col-lg-3 col-md-6">
                     <a href="post/{{id}}" class="decoration">
-                        <image class="img-responsive" src={{image}}></image>
+                        <image class="img-responsive" src="{{image}}"></image>
                         <p class="GameName">{{name}}</p>
                     </a>
                 </div>
                 {{/posts}}
             </div>
-
-            {{^posts}}
-            <p>No posts yet.</p>
-            {{/posts}}
-            <br>
         </div>
     </section>
 
