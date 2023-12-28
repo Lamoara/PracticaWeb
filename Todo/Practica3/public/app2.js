@@ -1,24 +1,20 @@
 const NUM_RESULTS = 4;
-
 let loadMoreRequests = 0;
 
-async function loadMore() {
-
-    const from = (loadMoreRequests + 1) * NUM_RESULTS;
-    const to = from + NUM_RESULTS;
-
-    const response = await fetch(`/moreGames?from=${from}&to=${to}`);
-
-    const newGame = await response.text();
+async function loadMore(from, to, genero) {
+    const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
+    const newGames = await response.text();
 
     const gameDiv = document.getElementById("extraGames");
-
-    gameDiv.innerHTML += newGame;
-
-    loadMoreRequests++;
+    gameDiv.innerHTML = newGames;
 }
 
+function filtra() {
+    let genero = document.getElementById('filter-button').value;
+    loadMore(0, 8, genero);
+}
 
+// checkUsernameAvailability() funcion de prueba
 async function checkUsernameAvailability() {
 
     let usernameInput = document.getElementById('username');
@@ -31,16 +27,8 @@ async function checkUsernameAvailability() {
 
     let message = responseObj.available ? `
     <p>Disponible</p>` :
-    '<p>No disponible</p>';
+        '<p>No disponible</p>';
 
     const messageDiv = document.getElementById('message');
     messageDiv.innerHTML = message;
-}
-
-function filtra() {
-
-    let genero = document.getElementById('filter-button').value;
-
-    let content = document.getElementById('content');
-    content.innerHTML += '<p>Hola '+genero+'!</p>';
 }

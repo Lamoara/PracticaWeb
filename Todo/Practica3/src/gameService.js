@@ -203,9 +203,11 @@ addPost({
 
 añadir();
 
-
-export function getPosts(from, to) {
+export function getPosts(from, to, genero) {
     let values = [...posts.values()];
+    if (genero && genero !== "No seleccionado") {
+        values = values.filter(post => post.genero === genero);
+    }
     if (from !== undefined) {
         return values.slice(from, to);
     } else {
@@ -213,23 +215,8 @@ export function getPosts(from, to) {
     }
 }
 
-export function getPostsFilter(from, to, genero) {
-    // Obtiene todas las publicaciones y las almacena en el array 'values'
-    let values = [...posts.values()];
-
-    // Filtra las publicaciones por el atributo 'genero' si se proporciona el parámetro 'genero'
-    if (genero !== undefined) {
-        values = values.filter(post => post.genero === genero);
-    }
-
-    // Verifica si se proporciona el parámetro 'from' (inicio del rango)
-    if (from !== undefined) {
-        // Devuelve un subconjunto de las publicaciones desde 'from' hasta 'to'
-        return values.slice(from, to);
-    } else {
-        // Si no se proporciona 'from', devuelve todas las publicaciones
-        return values;
-    }
+export function getPosts2() {
+    return [...posts.values()];
 }
 
 export function addPost(post) {

@@ -7,7 +7,7 @@ const router = express.Router(); //router sera el encargado de controlar todas l
 
 router.get('/', (req, res) => {
 
-    const game = gameService.getPosts(0,4);
+    const game = gameService.getPosts(0,8);
 
     res.render('PracticaWeb', {
         posts: game
@@ -15,17 +15,18 @@ router.get('/', (req, res) => {
 });
 
 router.get('/moreGames', (req, res) => {
-
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
+    const genero = req.query.genero;
 
-    const game = gameService.getPosts(from,to);
+    const game = gameService.getPosts(from, to, genero);
 
     res.render('Extragames', {
         posts: game
     });
 });
 
+// /availableUsername de prueba
 router.get('/availableUsername', (req, res) => {
 
     let username = req.query.username;
@@ -38,7 +39,6 @@ router.get('/availableUsername', (req, res) => {
 
     res.json(response);
 });
-
 
 router.get('/new', (req, res) => { //esta cuando el que pida sea con una raiz "/new"
 
