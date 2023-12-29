@@ -7,7 +7,6 @@ const onScroll = () => {
 
     if (scrollPosition + windowHeight * 2 >= document.documentElement.scrollHeight) {
         loadMoreOnClick();
-        console.log("Load")
     }
 }
 
@@ -29,8 +28,8 @@ async function loadMore(from, to, genero, nameInput) {
 function filtra() {
     const genero = document.getElementById('filter-button').value;
     const gameDiv = document.getElementById("extraGames");
+    
     loadMoreRequests = 0;
-
     gameDiv.innerHTML = "";
 
     loadMore(loadMoreRequests * NUM_RESULTS, (loadMoreRequests + 1) * NUM_RESULTS, genero);
@@ -46,7 +45,7 @@ function loadMoreOnClick() {
     loadMoreRequests++;
 }
 
-function search() {
+function searchName() {
     const nameInput = document.getElementById('name').value;
     const gameDiv = document.getElementById("extraGames");
 
@@ -66,6 +65,4 @@ async function addfavorito(){
     const ul=document.getElementById("favs");
     ul.innerHTML = element;
     alert("Se ha agregado correctamente");
-    
-    
 }
