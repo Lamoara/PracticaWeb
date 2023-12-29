@@ -5,7 +5,7 @@ const onScroll = () => {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
     const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-    if (scrollPosition + windowHeight >= document.documentElement.scrollHeight - 400) {
+    if (scrollPosition + windowHeight * 2 >= document.documentElement.scrollHeight) {
         loadMoreOnClick();
         console.log("Load")
     }
