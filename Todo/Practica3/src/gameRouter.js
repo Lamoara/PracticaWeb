@@ -6,7 +6,7 @@ const router = express.Router(); //router sera el encargado de controlar todas l
 router.get('/', (req, res) => {
 
     let genero = 'No seleccionado';
-    const game = gameService.getPosts(0,4,genero);
+    const game = gameService.getPosts(0,8,genero);
     
     res.render('PracticaWeb', {
         posts: game
