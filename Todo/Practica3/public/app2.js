@@ -1,8 +1,8 @@
 const NUM_RESULTS = 4;
 let loadMoreRequests = 0;
 
-async function loadMore(from, to, genero) {
-    const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
+async function loadMore(from, to, genero, nameInput) {
+    const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}&nameInput=${nameInput}`);
     const newGames = await response.text();
 
     const gameDiv = document.getElementById("extraGames");
@@ -34,24 +34,18 @@ function loadMoreOnClick() {
     loadMoreRequests++;
 }
 
-// checkUsernameAvailability() funcion de prueba
-async function checkUsernameAvailability() {
+function search() {
 
-    let usernameInput = document.getElementById('username');
+    let nameInput = document.getElementById('name').value;
+    const gameDiv = document.getElementById("extraGames");
 
-    let username = usernameInput.value;
+    loadMoreRequests = 0;
+    gameDiv.innerHTML = "";
 
-    const response = await fetch(`/availableUsername?username=${username}`);
-
-    const responseObj = await response.json();
-
-    let message = responseObj.available ? `
-    <p>Disponible</p>` :
-        '<p>No disponible</p>';
-
-    const messageDiv = document.getElementById('message');
-    messageDiv.innerHTML = message;
+    loadMore(loadMoreRequests * NUM_RESULTS, (loadMoreRequests + 1) * NUM_RESULTS, genero,nameInput);
+    loadMoreRequests++;
 }
+
 
 async function addfavorito(){
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo

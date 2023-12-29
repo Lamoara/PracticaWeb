@@ -1,8 +1,6 @@
 import express from 'express';
 import * as gameService from './gameService.js';
 
-let existingUsernames = [ 'user23', 'pepito', 'juan' ];
-
 const router = express.Router(); //router sera el encargado de controlar todas las peticiones del servidor 
 
 router.get('/', (req, res) => {
@@ -19,7 +17,8 @@ router.get('/moreGames', (req, res) => {
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
     const genero = req.query.genero;
-    const game = gameService.getPosts(from, to, genero);
+    const nameInput = req.query.nameInput;
+    const game = gameService.getPosts(from, to, genero, nameInput);
 
     res.render('Extragames', {
         posts: game
@@ -35,19 +34,6 @@ router.get('/addfavorito',(req, res) => {
     });
 });
 
-// /availableUsername de prueba
-router.get('/availableUsername', (req, res) => {
-
-    let username = req.query.username;
-
-    let availableUsername = existingUsernames.indexOf(username) === -1;
-
-    let response = {
-        available: availableUsername
-    }
-
-    res.json(response);
-});
 
 router.get('/new', (req, res) => { //esta cuando el que pida sea con una raiz "/new"
 
