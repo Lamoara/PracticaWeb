@@ -13,18 +13,6 @@ const onScroll = () => {
 
 window.addEventListener('scroll', onScroll)
 
-const onScroll = () => {
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-    if (scrollPosition + windowHeight >= document.documentElement.scrollHeight - 400) {
-        loadMoreOnClick();
-        console.log("Load")
-    }
-}
-
-window.addEventListener('scroll', onScroll)
-
 async function loadMore(from, to, genero, nameInput) {
     const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}&nameInput=${nameInput}`);
     const newGames = await response.text();
