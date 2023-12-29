@@ -10,10 +10,10 @@ const onScroll = () => {
     }
 }
 
-window.addEventListener('scroll', onScroll)
+//window.addEventListener('scroll', onScroll)
 
-async function loadMore(from, to, genero, nameInput) {
-    const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}&nameInput=${nameInput}`);
+async function loadMore(from, to, genero) {
+    const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
     const newGames = await response.text();
 
     const gameDiv = document.getElementById("extraGames");
@@ -47,15 +47,42 @@ function loadMoreOnClick() {
 
 function searchName() {
     const nameInput = document.getElementById('name').value;
-    const gameDiv = document.getElementById("extraGames");
 
-    loadMoreRequests = 0;
-    gameDiv.innerHTML = "";
+    fetch(`/searchGames?nameInput=${nameInput}`)
+        .then(response => response.json())
+        .then(data => {
+            const gameDiv = document.getElementById("extraGames");
+            
+            gameDiv.innerHTML = "";
 
-    loadMore(loadMoreRequests * NUM_RESULTS, (loadMoreRequests + 1) * NUM_RESULTS, nameInput);
-    loadMoreRequests++;
+            gameDiv.insertAdjacentHTML('beforeend', generateGameHTML(data.posts));
+        })
+        .catch(error => {
+            console.error('Error en la solicitud AJAX:', error);
+        });
 }
 
+function generateGameHTML(games) {
+    if (!games || games.length === 0) {
+        return '<p>No se encontraron resultados</p>';
+    }
+    let htmlString = '<div class="row">';
+
+    games.forEach(game => {
+        htmlString += `
+            <div class="col-lg-3 col-md-6">
+                <a href="post/${game.id}" class="decoration">
+                    <image class="img-responsive" src="${game.image}"></image>
+                    <p class="GameName">${game.name}</p>
+                </a>
+            </div>
+        `;
+    });
+
+    htmlString += '</div>';
+
+    return htmlString;
+}
 
 async function addfavorito(){
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo

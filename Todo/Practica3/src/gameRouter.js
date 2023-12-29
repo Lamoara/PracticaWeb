@@ -17,13 +17,20 @@ router.get('/moreGames', (req, res) => {
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
     const genero = req.query.genero;
-    const nameInput = req.query.nameInput;
-    const game = gameService.getPosts(from, to, genero, nameInput);
+    const game = gameService.getPosts(from, to, genero);
 
     res.render('Extragames', {
         posts: game
     });
 });
+
+router.get('/searchGames', (req, res) => {
+    const nameInput = req.query.nameInput;
+    const games = gameService.searchGame(nameInput);
+
+    res.json({ posts: games });
+});
+
 
 router.get('/addfavorito',(req, res) => {
     const id = req.query.id;

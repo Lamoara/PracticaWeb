@@ -228,7 +228,7 @@ addPost({
 });
 
 addPost({ 
-    name: "BloodBorne", 
+    name: "Bloodborne", 
     image: "https://www.tebeosfera.com/T3content/img/T3_numeros/0/1/num1_vBtD-001.jpg",
     description: "El juego de tablero es un desafiante y tenebroso juego cooperativo donde 1 a 4 Cazadores deberán explorar la ciudad de Yharnam y luchar contra bestias, monstruos y ciudadanos enloquecidos. Solo así sobrevivirán a la noche y erradicarán la fuente de la locura que la consume.",
     fecha:"2015-03-24",
@@ -294,11 +294,13 @@ addPost({
 
 añadir();
 
-export function getPosts(from, to, genero, nameInput) {
+export function getPosts(from, to, genero) {
     let values = [...posts.values()];
+
     if (genero && genero !== "No seleccionado") {
         values = values.filter(post => post.genero === genero);
     }
+
 
     if (from !== undefined) {
         return values.slice(from, to);
@@ -307,8 +309,13 @@ export function getPosts(from, to, genero, nameInput) {
     }
 }
 
-export function getPosts2() {
-    return [...posts.values()];
+export function searchGame(nameInput) {
+    const values = [...posts.values()];
+
+    // Filtra los juegos que coincidan con el término de búsqueda (ignorando mayúsculas y minúsculas)
+    const matchingGames = values.filter(game => game.name.toLowerCase().includes(nameInput.toLowerCase()));
+
+    return matchingGames;
 }
 
 export function addPost(post) {
