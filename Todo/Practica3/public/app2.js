@@ -6,12 +6,32 @@ async function loadMore(from, to, genero) {
     const newGames = await response.text();
 
     const gameDiv = document.getElementById("extraGames");
-    gameDiv.innerHTML = newGames;
+
+    if (from === 0) {
+        gameDiv.innerHTML = "";
+    }
+
+    gameDiv.insertAdjacentHTML('beforeend', newGames);
 }
 
 function filtra() {
+    const genero = document.getElementById('filter-button').value;
+    const gameDiv = document.getElementById("extraGames");
+    loadMoreRequests = 0;
+
+    gameDiv.innerHTML = "";
+
+    loadMore(loadMoreRequests * NUM_RESULTS, (loadMoreRequests + 1) * NUM_RESULTS, genero);
+    loadMoreRequests++;
+}
+
+function loadMoreOnClick() {
+    const from = loadMoreRequests * NUM_RESULTS;
+    const to = from + NUM_RESULTS;
     let genero = document.getElementById('filter-button').value;
-    loadMore(0, 8, genero);
+
+    loadMore(from, to, genero);
+    loadMoreRequests++;
 }
 
 // checkUsernameAvailability() funcion de prueba

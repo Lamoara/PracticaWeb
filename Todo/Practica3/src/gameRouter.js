@@ -7,8 +7,9 @@ const router = express.Router(); //router sera el encargado de controlar todas l
 
 router.get('/', (req, res) => {
 
-    const game = gameService.getPosts(0,8);
-
+    let genero = 'No seleccionado';
+    const game = gameService.getPosts(0,4,genero);
+    
     res.render('PracticaWeb', {
         posts: game
     });
@@ -18,7 +19,6 @@ router.get('/moreGames', (req, res) => {
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
     const genero = req.query.genero;
-
     const game = gameService.getPosts(from, to, genero);
 
     res.render('Extragames', {
@@ -34,6 +34,7 @@ router.get('/addfavorito',(req, res) => {
         name: name
     });
 });
+
 // /availableUsername de prueba
 router.get('/availableUsername', (req, res) => {
 
