@@ -2,6 +2,96 @@ const posts = new Map();
 let idVariable;
 let nextId = 0;
 export function añadir(){
+
+addPost({
+    name: "NieR: Automata",
+    image: "https://media.vandal.net/m/31670/nier-automata-201739151954_1.jpg",
+    description: "NieR: Automata es un juego de acción y rol que se desarrolla en un mundo postapocalíptico donde controlas a androides de combate en su lucha contra las máquinas. La narrativa profunda y la mezcla de géneros hacen de este juego una experiencia única.",
+    fecha: "2017-03-17",
+    trailer: "https://www.youtube.com/embed/Am2jbwofIoo?si=y1eH0pfbQUeSYtRS",
+    desarrolladora: "PlatinumGames",
+    genero: "Acción y RPG",
+    symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
+    symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
+    symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
+    symbolpc: "bi bi-check2", pc: "tick", checkedpc: "checked",
+    comments: [{ user: "GamerGirl", text: "La trama de este juego es simplemente fascinante. Una obra maestra en todos los aspectos.", reviewValue: [,,,,] }]
+});
+
+addPost({
+    name: "Dark Souls III",
+    image: "https://media.vandal.net/m/31454/dark-souls-iii-2016412115050_1.jpg",
+    description: "Dark Souls III es un desafiante juego de acción y RPG que te sumerge en un mundo oscuro y lleno de peligros. Enfrenta a enemigos formidables, descubre secretos y mejora tu personaje en esta experiencia épica.",
+    fecha: "2016-04-12",
+    trailer: "https://www.youtube.com/embed/_zDZYrIUgKE?si=5if-LPcJQYO9o7Rx",
+    desarrolladora: "FromSoftware",
+    genero: "Acción y RPG",
+    symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
+    symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
+    symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
+    symbolpc: "bi bi-check2", pc: "tick", checkedpc: "checked",
+    comments: [{ user: "SoulSeeker", text: "Un juego desafiante que recompensa la perseverancia. La atmósfera es impresionante.", reviewValue: [,,,,] }]
+});
+
+addPost({
+    name: "The Elder Scrolls V: Skyrim",
+    image: "https://media.vandal.net/m/39790/the-elder-scrolls-v-skyrim-special-edition-201661365045_1.jpg",
+    description: "Skyrim es un juego de rol de mundo abierto que te sumerge en el vasto continente de Tamriel. Conviértete en el Dovahkiin y enfrenta dragones, elige tu destino y vive una épica aventura en un mundo lleno de misterios y magia.",
+    fecha: "2011-11-11",
+    trailer: "https://www.youtube.com/embed/PjqsYzBrP-M?si=PYxeWlIxSGCfYnYV",
+    desarrolladora: "Bethesda Game Studios",
+    genero: "RPG",
+    symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
+    symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
+    symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
+    symbolpc: "bi bi-check2", pc: "tick", checkedpc: "checked",
+    comments: [{ user: "Dragonborn", text: "¡Fus Ro Dah! Skyrim es una obra maestra que ofrece horas interminables de exploración.", reviewValue: [,,,,] }]
+});
+
+addPost({
+    name: "The Witcher 3: Wild Hunt",
+    image: "https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S2_1200x1600-53a8fb2c0201cd8aea410f2a049aba3f",
+    description: "The Witcher 3: Wild Hunt es un juego de rol de mundo abierto, ambientado en un mundo de fantasía lleno de monstruos, magia y decisiones morales impactantes. Juegas como Geralt de Rivia, un cazador de monstruos mutante, en busca de su hija adoptiva perdida.",
+    fecha: "2015-05-19",
+    trailer: "https://www.youtube.com/embed/c0i88t0Kacs?si=6GLm5ZViS-uKjiV4",
+    desarrolladora: "CD Projekt",
+    genero: "RPG",
+    symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
+    symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
+    symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
+    symbolpc: "bi bi-check2", pc: "tick", checkedpc: "checked",
+    comments: [{ user: "Gamer123", text: "Una obra maestra, el mejor juego de la generación.", reviewValue: [,,,,] }]
+});
+
+addPost({
+    name: "Assassin's Creed Valhalla",
+    image: "https://image.api.playstation.com/vulcan/img/rnd/202011/0302/8jomNsyMYDoJnzFkBrr9Rit2.jpg",
+    description: "Assassin's Creed Valhalla te lleva a la era vikinga, donde juegas como Eivor, un guerrero vikingo en busca de un nuevo hogar en Inglaterra. Explora, saquea y lucha en este juego de acción y aventuras.",
+    fecha: "2020-11-10",
+    trailer: "https://www.youtube.com/embed/ssrOze7GXik?si=D8IUVJllQ4eKFoXK",
+    desarrolladora: "Ubisoft",
+    genero: "Acción y Aventuras",
+    symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
+    symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
+    symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
+    symbolpc: "bi bi-check2", pc: "tick", checkedpc: "checked",
+    comments: [{ user: "NordicWarrior", text: "Me encanta la ambientación vikinga, y el juego tiene una historia fascinante.", reviewValue: [,,,,] }]
+});
+
+addPost({
+    name: "Cyberpunk 2077",
+    image: "https://media.vandal.net/m/20029/cyberpunk-2077-201961217172698_1.jpg",
+    description: "En un futuro distópico, encarnas a V, un mercenario en busca de inmortalidad, en la ciudad de Night City. Cyberpunk 2077 ofrece un mundo abierto lleno de opciones y decisiones que afectan la historia.",
+    fecha: "2020-12-10",
+    trailer: "https://www.youtube.com/embed/8X2kIfS6fb8?si=WxgOgqRlTDqE4D88",
+    desarrolladora: "CD Projekt",
+    genero: "RPG de Acción",
+    symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
+    symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
+    symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
+    symbolpc: "bi bi-check2", pc: "tick", checkedpc: "checked",
+    comments: [{ user: "TechieGuy", text: "A pesar de los problemas iniciales, el juego tiene una historia envolvente y un mundo impresionante.", reviewValue: [,,,,] }]
+});
 addPost({
     name: "Red Dead Redemption 2", 
     image: "https://i.blogs.es/juegos/13424/red_dead_3__nombre_temporal_/fotos/maestras/red_dead_3__nombre_temporal_-4030936.jpg", 
@@ -200,6 +290,7 @@ addPost({
     symbolpc:"bi bi-x-lg", pc:"tick-red"
 });
 }
+
 
 añadir();
 
