@@ -26,6 +26,14 @@ router.get('/moreGames', (req, res) => {
     });
 });
 
+router.get('/addfavorito',(req, res) => {
+    const id = req.query.id;
+    const element = gameService.getPost(id);
+    const name=element.name;
+    res.render('favorite', {
+        name: name
+    });
+});
 // /availableUsername de prueba
 router.get('/availableUsername', (req, res) => {
 

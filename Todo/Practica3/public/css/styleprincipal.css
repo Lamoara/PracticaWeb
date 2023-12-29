@@ -693,6 +693,26 @@ body {
     border-radius: 5px;
 }
 
+#favorite-container{
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 10px;
+
+}
+
+#botonfavoritos{
+    background-color: yellow;
+    padding:10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+#botonfavoritos2{
+    background-color: yellow;
+    padding:10px 100px;
+    border: none;
+    border-radius: 5px;
+}
 #buttonmore{
       margin: 20px;
       padding: 10px 20px;

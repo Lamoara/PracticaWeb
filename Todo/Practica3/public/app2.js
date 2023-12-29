@@ -32,3 +32,15 @@ async function checkUsernameAvailability() {
     const messageDiv = document.getElementById('message');
     messageDiv.innerHTML = message;
 }
+
+async function addfavorito(){
+    const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
+    const elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
+    const response = await fetch('/addfavorito?id=$(elementoid)');
+    const element=await response.json();
+    const ul=document.getElementById("favs");
+    ul.innerHTML = element;
+    alert("Se ha agregado correctamente");
+    
+    
+}

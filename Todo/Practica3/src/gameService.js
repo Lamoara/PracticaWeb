@@ -25,7 +25,7 @@ addPost({
     description: "Factorio es un juego sobre la construcción y creación de fábricas automatizadas para producir elementos de complejidad creciente, dentro de un mundo 2D infinito. Usa tu imaginación para diseñar tu fábrica, combina elementos simples en estructuras ingeniosas y, finalmente, protégela de las criaturas a las que realmente no les agradas.",
     fecha: "2016-15-02", 
     trailer: "https://www.youtube.com/embed/J8SBp4SyvLc?si=taNZWEW5IUAM-fQg", 
-    desarrolladora: "Wube Software LTD", 
+    desarrolladora: "Wube Soft  ware LTD", 
     genero: "Estrategia", 
     symbolps:"bi bi-question", 
     symbolxbox:"bi bi-question",
