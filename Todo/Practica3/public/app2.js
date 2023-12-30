@@ -83,13 +83,62 @@ function generateGameHTML(games) {
 
     return htmlString;
 }
+let favoritos=new Array();
+let cont=0;
 
-async function addfavorito(){
+async function añadir(){
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
     const elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
-    const response = await fetch('/addfavorito?id=$(elementoid)');
+    const response = await fetch(`/addfavorito?id=${elementoId}`);
     const element=await response.json();
-    const ul=document.getElementById("favs");
-    ul.innerHTML = element;
-    alert("Se ha agregado correctamente");
+    favoritos.push(element);
+    cont++;
+    const nuevop=document.createElement("p");
+    nuevop.textContent='añadido a favoritos';
+    const div=document.getElementById("mensaje");
+    div.appendChild(nuevop);
+    /*const ul=document.getElementById("favs");
+    const nuevoLi = document.createElement("li");
+    // Asigna el contenido al nuevo elemento li
+    nuevoLi.textContent = element.nombre;
+    ul.appendChild(nuevoLi);*/
 }
+
+async function showfavorites() {
+
+     const modal = document.createElement('div');
+     modal.className = 'modal';
+     modal.innerHTML = `
+         <div class="modal-content">
+             <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+             <h2>Lista de Favoritos</h2>
+             <div id="favoritos-container"></div>
+         </div>
+     `;
+     const favoritosContainer = modal.querySelector('#favoritos-container');
+     
+     favoritos.forEach(favorito => {
+        const pElement = document.createElement('p');
+        pElement.textContent = favorito.nombre; // Ajusta esta propiedad según la estructura de tus elementos
+        favoritosContainer.appendChild(pElement);
+    });   
+
+    document.body.appendChild(modal);
+
+    }
+
+    function cerrarModal() {
+        // Remover el modal al cerrar
+        const modal = document.querySelector('.modal');
+        modal.parentNode.removeChild(modal);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Otros códigos de inicialización si es necesario
+    
+        // Evento: Cuando se hace clic en el botón para mostrar favoritos
+        const mostrarFavoritosBtn = document.getElementById('botonfavoritos');
+        if (mostrarFavoritosBtn) {
+            mostrarFavoritosBtn.addEventListener('click', mostrarFavoritos);
+        }
+    });

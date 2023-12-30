@@ -33,12 +33,14 @@ router.get('/searchGames', (req, res) => {
 
 
 router.get('/addfavorito',(req, res) => {
-    const id = req.query.id;
+    const id = parseInt(req.query.id);
     const element = gameService.getPost(id);
-    const name=element.name;
-    res.render('favorite', {
-        name: name
-    });
+    const favorito = {
+        id: element.id,
+        nombre: element.name,
+        // Otras propiedades que quieras enviar al cliente
+    };
+    res.json(favorito);
 });
 
 
