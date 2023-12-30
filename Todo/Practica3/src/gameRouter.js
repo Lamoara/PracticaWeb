@@ -38,7 +38,6 @@ router.get('/addfavorito',(req, res) => {
     const favorito = {
         id: element.id,
         nombre: element.name,
-        // Otras propiedades que quieras enviar al cliente
     };
     res.json(favorito);
 });
