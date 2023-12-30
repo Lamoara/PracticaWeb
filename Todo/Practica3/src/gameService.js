@@ -294,7 +294,7 @@ addPost({
 
 añadir();
 
-export function getPosts(from, to, genero, nameInput) {
+export function getPosts(from, to, genero) {
     let values = [...posts.values()];
     if (genero && genero !== "No seleccionado") {
         values = values.filter(post => post.genero === genero);
