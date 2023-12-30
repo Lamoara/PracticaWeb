@@ -17,21 +17,30 @@ router.get('/moreGames', (req, res) => {
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
     const genero = req.query.genero;
-    const nameInput = req.query.nameInput;
-    const game = gameService.getPosts(from, to, genero, nameInput);
+    const game = gameService.getPosts(from, to, genero);
 
     res.render('Extragames', {
         posts: game
     });
 });
 
+router.get('/searchGames', (req, res) => {
+    const nameInput = req.query.nameInput;
+    const games = gameService.searchGame(nameInput);
+
+    res.json({ posts: games });
+});
+
+
 router.get('/addfavorito',(req, res) => {
-    const id = req.query.id;
+    const id = parseInt(req.query.id);
     const element = gameService.getPost(id);
-    const name=element.name;
-    res.render('favorite', {
-        name: name
-    });
+    const favorito = {
+        id: element.id,
+        nombre: element.name,
+        // Otras propiedades que quieras enviar al cliente
+    };
+    res.json(favorito);
 });
 
 

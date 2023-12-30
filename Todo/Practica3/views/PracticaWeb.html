@@ -51,19 +51,20 @@
             <button type="button" onclick="searchName()" id="search-button"><i class="bi bi-search"></i></button>
         </form>
 
-        <div id="favorite-container">
-            <button id="botonfavoritos">
+            <button onclick="showfavorites()" id="botonfavoritos" >
                 <i class="bi bi-heart-fill"></i>
-            </button>   
-            <div id="favoritos" class="modal">
+            </button>
+            
+            
+            <!--<div id="favoritos" class="modal">
                 <div class="modal-content">
                     <h3>Lista de favoritos</h3>
                     <ul id="favs">
-                        <!-- aqui iran los elementos favoritos agregados por el usuario -->
+                         aqui iran los elementos favoritos agregados por el usuario 
                     </ul>
                 </div>
             </div>
-        </div>
+            </div> -->
 
     </div>
 
@@ -87,9 +88,7 @@
             </div>
         </div>
     </section>
-
-    <!-- <button id="buttonmore" onclick='loadMoreOnClick()'>Cargar más</button> -->
-
+    
     <div class="gridButtonLarge">
         <a class="buttonsubmitlarge" id="buttonnew" href="/new" type="submit"><i class="bi bi-plus-circle"></i></a>
     </div>
