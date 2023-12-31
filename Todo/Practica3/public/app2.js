@@ -109,6 +109,7 @@ async function añadir(){
     }
 }
 
+
 async function showfavorites(){
 
     const response = await fetch('/addfavorito', {
@@ -124,16 +125,30 @@ async function showfavorites(){
     showtab();
 }
 
+
+let visible = sessionStorage.getItem('visible') === 'true' || false;
+
 function showtab(){
  const boton= document.getElementById("botonfavoritos");
  const favoritolist=document.getElementById("favoritolist");
  const cerrarlista=document.getElementById("cerrarlista");
- boton.addEventListener('click', function() {
-    favoritolist.style.display = 'block';
-    });
+ if (visible){
+    boton.addEventListener('click', function() {
+        favoritolist.style.display = 'none';
+        }); 
+    visible=false;
+ } else{
+    boton.addEventListener('click', function() {
+        favoritolist.style.display = 'block';
+        }); 
+    visible=true;
+ }
+
 cerrarlista.addEventListener('click', function() {
         favoritolist.style.display = 'none';
     });
+
+
     
 }
 
