@@ -86,27 +86,27 @@ function generateGameHTML(games) {
 
 let favoritos = JSON.parse(sessionStorage.getItem('favoritos')) || [];
 let cont = sessionStorage.getItem('cont') || 0;
-let conf = sessionStorage.getItem('conf') === 'true' || true; // Se establecerá a true si no existe en localStorage
+//let conf = sessionStorage.getItem('conf') === 'true' || true; // Se establecerá a true si no existe en localStorage
 
 async function añadir(){
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
     const elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
-    if (conf){
+    
+    if (favoritos.includes(elementoId))  {
+       alert('Ya has añadido este juego a tus favoritos');
+    }
+    else if (favoritos.includes(elementoId)===false){
         favoritos.push(elementoId);
         cont++;
         // Almacenar favoritos, cont y conf actualizados en localStorage
        sessionStorage.setItem('favoritos', JSON.stringify(favoritos));
         sessionStorage.setItem('cont', cont);
-        sessionStorage.setItem('conf', conf);
+       // sessionStorage.setItem('conf', conf);
         const nuevop = document.createElement("p");
         nuevop.textContent = 'añadido a favoritos';
         const div = document.getElementById("mensaje");
         div.appendChild(nuevop);
-        conf = false;
     }
-     else if (favoritos.includes(elementoId)) {
-        alert('Ya has añadido este juego a tus favoritos');
-}
 }
 
 async function showfavorites(){
