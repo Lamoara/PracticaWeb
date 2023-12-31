@@ -85,7 +85,7 @@ function generateGameHTML(games) {
 }
 
 let favoritos = JSON.parse(sessionStorage.getItem('favoritos')) || [];
-let cont = sessionStorage.getItem('cont') || 0;
+//let cont = sessionStorage.getItem('cont') || 0;
 //let conf = sessionStorage.getItem('conf') === 'true' || true; // Se establecerá a true si no existe en localStorage
 
 async function añadir(){
@@ -97,96 +97,70 @@ async function añadir(){
     }
     else if (favoritos.includes(elementoId)===false){
         favoritos.push(elementoId);
-        cont++;
+        //cont++;
         // Almacenar favoritos, cont y conf actualizados en localStorage
        sessionStorage.setItem('favoritos', JSON.stringify(favoritos));
-        sessionStorage.setItem('cont', cont);
+       // sessionStorage.setItem('cont', cont);
        // sessionStorage.setItem('conf', conf);
         const nuevop = document.createElement("p");
         nuevop.textContent = 'añadido a favoritos';
         const div = document.getElementById("mensaje");
         div.appendChild(nuevop);
+
+    const response = await fetch(`/addfavorito?elementoId=${elementoId}`);//le paso el valor del id
+    const data = await response.text(); //este recibe el html
+    const div1=document.getElementById("lista-favoritos"); //selecciona el div 
+    div1.innerHTML+=data; //supuestamente le carga el html en el div
     }
+
+    
 }
 
+let visible = sessionStorage.getItem('visible') === 'true' || false;
 
-async function showfavorites(){
+function showtab(){
+    const boton= document.getElementById("botonfavoritos");
+    const favoritolist=document.getElementById("favoritolist");
+    const cerrarlista=document.getElementById("cerrarlista");
+    if (visible){
+        boton.addEventListener('click', function() {
+            
+            favoritolist.style.display = 'none';
+        }); 
+        visible=false;
+    } else{
+        boton.addEventListener('click', function() {
+            favoritolist.style.display = 'block';
+        }); 
+        visible=true;
+    }
+    
+    cerrarlista.addEventListener('click', function() {
+        favoritolist.style.display = 'none';
+    });
+    
+}
+
+/*async function showfavorites(){
 
     const response = await fetch('/addfavorito', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ favoritos, cont }),
+        body: JSON.stringify({ favoritos}),
     });
-    const resultado = await response.text();
+    const resultado = await response.json();
     const ul=document.getElementById("lista-favoritos");
-    ul.innerHTML+=resultado;
-    showtab();
-}
-
-
-let visible = sessionStorage.getItem('visible') === 'true' || false;
-
-function showtab(){
- const boton= document.getElementById("botonfavoritos");
- const favoritolist=document.getElementById("favoritolist");
- const cerrarlista=document.getElementById("cerrarlista");
- if (visible){
-    boton.addEventListener('click', function() {
-        favoritolist.style.display = 'none';
-        }); 
-    visible=false;
- } else{
-    boton.addEventListener('click', function() {
-        favoritolist.style.display = 'block';
-        }); 
-    visible=true;
- }
-
-cerrarlista.addEventListener('click', function() {
-        favoritolist.style.display = 'none';
-    });
-
-
-    
-}
-
-/*async function showfavorites() {
-
-     const modal = document.createElement('div');
-     modal.className = 'modal';
-     modal.innerHTML = `
-         <div class="modal-content">
-             <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
-             <h2>Lista de Favoritos</h2>
-             <div id="favoritos-container"></div>
-         </div>
-     `;
-     const favoritosContainer = modal.querySelector('#favoritos-container');
-     
-     favoritos.forEach(favorito => {
-        const pElement = document.createElement('p');
-        pElement.textContent = favorito.nombre; // Ajusta esta propiedad según la estructura de tus elementos
-        favoritosContainer.appendChild(pElement);
-    });   
-
-    document.body.appendChild(modal);
-
+    ul.innerHTML = '';
+    for(let i=0;i<=favoritos.length;i++){
+        let post=resultado.get(favoritos[i]);
+       // elementos.push(post);
+        //sessionStorage.setItem('elementos', JSON.stringify(elementos));
+       let li=document.createElement("li");
+        li.textContent=post.name;
+        ul.appendChild(li);
     }
-
-    function cerrarModal() {
-        // Remover el modal al cerrar
-        const modal = document.querySelector('.modal');
-        modal.parentNode.removeChild(modal);
-    }*/
-
-   /* document.addEventListener('DOMContentLoaded', function () {
-        // Otros códigos de inicialización si es necesario
     
-        // Evento: Cuando se hace clic en el botón para mostrar favoritos
-        const mostrarFavoritosBtn = document.getElementById('botonfavoritos');
-        if (mostrarFavoritosBtn) {
-            mostrarFavoritosBtn.addEventListener('click', mostrarFavoritos);
-        }
-    });*/
+}*/
+
