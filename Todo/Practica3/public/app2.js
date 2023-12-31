@@ -109,7 +109,35 @@ async function añadir(){
 }
 }
 
-async function showfavorites() {
+async function showfavorites(){
+
+    const response = await fetch('/addfavorito', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ favoritos, cont }),
+    });
+    const resultado = await response.text();
+    const ul=document.getElementById("lista-favoritos");
+    ul.innerHTML+=resultado;
+    showtab();
+}
+
+function showtab(){
+ const boton= document.getElementById("botonfavoritos");
+ const favoritolist=document.getElementById("favoritolist");
+ const cerrarlista=document.getElementById("cerrarlista");
+ boton.addEventListener('click', function() {
+    favoritolist.style.display = 'block';
+    });
+cerrarlista.addEventListener('click', function() {
+        favoritolist.style.display = 'none';
+    });
+    
+}
+
+/*async function showfavorites() {
 
      const modal = document.createElement('div');
      modal.className = 'modal';
@@ -136,9 +164,9 @@ async function showfavorites() {
         // Remover el modal al cerrar
         const modal = document.querySelector('.modal');
         modal.parentNode.removeChild(modal);
-    }
+    }*/
 
-    document.addEventListener('DOMContentLoaded', function () {
+   /* document.addEventListener('DOMContentLoaded', function () {
         // Otros códigos de inicialización si es necesario
     
         // Evento: Cuando se hace clic en el botón para mostrar favoritos
@@ -146,4 +174,4 @@ async function showfavorites() {
         if (mostrarFavoritosBtn) {
             mostrarFavoritosBtn.addEventListener('click', mostrarFavoritos);
         }
-    });
+    });*/

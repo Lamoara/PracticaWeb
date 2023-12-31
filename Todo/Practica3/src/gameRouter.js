@@ -33,13 +33,18 @@ router.get('/searchGames', (req, res) => {
 
 
 router.get('/addfavorito',(req, res) => {
-    const id = parseInt(req.query.id);
-    const element = gameService.getPost(id);
-    const favorito = {
-        id: element.id,
-        nombre: element.name,
-    };
-    res.json(favorito);
+    const favoritos= req.body.favoritos;
+    const cont= req.body.cont;
+    let mapa= new Map();
+    for(let i=0; i<=cont;i++){ //tengo que tener a los elementos
+        let post=gameService.getPost(favoritos[i]);
+        mapa.set(post);
+    }
+    let values= [...favoritos.values()];
+
+    res.render('favorite', {
+        posts:values
+    });
 });
 
 

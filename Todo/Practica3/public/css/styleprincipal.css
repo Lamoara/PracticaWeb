@@ -713,6 +713,16 @@ body {
     border: none;
     border-radius: 5px;
 }
+.favorito-lista {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    display: none;
+   }
 #buttonmore{
       margin: 20px;
       padding: 10px 20px;
