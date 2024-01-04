@@ -520,6 +520,33 @@ table>tbody {
     width: 95%;
 }
 
+#name {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+}
+
+#description{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+}
+
+#image{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+}
+
+#trailer{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+}
+
+
+
+
 #InfoFecha {
     margin-left: 10px;
     margin-right: 10px;
@@ -733,4 +760,13 @@ body {
       border-radius: 5px;
       cursor: pointer;
       font-family: Arial, sans-serif;
+}
+
+#content{
+    background-color: rgb(249, 115, 115);
+    text-align: left;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
 }
