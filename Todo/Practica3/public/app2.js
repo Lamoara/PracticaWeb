@@ -10,7 +10,7 @@ const onScroll = () => {
     }
 }
 
-//window.addEventListener('scroll', onScroll)
+window.addEventListener('scroll', onScroll)
 
 async function loadMore(from, to, genero) {
     const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
