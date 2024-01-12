@@ -10,7 +10,7 @@ const onScroll = () => {
     }
 }
 
-//window.addEventListener('scroll', onScroll)
+window.addEventListener('scroll', onScroll)
 
 async function loadMore(from, to, genero) {
     const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
@@ -28,13 +28,35 @@ async function loadMore(from, to, genero) {
 function filtra() {
     const genero = document.getElementById('filter-button').value;
     const gameDiv = document.getElementById("extraGames");
+    let filteredGames;
+
+    if (genero !== "No seleccionado") {
+        console.log("y");
+        if (currentGames !== undefined) {
+            filteredGames = currentGames.filter(game => game.genero === genero);
+        }
+        else {
+            console.log("iuhoi");
+        }
+    } else {
+        console.log("hio");
+        filteredGames = currentGames;
+    }
+
+    gameDiv.innerHTML = "";
+    gameDiv.insertAdjacentHTML('beforeend', generateGameHTML(filteredGames));
+}
+
+/*function filtra() {
+    const genero = document.getElementById('filter-button').value;
+    const gameDiv = document.getElementById("extraGames");
     
     loadMoreRequests = 0;
     gameDiv.innerHTML = "";
 
     loadMore(loadMoreRequests * NUM_RESULTS, (loadMoreRequests + 1) * NUM_RESULTS, genero);
     loadMoreRequests++;
-}
+}*/
 
 function loadMoreOnClick() {
     const from = loadMoreRequests * NUM_RESULTS;
@@ -51,6 +73,7 @@ function searchName() {
     fetch(`/searchGames?nameInput=${nameInput}`)
         .then(response => response.json())
         .then(data => {
+            currentGames = data.posts;
             const gameDiv = document.getElementById("extraGames");
             
             gameDiv.innerHTML = "";
@@ -141,7 +164,7 @@ function showtab(){
     
 }
 
-/*async function showfavorites(){
+async function showfavorites(){
 
     const response = await fetch('/addfavorito', {
         method: 'POST',
@@ -160,7 +183,6 @@ function showtab(){
        let li=document.createElement("li");
         li.textContent=post.name;
         ul.appendChild(li);
-    }
-    
-}*/
+    } 
+}
 
