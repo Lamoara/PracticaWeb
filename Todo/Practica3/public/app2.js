@@ -1,5 +1,13 @@
 const NUM_RESULTS = 4;
 let loadMoreRequests = 0;
+let a = 0;
+
+fetch(`/searchGames?nameInput= `)
+        .then(response => response.json())
+        .then(data => {
+            currentGames = data.posts;
+        }
+);
 
 const onScroll = () => {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
@@ -16,7 +24,13 @@ async function loadMore(from, to, genero) {
     const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
     const newGames = await response.text();
 
-    const gameDiv = document.getElementById("extraGames");
+    let gameDiv;
+
+    if (a === 1) {
+        gameDiv = currentGames;
+    } else {
+        gameDiv = document.getElementById("extraGames");
+}
 
     if (from === 0) {
         gameDiv.innerHTML = "";
@@ -31,12 +45,10 @@ function filtra() {
     let filteredGames;
 
     if (genero !== "No seleccionado") {
-        console.log("y");
-        if (currentGames !== undefined) {
+        if (Array.isArray(currentGames)) {
             filteredGames = currentGames.filter(game => game.genero === genero);
-        }
-        else {
-            console.log("iuhoi");
+        } else {
+            filteredGames = currentGames;
         }
     } else {
         console.log("hio");
@@ -46,17 +58,6 @@ function filtra() {
     gameDiv.innerHTML = "";
     gameDiv.insertAdjacentHTML('beforeend', generateGameHTML(filteredGames));
 }
-
-/*function filtra() {
-    const genero = document.getElementById('filter-button').value;
-    const gameDiv = document.getElementById("extraGames");
-    
-    loadMoreRequests = 0;
-    gameDiv.innerHTML = "";
-
-    loadMore(loadMoreRequests * NUM_RESULTS, (loadMoreRequests + 1) * NUM_RESULTS, genero);
-    loadMoreRequests++;
-}*/
 
 function loadMoreOnClick() {
     const from = loadMoreRequests * NUM_RESULTS;
@@ -69,6 +70,7 @@ function loadMoreOnClick() {
 
 function searchName() {
     const nameInput = document.getElementById('name').value;
+    a = 1;
 
     fetch(`/searchGames?nameInput=${nameInput}`)
         .then(response => response.json())

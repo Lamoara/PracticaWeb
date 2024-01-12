@@ -667,7 +667,7 @@ body {
 }
 
 #formSearch{
-    flex:70%;
+    flex:60%;
     display: flex;
 }
 
@@ -724,14 +724,20 @@ body {
     margin-top: 20px;
     margin-left: 0px;
     margin-right: 10px;
-
 }
 
 #botonfavoritos{
+    flex: 10%;
+    margin: 20px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 10px;
     background-color: yellow;
-    padding:10px 30px;
-    border: none;
     border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border: none;
 }
 
 #botonfavoritos2{
@@ -740,6 +746,7 @@ body {
     border: none;
     border-radius: 5px;
 }
+
 .favorito-lista {
     position: fixed;
     top: 50%;
@@ -749,18 +756,7 @@ body {
     padding: 20px;
     border: 1px solid black;
     display: none;
-   }
-#buttonmore{
-      margin: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: Arial, sans-serif;
-}
+ }
 
 #content{
     background-color: rgb(249, 115, 115);
