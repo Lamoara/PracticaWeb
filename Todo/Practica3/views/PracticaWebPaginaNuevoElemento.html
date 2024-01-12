@@ -42,7 +42,7 @@
                 <p class="DataText">Título:</p>
                 <p>
                     <input class="TextFile" type="text" name="name" id="name" placeholder="Nombre del videojuego"
-                        value="{{post.name}}">
+                        value="{{post.name}}" oninput="verificarNombre()">
                 </p>
             </div>
             <div class="row" id="imgandtrailer">
@@ -50,14 +50,14 @@
                     <p class="DataText">Imagen URL:</p>
                     <p>
                         <input class="TextFile" type="url" name="image" id="image"
-                            placeholder="Copie el enlace de la portada del videojuego" value="{{post.image}}"></input>
+                            placeholder="Copie el enlace de la portada del videojuego" value="{{post.image}}" oninput="verificarURLImagen()"></input>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="TrailerData">
                     <p class="DataText">Trailer URL:</p>
                     <p>
                         <input class="TextFile" type="url" name="trailer" id="trailer"
-                            placeholder="Copie el enlace al trailer del videojuego" value="{{post.trailer}}"></input>
+                            placeholder="Copie el enlace al trailer del videojuego" value="{{post.trailer}}" oninput="verificarURLTrailer()"></input>
                     </p>
 
                 </div>
@@ -67,7 +67,7 @@
                 <p class="DataText">Descripción:</p>
                 <p>
                     <input class="TextFile" id="description" type="text" name="description"
-                        placeholder="Escribe una breve sinopsis" value="{{post.description}}"></input>
+                        placeholder="Escribe una breve sinopsis" value="{{post.description}}" oninput="verificarDescripcion()"></input>
                 </p>
             </div>
 

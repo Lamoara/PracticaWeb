@@ -766,3 +766,8 @@ body {
     margin-right: 30px;
     margin-bottom: 20px;
 }
+
+.is-invalid{
+    background-color: #f75858;
+
+}

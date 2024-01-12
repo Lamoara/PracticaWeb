@@ -67,3 +67,47 @@ async function validateForm(){
 }
 
     
+function verificarNombre() {
+    var nombreInput = document.getElementById('name');
+    var valorNombre = nombreInput.value;
+
+    if (valorNombre.length > 0 && valorNombre[0] !== valorNombre[0].toUpperCase()) {
+        nombreInput.classList.add('is-invalid');
+    } else {
+        nombreInput.classList.remove('is-invalid');
+    }
+}
+
+function verificarURLImagen() {
+    var imageInput = document.getElementById('image');
+    var imageURL = imageInput.value;
+
+    if (!/^https?:\/\/\S+\.(jpg|png)$/.test(imageURL)){
+        imageInput.classList.add('is-invalid');
+    } else {
+        imageInput.classList.remove('is-invalid');
+    }
+}
+
+function verificarURLTrailer() {
+    var trailerInput = document.getElementById('trailer');
+    var trailerURL = trailerInput.value;
+
+    if (!/^https?:\/\/\S+$/.test(trailerURL)){
+        trailerInput.classList.add('is-invalid');
+    } else {
+        trailerInput.classList.remove('is-invalid');
+    }
+}
+
+function verificarDescripcion() {
+    var descriptionInput = document.getElementById('description');
+    var descripcion = descriptionInput.value;
+
+    // Verifica si la longitud de la descripción está dentro del rango permitido o si está vacía
+    if (descripcion.length < 50 || descripcion.length > 500) {
+        descriptionInput.classList.add('is-invalid'); // Agrega la clase de Bootstrap para resaltar el error
+    } else {
+        descriptionInput.classList.remove('is-invalid'); // Elimina la clase de Bootstrap
+    }
+}
