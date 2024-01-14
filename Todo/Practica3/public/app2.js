@@ -110,39 +110,32 @@ function generateGameHTML(games) {
 }
 
 let favoritos = JSON.parse(sessionStorage.getItem('favoritos')) || [];
-//let cont = sessionStorage.getItem('cont') || 0;
-//let conf = sessionStorage.getItem('conf') === 'true' || true; // Se establecerá a true si no existe en localStorage
 
 async function añadir(){
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
     const elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
     
     if (favoritos.includes(elementoId))  {
-       alert('Ya has añadido este juego a tus favoritos');
+       //alert('has añadido este juego a tus favoritos');
+       let indicador= favoritos.indexOf(elementoId);
+       favoritos.splice(indicador,1);
+       sessionStorage.setItem("favoritos",JSON.stringify(favoritos));
+       alert('has eliminado este juego de tus favoritos');
+        
     }
     else if (favoritos.includes(elementoId)===false){
-        favoritos.push(elementoId);
-        //cont++;
-        // Almacenar favoritos, cont y conf actualizados en localStorage
+        favoritos.push(elementoId); 
+        // Almacenar favoritos en localStorage
        sessionStorage.setItem('favoritos', JSON.stringify(favoritos));
-       // sessionStorage.setItem('cont', cont);
-       // sessionStorage.setItem('conf', conf);
-        const nuevop = document.createElement("p");
+       /* const nuevop = document.createElement("p");
         nuevop.textContent = 'añadido a favoritos';
         const div = document.getElementById("mensaje");
-        div.appendChild(nuevop);
-
-//a patir de aqui no funciona
-
-   /* const response = await fetch(`/addfavorito?elementoId=${elementoId}`);//le paso el valor del id
-    const data = await response.text(); //este recibe el html
-    const div1=document.getElementById("lista-favoritos"); //selecciona el div 
-    div1.innerHTML+=data; //supuestamente le carga el html en el div 
-    */
+        div.appendChild(nuevop);*/
+       alert('has añadido este juego a tus favoritos');
    }
 
-    
 }
+
 
 let primeravez = sessionStorage.getItem('conf') === false || true;
 let longaux = sessionStorage.getItem('longaux') || 0;
@@ -152,7 +145,7 @@ async function addlista(){
 if(primeravez){
     longaux=favoritos.length;
     sessionStorage.setItem('longaux', longaux);
-    for (let i=1;i<=favoritos.length;i++){
+    for (let i=0;i<=favoritos.length-1;i++){
         let ident=favoritos[i];
         const respelement=await fetch(`/addfavorito?elementoid=${ident}`);
         const data =await respelement.text();//ya tengo el html 
@@ -167,14 +160,16 @@ if(primeravez){
 else{
     longaux2=favoritos.length;
     sessionStorage.setItem('longaux2', longaux2);
-    if(longaux!=longaux2) {
-        let cont=longaux2-longaux;
+    if(longaux<longaux2) {
+        let cont=Math.abs(longaux2-longaux);
+        let m=longaux+1;
         for(let j=1;j<=cont;j++){
-            let ident=favoritos[j];
+            let ident=favoritos[m];
             const respelement=await fetch(`/addfavorito?elementoid=${ident}`);
             const data =await respelement.text();//ya tengo el html 
             const lista=document.getElementById("lista-favoritos");
-            lista.innerHTML+=data; 
+            lista.innerHTML+=data;
+            m=m+1; 
         }
         longaux=longaux2;//la longitud del array inicial se pone al valor del 2, asi el 2 a la próxima tiene un nuevo valor
         sessionStorage.setItem('longaux', longaux);
