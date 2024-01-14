@@ -36,8 +36,6 @@ router.get('/moreComments', (req, res) => {
         result.push(comment);
     }
 
-    console.log(result);
-
     res.render('Extracomments', {comments: result});
 
     

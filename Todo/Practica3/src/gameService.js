@@ -377,9 +377,7 @@ export function addComment(postId, comment) {
 
 export function getComment(postId, num)
 {
-    const post = getPost(postId);
-    console.log(post);
-    console.log(num);
+    const post = getPost(postId.toString());
     if (post) {
         if (post.comments) {
             return post.comments[num] ?? null;
