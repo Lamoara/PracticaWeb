@@ -5,10 +5,10 @@ export function añadir(){
 
 addPost({
     name: "NieR: Automata",
-    image: "https://media.vandal.net/m/31670/nier-automata-201739151954_1.jpg",
+    image: "https://uvejuegos.com/img/caratulas/62412/nier-GYE.jpg",
     description: "NieR: Automata es un juego de acción y rol que se desarrolla en un mundo postapocalíptico donde controlas a androides de combate en su lucha contra las máquinas. La narrativa profunda y la mezcla de géneros hacen de este juego una experiencia única.",
     fecha: "2017-03-17",
-    trailer: "https://www.youtube.com/embed/Am2jbwofIoo?si=y1eH0pfbQUeSYtRS",
+    trailer: "https://www.youtube.com/embed/wJxNhJ8fjFk?si=NhdwAtSYOLQpjLAj",
     desarrolladora: "PlatinumGames",
     genero: "RPG",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
@@ -20,7 +20,7 @@ addPost({
 
 addPost({
     name: "Dark Souls III",
-    image: "https://media.vandal.net/m/31454/dark-souls-iii-2016412115050_1.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/tr/b/bb/Dark_souls_3_cover_art.jpg",
     description: "Dark Souls III es un desafiante juego de acción y RPG que te sumerge en un mundo oscuro y lleno de peligros. Enfrenta a enemigos formidables, descubre secretos y mejora tu personaje en esta experiencia épica.",
     fecha: "2016-04-12",
     trailer: "https://www.youtube.com/embed/_zDZYrIUgKE?si=5if-LPcJQYO9o7Rx",
@@ -35,7 +35,7 @@ addPost({
 
 addPost({
     name: "The Elder Scrolls V: Skyrim",
-    image: "https://media.vandal.net/m/39790/the-elder-scrolls-v-skyrim-special-edition-201661365045_1.jpg",
+    image: "https://i.3djuegos.com/juegos/18136/the_elder_scrolls_v_skyrim_anniversary_edition/fotos/ficha/the_elder_scrolls_v_skyrim_anniversary_edition-5504232.webp",
     description: "Skyrim es un juego de rol de mundo abierto que te sumerge en el vasto continente de Tamriel. Conviértete en el Dovahkiin y enfrenta dragones, elige tu destino y vive una épica aventura en un mundo lleno de misterios y magia.",
     fecha: "2011-11-11",
     trailer: "https://www.youtube.com/embed/PjqsYzBrP-M?si=PYxeWlIxSGCfYnYV",
@@ -68,7 +68,7 @@ addPost({
     image: "https://image.api.playstation.com/vulcan/img/rnd/202011/0302/8jomNsyMYDoJnzFkBrr9Rit2.jpg",
     description: "Assassin's Creed Valhalla te lleva a la era vikinga, donde juegas como Eivor, un guerrero vikingo en busca de un nuevo hogar en Inglaterra. Explora, saquea y lucha en este juego de acción y aventuras.",
     fecha: "2020-11-10",
-    trailer: "https://www.youtube.com/embed/ssrOze7GXik?si=D8IUVJllQ4eKFoXK",
+    trailer: "https://www.youtube.com/embed/ylQoXLLMim4?si=d3X_xkVMf_GAbA4b",
     desarrolladora: "Ubisoft",
     genero: "Aventura",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
@@ -80,7 +80,7 @@ addPost({
 
 addPost({
     name: "Cyberpunk 2077",
-    image: "https://media.vandal.net/m/20029/cyberpunk-2077-201961217172698_1.jpg",
+    image: "https://m.media-amazon.com/images/M/MV5BMTc0NjYzYmUtYmIyZC00OThmLWJhYjctOWIyYjIxMzFjMTUwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
     description: "En un futuro distópico, encarnas a V, un mercenario en busca de inmortalidad, en la ciudad de Night City. Cyberpunk 2077 ofrece un mundo abierto lleno de opciones y decisiones que afectan la historia.",
     fecha: "2020-12-10",
     trailer: "https://www.youtube.com/embed/8X2kIfS6fb8?si=WxgOgqRlTDqE4D88",
@@ -152,7 +152,7 @@ addPost({
 });
 addPost({ 
     name: "Mario Galaxy", 
-    image: "https://m.media-amazon.com/images/I/71gOWJnWXaL._AC_UF894,1000_QL80_.jpg", 
+    image: "https://i.ebayimg.com/images/g/2uAAAOSwrZZkPy4M/s-l1200.jpg", 
     description: "El «Festival de las Estrellas» se celebra en el Reino Champiñón cada cien años para conmemorar el paso de un cometa gigantesco. Con motivo de esta festividad, Mario ha sido invitado al castillo por la Princesa Peach, pero cuando llega el día de dicho evento aparece Bowser, quien, descendiendo del cielo, viene acompañado de varios barcos voladores con los que pretende invadir el lugar y secuestrar a la princesa. Con una de sus gigantescas máquinas, semejante a un platillo volador, arranca el castillo del suelo, marchándose así junto con Peach al espacio. Cuando él intenta detenerlo, el esbirro de Bowser, Kamek, usa su varita mágica para deshacerse de Mario, enviándolo a través del cosmos.",
     trailer: "https://www.youtube.com/embed/8Mng-r3D20Y?si=AzInSerVcV2M8_Og", 
     symbolps:"bi bi-question", 
@@ -162,7 +162,7 @@ addPost({
 });
 addPost({ 
     name: "God of War Ragnarok", 
-    image: "https://ae01.alicdn.com/kf/Sa8078be663894af7aad1a359dae1d840h/P-ster-de-lienzo-art-stico-impreso-de-God-of-War-Ragnarok-Game-para-decoraci-n.jpg", description: "En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida, planea un atraco falso junto al agente federal corrupto Dave Norton. Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte, pero todo sale mal porque Dave, en vez de dispararle a Trevor, le dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».",
+    image: "https://ae01.alicdn.com/kf/Sa8078be663894af7aad1a359dae1d840h/P-ster-de-lienzo-art-stico-impreso-de-God-of-War-Ragnarok-Game-para-decoraci-n.jpg", description: "God of War: Ragnarök gira en torno a la figura de Loki, un personaje que encarna el engaño y la mentira en la mitología nórdica, y que Santa Monica ha sabido maridar con los secretos que acompañan a una etapa como la adolescencia.",
     trailer: "https://www.youtube.com/embed/-tIAazzD1gk?si=FXa8OkgjRM_5pMm9", 
     desarrolladora: "Santa Mónica", 
     genero:"Aventura", 
@@ -252,7 +252,7 @@ addPost({
 });
 addPost({ 
     name: "Dantes Inferno",
-     image: "https://media.vandal.net/m/9705/201011910547_1.jpg", 
+     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdT7S7vWxetRLWDxRSX-5qtANvaV8aOSo8kybzNac99wZK0wa1Mc_inpdHDYbOU38oBNg&usqp=CAU", 
      description: "Narra la historia de Dante, un caballero Templario que tras volver de una sangrienta cruzada, descubre que su amada Beatriz ha muerto y debe de bajar hasta el infierno para salvar su alma de las manos de Lucifer.",
     fecha:"2010-02-05",
     trailer:"https://www.youtube.com/embed/UUOZRRU_Dyg?si=vrQdpUdU7pU1Keoa",
@@ -264,7 +264,7 @@ addPost({
 
 addPost({ 
     name: "EA Sports 24",
-     image: "https://i.blogs.es/156597/51cjvxc5xwl._sl500_/original.jpeg", 
+     image: "https://i.ebayimg.com/images/g/HfYAAOSwfbZlSV7g/s-l1600.jpg", 
      description: "Juego el cual se centra en recrear de manera virtual lo que sería un partido de fúbol, con mas de 19 000 futbolistas asosiados, 700 clubes, 100 estadios y 30 ligas de todo el mundo.",
     fecha:"2023-9-29",
     trailer:"https://www.youtube.com/embed/XhP3Xh4LMA8?si=q7nU0nasmx-G43CF",
