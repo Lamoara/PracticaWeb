@@ -110,7 +110,7 @@ async function añadir(){
     const response = await fetch(`/addfavorito?elementoId=${elementoId}`);//le paso el valor del id
     const data = await response.text(); //este recibe el html
     const div1=document.getElementById("lista-favoritos"); //selecciona el div 
-    div1.innerHTML+=data; //supuestamente le carga el html en el div
+    div1.innerHTML+=data; //supuestamente le carga el html en el div 
     }
 
     
@@ -124,19 +124,22 @@ function showtab(){
     const cerrarlista=document.getElementById("cerrarlista");
     if (visible){
         boton.addEventListener('click', function() {
-            
             favoritolist.style.display = 'none';
+            visible=false;
         }); 
-        visible=false;
+
     } else{
         boton.addEventListener('click', function() {
             favoritolist.style.display = 'block';
+            visible=true;
         }); 
-        visible=true;
+        
     }
     
     cerrarlista.addEventListener('click', function() {
         favoritolist.style.display = 'none';
+        visible=false;
+        
     });
     
 }
