@@ -141,28 +141,25 @@ async function añadir(){
     
 }
 
-let visible = sessionStorage.getItem('visible') === 'true' || false;
+let visible = sessionStorage.getItem('visible') === true || false;
 
 function showtab(){
     const boton= document.getElementById("botonfavoritos");
     const favoritolist=document.getElementById("favoritolist");
     const cerrarlista=document.getElementById("cerrarlista");
-    if (visible){
-        boton.addEventListener('click', function() {
-            favoritolist.style.display = 'none';
-            visible=false;
-        }); 
-
-    } else{
-        boton.addEventListener('click', function() {
-            favoritolist.style.display = 'block';
+    boton.addEventListener('click', function() {
+        if (visible===false){
+            favoritolist.style.right = '0';
             visible=true;
-        }); 
-        
-    }
+        }
+        else{
+            favoritolist.style.right = '-300px';
+            visible=false;
+        }
+    }); 
     
     cerrarlista.addEventListener('click', function() {
-        favoritolist.style.display = 'none';
+        favoritolist.style.right = '-300px';
         visible=false;
         
     });
