@@ -8,7 +8,7 @@ addPost({
     image: "https://uvejuegos.com/img/caratulas/62412/nier-GYE.jpg",
     description: "NieR: Automata es un juego de acción y rol que se desarrolla en un mundo postapocalíptico donde controlas a androides de combate en su lucha contra las máquinas. La narrativa profunda y la mezcla de géneros hacen de este juego una experiencia única.",
     fecha: "2017-03-17",
-    trailer: "https://www.youtube.com/embed/Am2jbwofIoo?si=y1eH0pfbQUeSYtRS",
+    trailer: "https://www.youtube.com/embed/wJxNhJ8fjFk?si=NhdwAtSYOLQpjLAj",
     desarrolladora: "PlatinumGames",
     genero: "RPG",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
@@ -68,7 +68,7 @@ addPost({
     image: "https://image.api.playstation.com/vulcan/img/rnd/202011/0302/8jomNsyMYDoJnzFkBrr9Rit2.jpg",
     description: "Assassin's Creed Valhalla te lleva a la era vikinga, donde juegas como Eivor, un guerrero vikingo en busca de un nuevo hogar en Inglaterra. Explora, saquea y lucha en este juego de acción y aventuras.",
     fecha: "2020-11-10",
-    trailer: "https://www.youtube.com/embed/ssrOze7GXik?si=D8IUVJllQ4eKFoXK",
+    trailer: "https://www.youtube.com/embed/ylQoXLLMim4?si=d3X_xkVMf_GAbA4b",
     desarrolladora: "Ubisoft",
     genero: "Aventura",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
@@ -162,7 +162,7 @@ addPost({
 });
 addPost({ 
     name: "God of War Ragnarok", 
-    image: "https://ae01.alicdn.com/kf/Sa8078be663894af7aad1a359dae1d840h/P-ster-de-lienzo-art-stico-impreso-de-God-of-War-Ragnarok-Game-para-decoraci-n.jpg", description: "En el año 2004, Michael Townley, Trevor Philips y Brad Snider eran ladrones de bancos que vivían en Ludendorff, en el estado de North Yankton (basado en Dakota del Norte). Michael, queriendo huir de esa vida, planea un atraco falso junto al agente federal corrupto Dave Norton. Dave tenía que matar a Trevor y arrestar a Brad mientras Michael fingía su muerte, pero todo sale mal porque Dave, en vez de dispararle a Trevor, le dispara a Brad y Trevor escapa. Michael es dado por muerto y es llevado con su familia a Los Santos (San Andreas) con una nueva identidad: «Michael De Santa».",
+    image: "https://ae01.alicdn.com/kf/Sa8078be663894af7aad1a359dae1d840h/P-ster-de-lienzo-art-stico-impreso-de-God-of-War-Ragnarok-Game-para-decoraci-n.jpg", description: "God of War: Ragnarök gira en torno a la figura de Loki, un personaje que encarna el engaño y la mentira en la mitología nórdica, y que Santa Monica ha sabido maridar con los secretos que acompañan a una etapa como la adolescencia.",
     trailer: "https://www.youtube.com/embed/-tIAazzD1gk?si=FXa8OkgjRM_5pMm9", 
     desarrolladora: "Santa Mónica", 
     genero:"Aventura", 
