@@ -10,12 +10,11 @@ fetch(`/searchGames?nameInput= `)
     );
 
 const onScroll = () => {
-    console.log("Scroll")
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
     const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
     if (scrollPosition + windowHeight * 2 >= document.documentElement.scrollHeight) {
-        if(window.location.href == "games")
+        if(window.location.href.pathname == undefined)
             loadMoreOnClick();
     }
 }
@@ -227,4 +226,21 @@ async function showfavorites() {
         console.log(post.name);
         ul.appendChild(li);
     }
+}
+
+window.onload = function(){
+    reset();
+};
+
+function reset()
+{
+    loadMoreRequests = 0;
+}
+
+async function loadMoreCommentsClick()
+{
+    const from = loadMoreRequests * NUM_RESULTS;
+    const to = from + NUM_RESULTS;
+
+    
 }
