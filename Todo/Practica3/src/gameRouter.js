@@ -36,9 +36,9 @@ router.get('/searchGames', (req, res) => {
 
 router.get('/addfavorito',(req, res) => {
     const id= parseInt(req.query.elementoId);
-    const elemento = gameService.getPost(id);//supuestamente quiero que el servidor me almacene en elemento el post
-    res.render('favorite', {
-        posts: elemento
+    let post = gameService.getPost(id);
+    res.render('favorite.html', {
+        post, id
     }); //en teoria se renderiza la pagina favorite en el que tengo solo que mostrar el nombre
     
 });

@@ -693,16 +693,6 @@ body {
     border-radius: 5px;
 }
 
-#name {
-    flex: 80%;
-    margin: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
 #search-button {
     margin: 20px;
     margin-left: 0px;
@@ -740,17 +730,11 @@ body {
     padding:10px 100px;
     border: none;
     border-radius: 5px;
+    margin-top:20px;
 }
 
 .favorito-lista {
     position: fixed;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid black;
-    display: none;*/
     top: 0;
     right: -300px;
     width: 300px;
@@ -799,4 +783,15 @@ body {
 
 .alert{
     margin: 10px;
+}
+
+#name {
+    flex: 80%;
+    margin: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
