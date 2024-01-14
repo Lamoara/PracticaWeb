@@ -24,6 +24,8 @@ router.get('/moreGames', (req, res) => {
     });
 });
 
+
+
 router.get('/searchGames', (req, res) => {
     const nameInput = req.query.nameInput;
     const games = gameService.searchGame(nameInput);
@@ -121,9 +123,13 @@ router.post('/post/:id/comment', (req, res) => {
     const postId = req.params.id;
     const { user, text, estrellas } = req.body;
     const reviewValue = Array.from({ length: estrellas }, (_, index) => index + 1);
-    if(user){
-    gameService.addComment(postId, { user, text, reviewValue });
-    res.redirect(`/post/${postId}`);}
+    const comments = [{user, text, reviewValue}];
+    if(user)
+    {
+        gameService.addComment(postId, { user, text, reviewValue });
+        res.render(`Extracomments`, {comments: comments});
+        res.redirect(`/post/${postId}`);
+    }
 });
 
 router.get('/post/:id/delete', (req, res) => {

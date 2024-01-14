@@ -1,3 +1,5 @@
+import { getId } from "../src/gameService";
+
 const NUM_RESULTS = 4;
 let loadMoreRequests = 0;
 let a = 0;
@@ -37,6 +39,15 @@ async function loadMore(from, to, genero) {
     }
 
     gameDiv.insertAdjacentHTML('beforeend', newGames);
+}
+
+async function loadMoreComments(from, to) {
+    const id = document.get.id;
+    const response = await fetch (`/moreComments?from=${from}&to=${to}&of=${id}`)
+    const newComments = await response.text();
+
+    let commentsDiv = document.getElementById("comments");
+    commentsDiv.innerHTML += newComments;
 }
 
 function filtra() {
@@ -187,4 +198,5 @@ async function showfavorites(){
         ul.appendChild(li);
     } 
 }
+
 
