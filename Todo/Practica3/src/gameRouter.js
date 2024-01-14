@@ -121,9 +121,15 @@ router.post('/post/:id/comment', (req, res) => {
     const postId = req.params.id;
     const { user, text, estrellas } = req.body;
     const reviewValue = Array.from({ length: estrellas }, (_, index) => index + 1);
-    if(user){
-    gameService.addComment(postId, { user, text, reviewValue });
-    res.redirect(`/post/${postId}`);}
+
+    if (user) {
+        gameService.addComment(postId, { user, text, reviewValue });
+        const updatedPost = gameService.getPost(postId);
+        res.json({ comments: updatedPost.comments });
+    } else {
+        // Manejar el caso donde el comentario no se puede agregar
+        res.status(400).json({ error: 'No se pudo agregar el comentario.' });
+    }
 });
 
 router.get('/post/:id/delete', (req, res) => {
