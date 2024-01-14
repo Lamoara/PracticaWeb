@@ -33,10 +33,10 @@ router.get('/searchGames', (req, res) => {
 
 
 router.get('/addfavorito',(req, res) => {
-    const id= parseInt(req.query.elementoId);
+    const id= req.query.elementoId;
     let post = gameService.getPost(id);
     res.render('favorite.html', {
-        post, id
+        post,id
     }); //en teoria se renderiza la pagina favorite en el que tengo solo que mostrar el nombre
     
 });
