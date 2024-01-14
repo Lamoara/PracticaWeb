@@ -10,11 +10,13 @@ fetch(`/searchGames?nameInput= `)
     );
 
 const onScroll = () => {
+    console.log("Scroll")
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
     const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
     if (scrollPosition + windowHeight * 2 >= document.documentElement.scrollHeight) {
-        loadMoreOnClick();
+        if(window.location.href == "games")
+            loadMoreOnClick();
     }
 }
 
