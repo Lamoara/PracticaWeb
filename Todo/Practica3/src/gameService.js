@@ -25,7 +25,7 @@ addPost({
     fecha: "2016-04-12",
     trailer: "https://www.youtube.com/embed/_zDZYrIUgKE?si=5if-LPcJQYO9o7Rx",
     desarrolladora: "FromSoftware",
-    genero: "Acción y RPG",
+    genero: "RPG",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
     symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
     symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
@@ -70,7 +70,7 @@ addPost({
     fecha: "2020-11-10",
     trailer: "https://www.youtube.com/embed/ssrOze7GXik?si=D8IUVJllQ4eKFoXK",
     desarrolladora: "Ubisoft",
-    genero: "Acción y Aventuras",
+    genero: "Aventura",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
     symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
     symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
@@ -85,7 +85,7 @@ addPost({
     fecha: "2020-12-10",
     trailer: "https://www.youtube.com/embed/8X2kIfS6fb8?si=WxgOgqRlTDqE4D88",
     desarrolladora: "CD Projekt",
-    genero: "RPG de Acción",
+    genero: "Acción",
     symbolps: "bi bi-check2", ps: "tick", checkedps: "checked",
     symbolxbox: "bi bi-check2", xbox: "tick", checkedxbox: "checked",
     symbolswitch: "bi bi-x-lg", nswitch: "tick-red",
@@ -300,8 +300,6 @@ export function getPosts(from, to, genero) {
     if (genero && genero !== "No seleccionado") {
         values = values.filter(post => post.genero === genero);
     }
-
-
     if (from !== undefined) {
         return values.slice(from, to);
     } else {

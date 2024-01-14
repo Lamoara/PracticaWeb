@@ -51,29 +51,19 @@
             <button type="button" onclick="searchName()" id="search-button"><i class="bi bi-search"></i></button>
         </form>
 
-            <button onclick="showtab()" id="botonfavoritos" >
-                <i class="bi bi-heart-fill"></i>
-            </button>
-            
-            <div id="favoritolist" class="favorito-lista">
-                <h2>LISTA DE FAVORITOS</h2>
-                <div id="lista-favoritos">
-                    
-                </div>
-                <button id="cerrarlista">Cerrar</button>
-               </div>
-            
+        <button type="button" onclick="showtab()" id="botonfavoritos"><i class="bi bi-heart-fill"></i></button>
 
+        <div id="favoritolist" class="favorito-lista">
+            <h2>LISTA DE FAVORITOS</h2>
+            <div id="lista-favoritos">
+
+            </div>
+            <button id="cerrarlista">Cerrar</button>
+        </div>
     </div>
 
-
-    <div id='content'></div>
-
-
-    <section id="message"></section>
-
-    <section> <!--significado semántico mas definido-->
-        <div id="extraGames" class="container"> <!--agrupar elementos (menos definido semánticamente)-->
+    <section>
+        <div id="extraGames" class="container">
             <div class="row">
                 {{#posts}}
                 <div class="col-lg-3 col-md-6">
@@ -86,7 +76,7 @@
             </div>
         </div>
     </section>
-    
+
     <div class="gridButtonLarge">
         <a class="buttonsubmitlarge" id="buttonnew" href="/new" type="submit"><i class="bi bi-plus-circle"></i></a>
     </div>
