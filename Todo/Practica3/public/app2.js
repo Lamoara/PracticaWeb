@@ -242,8 +242,7 @@ function loadMoreCommentsClick()
     const from = loadMoreRequests * NUM_RESULTS;
     const to = from + NUM_RESULTS;
     const urlFragment = window.location.pathname;
-    const id = parseInt(urlFragment.split('/').pop());
-    console.log(id);
+    const id = parseInt(urlFragment.split('/').pop());55
     loadMoreComments(from, to, id);
 }
 
@@ -251,7 +250,6 @@ async function loadMoreComments(from, to, id)
 {
     const response = await fetch(`/moreComments?from=${from}&to=${to}&id=${id}`)
     const newComments = await response.text();
-   
     let commentDiv = document.getElementById("comments");
     commentDiv.innerHTML += newComments;
 }

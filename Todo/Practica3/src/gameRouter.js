@@ -27,14 +27,16 @@ router.get('/moreGames', (req, res) => {
 router.get('/moreComments', (req, res) => {
     const from = parseInt(req.query.from);
     const to = parseInt(req.query.to);
-    const genero = parseInt(req.query.id);
-
+    const id = parseInt(req.query.id);
+    
     let result = [];
 
     for(let i = from; i<to; i++){
-        let comment = gameService.getPost(id);
+        let comment = gameService.getComment(id, i);
         result.push(comment);
     }
+
+    console.log(result);
 
     res.render('Extracomments', {comments: result});
 
