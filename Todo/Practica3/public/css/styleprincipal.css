@@ -693,16 +693,6 @@ body {
     border-radius: 5px;
 }
 
-#name {
-    flex: 80%;
-    margin: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
 #search-button {
     margin: 20px;
     margin-left: 0px;
@@ -740,6 +730,7 @@ body {
     padding:10px 100px;
     border: none;
     border-radius: 5px;
+    margin-top:20px;
 }
 
 .favorito-lista {
@@ -792,4 +783,15 @@ body {
 
 .alert{
     margin: 10px;
+}
+
+#name {
+    flex: 80%;
+    margin: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
