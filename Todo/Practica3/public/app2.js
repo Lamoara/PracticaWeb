@@ -132,18 +132,61 @@ async function añadir(){
         const div = document.getElementById("mensaje");
         div.appendChild(nuevop);
 
-    const response = await fetch(`/addfavorito?elementoId=${elementoId}`);//le paso el valor del id
+//a patir de aqui no funciona
+
+   /* const response = await fetch(`/addfavorito?elementoId=${elementoId}`);//le paso el valor del id
     const data = await response.text(); //este recibe el html
     const div1=document.getElementById("lista-favoritos"); //selecciona el div 
     div1.innerHTML+=data; //supuestamente le carga el html en el div 
-    }
+    */
+   }
 
     
+}
+
+let primeravez = sessionStorage.getItem('conf') === false || true;
+let longaux = sessionStorage.getItem('longaux') || 0;
+let longaux2 = sessionStorage.getItem('longaux2') || 0;
+async function addlista(){
+    //tengo el array con los valores en la sesion, le hago un for del tamaño del array
+if(primeravez){
+    longaux=favoritos.length;
+    sessionStorage.setItem('longaux', longaux);
+    for (let i=1;i<=favoritos.length;i++){
+        let ident=favoritos[i];
+        const respelement=await fetch(`/addfavorito?elementoid=${ident}`);
+        const data =await respelement.text();//ya tengo el html 
+        //let elem={action:'getElementFavorite'};//se le asigna una accion a elem
+       // PracticaWeb.postMessage(elem,'*');
+        const lista=document.getElementById("lista-favoritos");
+        lista.innerHTML+=data;
+    } 
+    primeravez=false;
+    sessionStorage.setItem('primeravez', primeravez);
+}
+else{
+    longaux2=favoritos.length;
+    sessionStorage.setItem('longaux2', longaux2);
+    if(longaux!=longaux2) {
+        let cont=longaux2-longaux;
+        for(let j=1;j<=cont;j++){
+            let ident=favoritos[j];
+            const respelement=await fetch(`/addfavorito?elementoid=${ident}`);
+            const data =await respelement.text();//ya tengo el html 
+            const lista=document.getElementById("lista-favoritos");
+            lista.innerHTML+=data; 
+        }
+        longaux=longaux2;//la longitud del array inicial se pone al valor del 2, asi el 2 a la próxima tiene un nuevo valor
+        sessionStorage.setItem('longaux', longaux);
+    }
+
+}
 }
 
 let visible = sessionStorage.getItem('visible') === true || false;
 
 function showtab(){
+    addlista();
     const boton= document.getElementById("botonfavoritos");
     const favoritolist=document.getElementById("favoritolist");
     const cerrarlista=document.getElementById("cerrarlista");
@@ -151,17 +194,19 @@ function showtab(){
         if (visible===false){
             favoritolist.style.right = '0';
             visible=true;
+            sessionStorage.setItem('visible', visible);
         }
         else{
             favoritolist.style.right = '-300px';
             visible=false;
+            sessionStorage.setItem('visible', visible);
         }
     }); 
     
     cerrarlista.addEventListener('click', function() {
         favoritolist.style.right = '-300px';
         visible=false;
-        
+        sessionStorage.setItem('visible', visible);
     });
     
 }
