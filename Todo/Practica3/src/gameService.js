@@ -374,3 +374,15 @@ export function addComment(postId, comment) {
         post.comments.push(comment);
     }
 }
+
+export function getComment(postId, num)
+{
+    const post = getPost(postId);
+    console.log(post);
+    console.log(num);
+    if (post) {
+        if (post.comments) {
+            return post.comments[num] ?? null;
+        }
+    }
+}

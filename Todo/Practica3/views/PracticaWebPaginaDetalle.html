@@ -150,25 +150,11 @@
                 </div>
             </div>
     </form>
-    {{#post.comments}}
-    <div class="gridReview">
-        <div class="imageUser">
-            <img class="userImage" src="/Imagenes_practica/user.png">
-            <p class="userName">{{user}}</p>
-        </div>
-        <div class="review">
-            <p class="reviewtext">{{text}}</p>
-            <div class="ScoreReview">
-                {{#reviewValue}}
-                <p class="YellowStar">★</p>
-                {{/reviewValue}}
-            </div>
-        </div>
+    <div id="comments">
+        <!-- Con suerte aqui iran los comentarios xd-->
     </div>
-    {{/post.comments}}
-    {{^post.comments}}
-    {{/post.comments}}
     </section>
+    <button class="Cargar" onclick="loadMoreCommentsClick()">Cargar mas</button>
     <footer>
         <div class="pieDePagina">
             <a href="/" class="decoration">

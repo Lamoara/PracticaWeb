@@ -14,7 +14,8 @@ const onScroll = () => {
     const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
     if (scrollPosition + windowHeight * 2 >= document.documentElement.scrollHeight) {
-        loadMoreOnClick();
+        if(window.location.pathname == "/")
+            loadMoreOnClick();
     }
 }
 
@@ -225,4 +226,49 @@ async function showfavorites() {
         console.log(post.name);
         ul.appendChild(li);
     }
+}
+
+window.onload = function(){
+    reset();
+};
+
+function reset()
+{
+    loadMoreRequests = 0;
+}
+
+function loadMoreCommentsClick()
+{
+    const from = loadMoreRequests * NUM_RESULTS;
+    const to = from + NUM_RESULTS;
+    const urlFragment = window.location.pathname;
+    const id = parseInt(urlFragment.split('/').pop());55
+    loadMoreComments(from, to, id);
+}
+
+async function loadMoreComments(from, to, id)
+{
+    const response = await fetch(`/moreComments?from=${from}&to=${to}&id=${id}`)
+    const newComments = await response.text();
+    let commentDiv = document.getElementById("comments");
+    commentDiv.innerHTML += newComments;
+}
+
+async function loadMore(from, to, genero) {
+    const response = await fetch(`/moreGames?from=${from}&to=${to}&genero=${genero}`);
+    const newGames = await response.text();
+
+    let gameDiv;
+
+    if (a === 1) {
+        gameDiv = currentGames;
+    } else {
+        gameDiv = document.getElementById("extraGames");
+    }
+
+    if (from === 0) {
+        gameDiv.innerHTML = "";
+    }
+
+    gameDiv.insertAdjacentHTML('beforeend', newGames);
 }

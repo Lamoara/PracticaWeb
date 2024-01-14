@@ -24,6 +24,25 @@ router.get('/moreGames', (req, res) => {
     });
 });
 
+router.get('/moreComments', (req, res) => {
+    const from = parseInt(req.query.from);
+    const to = parseInt(req.query.to);
+    const id = parseInt(req.query.id);
+    
+    let result = [];
+
+    for(let i = from; i<to; i++){
+        let comment = gameService.getComment(id, i);
+        result.push(comment);
+    }
+
+    console.log(result);
+
+    res.render('Extracomments', {comments: result});
+
+    
+})
+
 router.get('/searchGames', (req, res) => {
     const nameInput = req.query.nameInput;
     const games = gameService.searchGame(nameInput);
@@ -112,9 +131,10 @@ router.post('/post/new', (req, res) => {
 
 router.get('/post/:id', (req, res) => {
 
-    let post = gameService.getPost(req.params.id);
+    let id = req.params.id;
+    let post = gameService.getPost(id);
 
-    res.render('PracticaWebPaginaDetalle',{post});
+    res.render('PracticaWebPaginaDetalle',{post, id});
 });
 
 router.post('/post/:id/comment', (req, res) => {
