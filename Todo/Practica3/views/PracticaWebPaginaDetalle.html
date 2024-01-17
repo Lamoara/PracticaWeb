@@ -118,7 +118,7 @@
             </div>
         </div>
     </section>
-    <form action="/post/{{post.id}}/comment" method="post">
+    <form>
         <section>
             <div class="formgrid">
                 <div id="contentform">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     <div class="gridButtonLarge">
-                        <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
+                        <button class="buttonsubmitlarge" type="submit" onclick="commentClick()"><i class="bi bi-upload"></i></button>
                     </div>
                 </div>
             </div>
@@ -154,7 +154,6 @@
         <!-- Con suerte aqui iran los comentarios xd-->
     </div>
     </section>
-    <button class="Cargar" onclick="loadMoreCommentsClick()">Cargar mas</button>
     <footer>
         <div class="pieDePagina">
             <a href="/" class="decoration">
