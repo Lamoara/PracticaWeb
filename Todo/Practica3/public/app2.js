@@ -120,7 +120,11 @@ async function añadir(id) {
     if(urlFragment != "/")
         elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
     else
-        elementoId = parseInt(id);
+        {
+            elementoId = parseInt(id);
+            primeravez = true;
+            addlista();
+        }
 
     console.log(elementoId);
     if (favoritos.includes(elementoId)) {
@@ -151,13 +155,14 @@ let longaux2 = sessionStorage.getItem('longaux2') || 0;
 async function addlista() {//para mostrar los elementos en la lista
     //tengo el array con los valores en la sesion, le hago un for del tamaño del array
     if (primeravez) {
+        const lista = document.getElementById("lista-favoritos");
+        lista.innerHTML = "";
         longaux = favoritos.length;
         sessionStorage.setItem('longaux', longaux);
         for (let i = 0; i <= favoritos.length - 1; i++) {
             let elementoId = favoritos[i];
             const respelement = await fetch(`/addfavorito?elementoId=${elementoId}`);
             const data = await respelement.text();
-            const lista = document.getElementById("lista-favoritos");
             lista.innerHTML += data;
         }
         primeravez = false;
