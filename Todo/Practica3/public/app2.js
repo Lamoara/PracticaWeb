@@ -120,11 +120,7 @@ async function añadir(id) {
     if(urlFragment != "/")
         elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
     else
-        {
             elementoId = parseInt(id);
-            primeravez = true;
-            addlista();
-        }
 
     console.log(elementoId);
     if (favoritos.includes(elementoId)) {
@@ -146,6 +142,11 @@ async function añadir(id) {
         alert('has añadido este juego a tus favoritos');
     }
 
+    if(urlFragment == "/")
+    {
+        primeravez = true;
+        addlista();
+    }
 }
 
 
@@ -155,9 +156,14 @@ let longaux2 = sessionStorage.getItem('longaux2') || 0;
 async function addlista() {//para mostrar los elementos en la lista
     //tengo el array con los valores en la sesion, le hago un for del tamaño del array
     if (primeravez) {
-        const lista = document.getElementById("lista-favoritos");
-        lista.innerHTML = "";
         longaux = favoritos.length;
+
+        const lista = document.getElementById("lista-favoritos");
+        const numero = document.getElementById("contlist");
+
+        lista.innerHTML = "";
+        numero.innerHTML = longaux;
+        
         sessionStorage.setItem('longaux', longaux);
         for (let i = 0; i <= favoritos.length - 1; i++) {
             let elementoId = favoritos[i];
