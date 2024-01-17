@@ -2,6 +2,7 @@ const NUM_RESULTS = 4;
 let loadMoreRequests = 0;
 let a = 0;
 
+
 fetch(`/searchGames?nameInput= `)
     .then(response => response.json())
     .then(data => {
@@ -38,6 +39,7 @@ async function loadMore(from, to, genero) {
     }
 
     gameDiv.insertAdjacentHTML('beforeend', newGames);
+
 }
 
 function filtra() {
@@ -110,6 +112,7 @@ function generateGameHTML(games) {
 }
 
 let favoritos = JSON.parse(sessionStorage.getItem('favoritos')) || [];
+let contador = sessionStorage.getItem('contador') || 0;
 
 async function añadir() {
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
@@ -120,6 +123,8 @@ async function añadir() {
         let indicador = favoritos.indexOf(elementoId);
         favoritos.splice(indicador, 1);
         sessionStorage.setItem("favoritos", JSON.stringify(favoritos));
+        contador=favoritos.length;
+        sessionStorage.setItem("contador", contador);//actualizamos el contador=longitud del array
         alert('has eliminado este juego de tus favoritos');
 
     }
@@ -127,10 +132,8 @@ async function añadir() {
         favoritos.push(elementoId);
         // Almacenar favoritos en localStorage
         sessionStorage.setItem('favoritos', JSON.stringify(favoritos));
-        /* const nuevop = document.createElement("p");
-         nuevop.textContent = 'añadido a favoritos';
-         const div = document.getElementById("mensaje");
-         div.appendChild(nuevop);*/
+        contador=favoritos.length;
+        sessionStorage.setItem("contador", contador);//actualizamos el contador 
         alert('has añadido este juego a tus favoritos');
     }
 
@@ -140,7 +143,7 @@ async function añadir() {
 let primeravez = sessionStorage.getItem('conf') === false || true;
 let longaux = sessionStorage.getItem('longaux') || 0;
 let longaux2 = sessionStorage.getItem('longaux2') || 0;
-async function addlista() {
+async function addlista() {//para mostrar los elementos en la lista
     //tengo el array con los valores en la sesion, le hago un for del tamaño del array
     if (primeravez) {
         longaux = favoritos.length;
@@ -179,7 +182,7 @@ async function addlista() {
 
 let visible = sessionStorage.getItem('visible') === true || false;
 
-function showtab() {
+function showtab() { //para mostrar la lista
     addlista();
     const boton = document.getElementById("botonfavoritos");
     const favoritolist = document.getElementById("favoritolist");
@@ -204,6 +207,8 @@ function showtab() {
     });
 
 }
+
+
 
 async function showfavorites() {
 
@@ -236,6 +241,9 @@ window.onload = function(){
             loadMoreOnClick();
             loadMoreOnClick();
             loadMoreOnClick();
+            const contadorLista = document.getElementById('contlist');
+            let cantidadElementos= contador;
+            contadorLista.textContent = cantidadElementos;
         }
     if(window.location.pathname.includes("/post") && !window.location.pathname.includes("edit"))
     {
