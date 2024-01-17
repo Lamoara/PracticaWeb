@@ -111,7 +111,7 @@ addPost({
 
 addPost({ 
     name: "Factorio", 
-    image: "https://assetsio.reedpopcdn.com/co1tfy.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp", 
+    image: "https://assetsio.reedpopcdn.com/co1tfy.jpg", 
     description: "Factorio es un juego sobre la construcción y creación de fábricas automatizadas para producir elementos de complejidad creciente, dentro de un mundo 2D infinito. Usa tu imaginación para diseñar tu fábrica, combina elementos simples en estructuras ingeniosas y, finalmente, protégela de las criaturas a las que realmente no les agradas.",
     fecha: "2016-15-02", 
     trailer: "https://www.youtube.com/embed/J8SBp4SyvLc?si=taNZWEW5IUAM-fQg", 
