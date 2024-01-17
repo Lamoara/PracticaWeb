@@ -142,8 +142,7 @@ router.post('/post/:id/comment', (req, res) => {
     if(user){
         gameService.addComment(postId, { user, text, reviewValue });
     }
-
-    res.render("Extracomments.html", {comments: {user, text, reviewValue}});
+    res.redirect(`/post/${postId}`);
 });
 
 router.get('/post/:id/delete', (req, res) => {
