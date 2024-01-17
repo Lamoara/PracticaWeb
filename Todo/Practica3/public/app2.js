@@ -230,6 +230,13 @@ async function showfavorites() {
 
 window.onload = function(){
     reset();
+
+    if(window.location.pathname == "/")
+        {
+            loadMoreOnClick();
+            loadMoreOnClick();
+            loadMoreOnClick();
+        }
 };
 
 function reset()
