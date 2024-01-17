@@ -245,56 +245,11 @@ window.onload = function(){
             let cantidadElementos= contador;
             contadorLista.textContent = cantidadElementos;
         }
-    if(window.location.pathname.includes("/post") && !window.location.pathname.includes("edit"))
-    {
-        loadMoreCommentsClick()
-    }
 };
 
 function reset()
 {
     loadMoreRequests = 0;
-}
-
-function loadMoreCommentsClick()
-{
-    const from = loadMoreRequests * NUM_RESULTS;
-    const to = from + NUM_RESULTS;
-    const urlFragment = window.location.pathname;
-    const id = parseInt(urlFragment.split('/').pop());55
-    loadMoreComments(from, to, id);
-    loadMoreRequests += NUM_RESULTS;
-}
-
-async function loadMoreComments(from, to, id)
-{
-    const response = await fetch(`/moreComments?from=${from}&to=${to}&id=${id}`)
-    const newComments = await response.text();
-
-    let commentDiv = document.getElementById("comments");
-    commentDiv.innerHTML += newComments;
-}
-
-async function commentClick()
-{
-    // Obtener los valores de los campos del formulario
-    let nombre = document.getElementById("name").value;
-    let reseña = document.getElementById("text").value;
-    
-    // Obtener el valor de la valoración
-    let valoracion = document.querySelector('input[name="estrellas"]:checked');
-    let valoracionValue = valoracion ? valoracion.value : 'No seleccionado';
-
-    // Puedes hacer algo con los valores, por ejemplo, imprimirlos en la consola
-    console.log("Nombre:", nombre);
-    console.log("Reseña:", reseña);
-    console.log("Valoración:", valoracionValue);
-
-    const response = await fetch(`/comment`)
-    const newComments = await response.text()
-
-    let commentDiv = document.getElementById("comments");
-    commentDiv.innerHTML += newComments;
 }
 
 async function loadMore(from, to, genero) {
