@@ -1,10 +1,13 @@
 <div class="row">
     {{#posts}}
-    <div class="col-lg-3 col-md-6"> <!--en bootstrap hay 12 columnas -->
-        <a href="post/{{id}}" class="decoration">
-            <image class="img-responsive" src={{image}}></image>
+    <div class="col-lg-3 col-md-6">
+        <a href="post/{{id}}" id="{{id}}" class="decoration">
+            <image class="img-responsive" src="{{image}}"></image>
             <p class="GameName">{{name}}</p>
         </a>
+            <div class="text-center">
+                <button class="btn btn-sm btn-secondary" onclick="añadir('{{id}}')" id="botonfavoritos2"><i class="bi bi-heart-fill"></i></button>
+            </div>
     </div>
     {{/posts}}
 </div>

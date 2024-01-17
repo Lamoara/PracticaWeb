@@ -114,10 +114,15 @@ function generateGameHTML(games) {
 let favoritos = JSON.parse(sessionStorage.getItem('favoritos')) || [];
 let contador = sessionStorage.getItem('contador') || 0;
 
-async function añadir() {
+async function añadir(id) {
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
-    const elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
+    let elementoId;
+    if(urlFragment != "/")
+        elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
+    else
+        elementoId = parseInt(id);
 
+    console.log(elementoId);
     if (favoritos.includes(elementoId)) {
         //alert('has añadido este juego a tus favoritos');
         let indicador = favoritos.indexOf(elementoId);
@@ -207,7 +212,6 @@ function showtab() { //para mostrar la lista
     });
 
 }
-
 
 
 async function showfavorites() {
