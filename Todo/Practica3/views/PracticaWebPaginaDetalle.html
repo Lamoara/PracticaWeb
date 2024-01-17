@@ -118,7 +118,7 @@
             </div>
         </div>
     </section>
-    <form>
+    <form action="/post/{{post.id}}/comment" method="post">
         <section>
             <div class="formgrid">
                 <div id="contentform">
@@ -145,14 +145,29 @@
                         </div>
                     </div>
                     <div class="gridButtonLarge">
-                        <button class="buttonsubmitlarge" type="submit" onclick="commentClick()"><i class="bi bi-upload"></i></button>
+                        <button class="buttonsubmitlarge" type="submit"><i class="bi bi-upload"></i></button>
                     </div>
                 </div>
             </div>
     </form>
-    <div id="comments">
-        <!-- Con suerte aqui iran los comentarios xd-->
+    {{#post.comments}}
+    <div class="gridReview">
+        <div class="imageUser">
+            <img class="userImage" src="/Imagenes_practica/user.png">
+            <p class="userName">{{user}}</p>
+        </div>
+        <div class="review">
+            <p class="reviewtext">{{text}}</p>
+            <div class="ScoreReview">
+                {{#reviewValue}}
+                <p class="YellowStar">★</p>
+                {{/reviewValue}}
+            </div>
+        </div>
     </div>
+    {{/post.comments}}
+    {{^post.comments}}
+    {{/post.comments}}
     </section>
     <footer>
         <div class="pieDePagina">
