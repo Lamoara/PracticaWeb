@@ -40,7 +40,7 @@ async function validateForm(){
         <p class="alert"><i class="bi bi-exclamation-circle"></i> URL Imagen no puede estar vacía.</p>`;
     }
 
-    else if (!/^https?:\/\/\S+\.(jpg|png)$/.test(imagenURL)) {
+    else if (!/^https?:\/\/\S+\.(jpg|png|webp|gif|bmp|jpeg|svg)$/.test(imagenURL)) {
         check = false;
         content.innerHTML += `
         <p class="alert"><i class="bi bi-exclamation-circle"></i> El campo URL Imagen debe ser una URL válida.</p>`;
