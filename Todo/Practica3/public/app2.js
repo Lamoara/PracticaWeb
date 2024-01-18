@@ -114,10 +114,15 @@ function generateGameHTML(games) {
 let favoritos = JSON.parse(sessionStorage.getItem('favoritos')) || [];
 let contador = sessionStorage.getItem('contador') || 0;
 
-async function añadir() {
+async function añadir(id) {
     const urlFragment = window.location.pathname; // Esto devolverá "/post/0" en tu ejemplo
-    const elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
+    let elementoId;
+    if(urlFragment != "/")
+        elementoId = parseInt(urlFragment.split('/').pop(), 10); // Obtener el último segmento como entero
+    else
+            elementoId = parseInt(id);
 
+    console.log(elementoId);
     if (favoritos.includes(elementoId)) {
         //alert('has añadido este juego a tus favoritos');
         let indicador = favoritos.indexOf(elementoId);
@@ -137,6 +142,11 @@ async function añadir() {
         alert('has añadido este juego a tus favoritos');
     }
 
+    if(urlFragment == "/")
+    {
+        primeravez = true;
+        addlista();
+    }
 }
 
 
@@ -147,12 +157,18 @@ async function addlista() {//para mostrar los elementos en la lista
     //tengo el array con los valores en la sesion, le hago un for del tamaño del array
     if (primeravez) {
         longaux = favoritos.length;
+
+        const lista = document.getElementById("lista-favoritos");
+        const numero = document.getElementById("contlist");
+
+        lista.innerHTML = "";
+        numero.innerHTML = longaux;
+        
         sessionStorage.setItem('longaux', longaux);
         for (let i = 0; i <= favoritos.length - 1; i++) {
             let elementoId = favoritos[i];
             const respelement = await fetch(`/addfavorito?elementoId=${elementoId}`);
             const data = await respelement.text();
-            const lista = document.getElementById("lista-favoritos");
             lista.innerHTML += data;
         }
         primeravez = false;
@@ -207,8 +223,6 @@ function showtab() { //para mostrar la lista
     });
 
 }
-
-
 
 
 
