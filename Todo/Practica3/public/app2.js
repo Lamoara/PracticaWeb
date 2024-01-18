@@ -210,28 +210,7 @@ function showtab() { //para mostrar la lista
 
 
 
-async function showfavorites() {
 
-    const response = await fetch('/addfavorito', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ favoritos }),
-    });
-    const resultado = await response.json();
-    const ul = document.getElementById("lista-favoritos");
-    ul.innerHTML = '';
-    for (let i = 0; i <= favoritos.length; i++) {
-        let post = resultado.get(favoritos[i]);
-        // elementos.push(post);
-        //sessionStorage.setItem('elementos', JSON.stringify(elementos));
-        let li = document.createElement("li");
-        li.textContent = post.name;
-        console.log(post.name);
-        ul.appendChild(li);
-    }
-}
 
 window.onload = function(){
     reset();
